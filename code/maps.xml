@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Maps>
+
+	<!-- Includes related with the library -->
+	<Include file="dwmaps.xml"/>
+	
+	<!-- Includes for this game -->
+	<Include file="citymaps.xml"/>
+	
+</Maps>

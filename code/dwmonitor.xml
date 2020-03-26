@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Monitors>
+	
+	<!-- Includes -->
+	<Include file="ptmonitor.xml"/>
+	
+	<!-- Simple step: 
+		 Just stands for ever looking to the right (left is defined in dwmonitor.xml) -->
+	<Monitor id="50000" cyclic="NO">
+		<!-- Single step: Staying -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> <!-- Means standing -->
+			<Variable id="Direction" value="0"/> <!-- Meaning to the right -->
+			<!-- The impulse is not necessary when just standing -->
+			<Variable id="Seconds" value="-1"/> <!-- For ever -->
+		</Step>
+	</Monitor>
+	
+	<!-- Simple step: 
+		 Stands for a while looking to the left, 
+		 Runs  a couple of pixels to the left
+		 Stands again for a while still looking to the left
+		 Turns to look to the right and stands so for a while again
+		 Runs to the right during a couple of steps
+		 and finally stands a couple of seconds looking to the right.
+		 Then starts back -->
+	<Monitor id="50001" cyclic="YES">
+		<!-- 1: To stand for a while -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> <!-- Means standing -->
+			<Variable id="Direction" value="1"/> <!-- Meaning to the left -->
+			<!-- Impulse is not neceesary when standing -->
+			<Variable id="Seconds" value="1.0"/> <!-- Seconds -->
+		</Step>
+		
+		<!-- 2: Run -->
+		<Step type="50000">
+			<Variable id="Type" value="3"/> <!-- Means running -->
+			<Variable id="Direction" value="1"/>
+			<Variable id="Impulse" value="1"/> <!-- Normal impulse -->
+			<Variable id="Seconds" value="0"/> <!-- Just finishes when starts -->
+		</Step>
+		
+		<!-- 3: Maintains the previous state up to a location -->
+		<Step type="8">
+			<Variable id="Point" value="144,-1,-1"/> <!-- It won't be ever this one... -->
+			<Variable id="Distance" value="6"/> <!-- It has to be close to the pixels really advanced per loop -->
+		</Step>
+		
+		<!-- 4: Stands -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> 
+			<Variable id="Direction" value="1"/> 
+			<Variable id="Seconds" value="1.0"/>
+		</Step>
+		
+		<!-- 5: Stands again, but now looking to the right -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> 
+			<Variable id="Direction" value="0"/> 
+			<Variable id="Seconds" value="1.0"/>
+		</Step>
+		
+		<!-- 6: Runs but now to the right -->
+		<Step type="50000">
+			<Variable id="Type" value="3"/> 
+			<Variable id="Direction" value="0"/>
+			<Variable id="Impulse" value="1"/> 
+			<Variable id="Seconds" value="0"/> 
+		</Step>
+		
+		<!-- 7: Again, keep the situation up to a location -->
+		<Step type="8">
+			<Variable id="Point" value="312,-1,-1"/> 
+			<Variable id="Distance" value="6"/> 
+		</Step>
+		
+		<!-- 8: Stands finally  -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> 
+			<Variable id="Direction" value="0"/> 
+			<Variable id="Seconds" value="1.0"/>
+		</Step>
+	</Monitor>
+	
+	<!-- Simple step: 
+		 Just stands for ever looking to the right (left is defined in dwmonitor.xml) -->
+	<Monitor id="50002" cyclic="NO">
+		<!-- 1: To stand for ever -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> <!-- Means standing -->
+			<Variable id="Direction" value="1"/> <!-- Meaning to the left -->
+			<!-- Impulse is not neceesary when standing -->
+			<Variable id="Seconds" value="-1"/> <!-- For ever (not needed) -->
+		</Step>
+	</Monitor>
+	
+</Monitors>
