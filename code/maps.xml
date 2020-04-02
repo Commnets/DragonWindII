@@ -6,5 +6,6 @@
 	
 	<!-- Includes for this game -->
 	<Include file="citymaps.xml"/>
+	<Include file="landscapemaps.xml"/>
 	
 </Maps>

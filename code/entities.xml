@@ -1,5 +1,1288 @@
 <?xml version="1.0"?>
 <Entities>
+	
+	<!-- This definition rewrites what is defined in the dwentities.xml -->
+	<!-- Bad Guys -->
+	<SetOfEntities fromId="32000" number="10">
+		<Forms>
+			<Form id="50060"/>
+			<Form id="50061"/>
+			<Form id="50062"/>
+			<Form id="50063"/>
+			<Form id="50064"/>
+			<Form id="50065"/>
+			<Form id="50066"/>
+			<Form id="50067"/>
+
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+
+			<!-- Dino Right -->
+			<Form id="60000"/>
+			<!-- Dino Left -->
+			<Form id="60001"/>
+			<!-- Male Zombie Right -->
+			<Form id="60010"/>
+			<!-- Male Zombie Left -->
+			<Form id="60011"/>
+			<!-- Female Zombie Right -->
+			<Form id="60015"/>
+			<!-- Female Zombie Left -->
+			<Form id="60016"/>
+	
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+		</Forms>
+
+		<MovementsBase>
+			<Movement id="60000"/>
+			<Movement id="61000"/>
+			<Movement id="62000"/>
+			<Movement id="63000"/>
+		</MovementsBase>
+
+		<Animations>
+			<!-- Cat -->	
+			<Animation id="0" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50060"/>
+					<Attribute id="INITIALASPECT" value="28"/>
+					<Attribute id="FINALASPECT" value="38"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="1" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50060"/>
+					<Attribute id="INITIALASPECT" value="46"/>
+					<Attribute id="FINALASPECT" value="54"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="2" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50060"/>
+					<Attribute id="INITIALASPECT" value="38"/>
+					<Attribute id="FINALASPECT" value="46"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="3" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50060"/>
+					<Attribute id="INITIALASPECT" value="10"/>
+					<Attribute id="FINALASPECT" value="16"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="4" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50060"/>
+					<Attribute id="INITIALASPECT" value="54"/>
+					<Attribute id="FINALASPECT" value="64"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="5" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50060"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="6" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50060"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			
+			<Animation id="10" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50061"/>
+					<Attribute id="INITIALASPECT" value="28"/>
+					<Attribute id="FINALASPECT" value="38"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="11" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50061"/>
+					<Attribute id="INITIALASPECT" value="46"/>
+					<Attribute id="FINALASPECT" value="54"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="12" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50061"/>
+					<Attribute id="INITIALASPECT" value="38"/>
+					<Attribute id="FINALASPECT" value="46"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="13" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50061"/>
+					<Attribute id="INITIALASPECT" value="10"/>
+					<Attribute id="FINALASPECT" value="16"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="14" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50061"/>
+					<Attribute id="INITIALASPECT" value="54"/>
+					<Attribute id="FINALASPECT" value="64"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="15" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50061"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="16" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50061"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Cat -->	
+
+			<!-- Dog -->	
+			<Animation id="20" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50062"/>
+					<Attribute id="INITIALASPECT" value="28"/>
+					<Attribute id="FINALASPECT" value="38"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="21" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50062"/>
+					<Attribute id="INITIALASPECT" value="46"/>
+					<Attribute id="FINALASPECT" value="54"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="22" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50062"/>
+					<Attribute id="INITIALASPECT" value="38"/>
+					<Attribute id="FINALASPECT" value="46"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="23" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50062"/>
+					<Attribute id="INITIALASPECT" value="10"/>
+					<Attribute id="FINALASPECT" value="16"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="24" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50062"/>
+					<Attribute id="INITIALASPECT" value="54"/>
+					<Attribute id="FINALASPECT" value="64"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="25" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50062"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="26" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50062"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			
+			<Animation id="30" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50063"/>
+					<Attribute id="INITIALASPECT" value="28"/>
+					<Attribute id="FINALASPECT" value="38"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="31" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50063"/>
+					<Attribute id="INITIALASPECT" value="46"/>
+					<Attribute id="FINALASPECT" value="54"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="32" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50063"/>
+					<Attribute id="INITIALASPECT" value="38"/>
+					<Attribute id="FINALASPECT" value="46"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="33" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50063"/>
+					<Attribute id="INITIALASPECT" value="10"/>
+					<Attribute id="FINALASPECT" value="16"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="34" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50063"/>
+					<Attribute id="INITIALASPECT" value="54"/>
+					<Attribute id="FINALASPECT" value="64"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="35" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50063"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="36" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50063"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Dog -->	
+
+			<!-- Robot -->	
+			<Animation id="40" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50064"/>
+					<Attribute id="INITIALASPECT" value="10"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="41" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50064"/>
+					<Attribute id="INITIALASPECT" value="51"/>
+					<Attribute id="FINALASPECT" value="59"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="42" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50064"/>
+					<Attribute id="INITIALASPECT" value="20"/>
+					<Attribute id="FINALASPECT" value="30"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="43" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50064"/>
+					<Attribute id="INITIALASPECT" value="72"/>
+					<Attribute id="FINALASPECT" value="82"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="44" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50064"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="45" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50064"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			
+			<Animation id="50" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50065"/>
+					<Attribute id="INITIALASPECT" value="10"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="51" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50065"/>
+					<Attribute id="INITIALASPECT" value="51"/>
+					<Attribute id="FINALASPECT" value="59"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="52" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50065"/>
+					<Attribute id="INITIALASPECT" value="20"/>
+					<Attribute id="FINALASPECT" value="30"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="53" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50065"/>
+					<Attribute id="INITIALASPECT" value="72"/>
+					<Attribute id="FINALASPECT" value="82"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="54" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50065"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="55" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50065"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Robot -->
+
+			<!-- Jack -->
+			<Animation id="60" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50066"/>
+					<Attribute id="INITIALASPECT" value="10"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="61" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50066"/>
+					<Attribute id="INITIALASPECT" value="30"/>
+					<Attribute id="FINALASPECT" value="39"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="62" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50066"/>
+					<Attribute id="INITIALASPECT" value="20"/>
+					<Attribute id="FINALASPECT" value="30"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="63" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50066"/>
+					<Attribute id="INITIALASPECT" value="38"/>
+					<Attribute id="FINALASPECT" value="48"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="64" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50066"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="65" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50066"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			
+			<Animation id="70" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50067"/>
+					<Attribute id="INITIALASPECT" value="10"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="71" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50067"/>
+					<Attribute id="INITIALASPECT" value="30"/>
+					<Attribute id="FINALASPECT" value="39"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="72" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50067"/>
+					<Attribute id="INITIALASPECT" value="20"/>
+					<Attribute id="FINALASPECT" value="30"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="73" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50067"/>
+					<Attribute id="INITIALASPECT" value="38"/>
+					<Attribute id="FINALASPECT" value="48"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="74" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50067"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="75" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50067"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Jack -->
+
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+
+			<!-- Dino -->	
+			<!-- Right -->
+			<!-- Standing -->
+			<Animation id="80" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60000"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="18"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="81" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60000"/>
+					<Attribute id="INITIALASPECT" value="30"/>
+					<Attribute id="FINALASPECT" value="38"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping -->
+			<Animation id="82" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60000"/>
+					<Attribute id="INITIALASPECT" value="18"/>
+					<Attribute id="FINALASPECT" value="30"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Falling is like jumping in terms of animation -->
+			<!-- Sliding could be like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="83" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60000"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="8"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<Animation id="84" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60000"/>
+					<Attribute id="INITIALASPECT" value="7"/>
+					<Attribute id="FINALASPECT" value="7"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<Animation id="90" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60001"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="18"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="91" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60001"/>
+					<Attribute id="INITIALASPECT" value="30"/>
+					<Attribute id="FINALASPECT" value="38"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping -->
+			<Animation id="92" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60001"/>
+					<Attribute id="INITIALASPECT" value="18"/>
+					<Attribute id="FINALASPECT" value="30"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Falling is like jumping in terms of animation -->
+			<!-- Sliding could de like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="93" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60001"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="8"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="94" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60001"/>
+					<Attribute id="INITIALASPECT" value="7"/>
+					<Attribute id="FINALASPECT" value="7"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Dino -->
+
+			<!-- Male Zombie -->
+			<!-- Right -->
+			<!-- Standing -->
+			<Animation id="100" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60010"/>
+					<Attribute id="INITIALASPECT" value="20"/>
+					<Attribute id="FINALASPECT" value="35"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="101" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60010"/>
+					<Attribute id="INITIALASPECT" value="35"/>
+					<Attribute id="FINALASPECT" value="45"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="102" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60010"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="103" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60010"/>
+					<Attribute id="INITIALASPECT" value="19"/>
+					<Attribute id="FINALASPECT" value="19"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<Animation id="110" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60011"/>
+					<Attribute id="INITIALASPECT" value="20"/>
+					<Attribute id="FINALASPECT" value="35"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="111" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60011"/>
+					<Attribute id="INITIALASPECT" value="35"/>
+					<Attribute id="FINALASPECT" value="45"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="112" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60011"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="113" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60011"/>
+					<Attribute id="INITIALASPECT" value="19"/>
+					<Attribute id="FINALASPECT" value="19"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Male Zombie -->
+
+			<!-- Female Zombie -->
+			<!-- Right -->
+			<!-- Standing -->
+			<Animation id="120" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60015"/>
+					<Attribute id="INITIALASPECT" value="20"/>
+					<Attribute id="FINALASPECT" value="35"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="121" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60015"/>
+					<Attribute id="INITIALASPECT" value="35"/>
+					<Attribute id="FINALASPECT" value="45"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="122" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60015"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="123" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60015"/>
+					<Attribute id="INITIALASPECT" value="19"/>
+					<Attribute id="FINALASPECT" value="19"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<Animation id="130" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60016"/>
+					<Attribute id="INITIALASPECT" value="20"/>
+					<Attribute id="FINALASPECT" value="35"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="131" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60016"/>
+					<Attribute id="INITIALASPECT" value="35"/>
+					<Attribute id="FINALASPECT" value="45"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="132" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60016"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="133" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60016"/>
+					<Attribute id="INITIALASPECT" value="19"/>
+					<Attribute id="FINALASPECT" value="19"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Male Zombie -->
+
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+			
+		</Animations>
+		<States>
+			<!-- Cat -->
+			<State id="0" animation="0" movementBase="60000"/>
+			<State id="1" animation="1" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="2" animation="2" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="3" animation="3" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="4" animation="4" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="5" animation="5" movementBase="60000"/>
+			<State id="6" animation="6" movementBase="60000"/>
+			
+			<State id="10" animation="10" movementBase="60000"/>
+			<State id="11" animation="11" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="12" animation="12" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="13" animation="13" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="14" animation="14" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> <!-- To reduce the speed -->
+				</Attributes>
+			</State>
+			<State id="15" animation="15" movementBase="60000"/>
+			<State id="16" animation="16" movementBase="60000"/>
+			<!-- Cat -->
+			
+			<!-- Dog -->
+			<State id="20" animation="20" movementBase="60000"/>
+			<State id="21" animation="21" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="22" animation="22" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="23" animation="23" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="24" animation="24" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="25" animation="25" movementBase="60000"/>
+			<State id="26" animation="26" movementBase="60000"/>
+			
+			<State id="30" animation="30" movementBase="60000"/>
+			<State id="31" animation="31" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="32" animation="32" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="33" animation="33" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="34" animation="34" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="35" animation="35" movementBase="60000"/>
+			<State id="36" animation="36" movementBase="60000"/>
+			<!-- Dog -->
+			
+			<!-- Robot -->
+			<State id="40" animation="40" movementBase="60000"/>
+			<State id="41" animation="41" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="42" animation="42" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="43" animation="42" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="44" animation="43" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="45" animation="44" movementBase="60000"/>
+			<State id="46" animation="45" movementBase="60000"/>
+			
+			<State id="50" animation="50" movementBase="60000"/>
+			<State id="51" animation="51" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="52" animation="52" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="53" animation="52" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="54" animation="53" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="55" animation="54" movementBase="60000"/>
+			<State id="56" animation="55" movementBase="60000"/>
+			<!-- Robot -->
+			
+			<!-- Jack -->
+			<State id="60" animation="60" movementBase="60000"/>
+			<State id="61" animation="61" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="62" animation="62" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="63" animation="62" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="64" animation="63" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="65" animation="64" movementBase="60000"/>
+			<State id="66" animation="65" movementBase="60000"/>
+			
+			<State id="70" animation="70" movementBase="60000"/>
+			<State id="71" animation="71" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="72" animation="72" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="73" animation="72" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="74" animation="73" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="75" animation="74" movementBase="60000"/>
+			<State id="76" animation="75" movementBase="60000"/>
+			<!-- Jack -->
+
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+			
+			<!-- Dino -->
+			<!-- Right -->
+			<!-- Standing -->
+			<State id="80" animation="80" movementBase="60000"/>
+			<!-- Running -->
+			<State id="81" animation="81" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="82" animation="82" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="83" animation="82" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="84" animation="81" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="85" animation="83" movementBase="60000"/>
+			<!-- Died -->
+			<State id="86" animation="84" movementBase="60000"/>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<State id="90" animation="90" movementBase="60000"/>
+			<!-- Running -->
+			<State id="91" animation="91" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="92" animation="92" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="93" animation="92" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="94" animation="91" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="95" animation="93" movementBase="60000"/>
+			<!-- Died -->
+			<State id="96" animation="94" movementBase="60000"/>
+			<!-- Dino -->
+			
+			<!-- Male Zombie -->
+			<!-- Right -->
+			<!-- Standing -->
+			<State id="100" animation="100" movementBase="60000"/>
+			<!-- Running -->
+			<State id="101" animation="101" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="102" animation="101" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="103" animation="101" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="104" animation="101" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="105" animation="102" movementBase="60000"/>
+			<!-- Died -->
+			<State id="106" animation="103" movementBase="60000"/>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<State id="110" animation="110" movementBase="60000"/>
+			<!-- Running -->
+			<State id="111" animation="111" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="112" animation="111" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="113" animation="111" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="114" animation="111" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="115" animation="112" movementBase="60000"/>
+			<!-- Died -->
+			<State id="116" animation="113" movementBase="60000"/>
+			<!-- Male Zombie -->
+			
+			<!-- Female Zombie -->
+			<!-- Right -->
+			<!-- Standing -->
+			<State id="120" animation="120" movementBase="60000"/>
+			<!-- Running -->
+			<State id="121" animation="121" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="122" animation="121" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="123" animation="121" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="124" animation="121" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="125" animation="122" movementBase="60000"/>
+			<!-- Died -->
+			<State id="126" animation="123" movementBase="60000"/>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<State id="130" animation="130" movementBase="60000"/>
+			<!-- Running -->
+			<State id="131" animation="131" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="132" animation="131" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="133" animation="131" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="134" animation="131" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="135" animation="132" movementBase="60000"/>
+			<!-- Died -->
+			<State id="136" animation="133" movementBase="60000"/>
+			<!-- Male Zombie -->
+
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+
+		</States>
+	</SetOfEntities>
 
 	<!-- Includes -->
 	<Include file="dwentities.xml"/>

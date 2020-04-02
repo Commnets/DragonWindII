@@ -18,6 +18,19 @@
 
 namespace DragonTheRevenge
 {
+	/** To create the entities of the Dragonwind II. */
+	class EntityBuilder : public DRAGONWIND::EntityBuilder
+	{
+		public:
+		EntityBuilder (const std::string& eDef, QGAMES::FormBuilder* fB, QGAMES::MovementBuilder* mB)
+			: DRAGONWIND::EntityBuilder (eDef, fB, mB)
+							{ }
+
+		protected:
+		/** @see parent. */
+		virtual QGAMES::BadGuy* createBadGuy (const QGAMES::EntityBuilder::EntityDefinition& def);
+	};
+
 	/** To create the worlds and scenes of Dragonwind II. */
 	class WorldBuilder : public DRAGONWIND::WorldBuilder
 	{

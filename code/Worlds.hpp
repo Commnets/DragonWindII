@@ -18,6 +18,7 @@
 #include "Defs.hpp"
 
 #include "CityWorlds.hpp"
+#include "LandscapeWorlds.hpp"
 
 #endif
   

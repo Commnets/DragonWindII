@@ -1,10 +1,6 @@
 <?xml version="1.0"?>
 <Maps>
 	
-	<!-- The standard background maps used in city scenes --> 
-	<Map id="50120" type="10000" file="maps/BKCity.xml"/>
-	<!-- -->
-	
 	<!-- The maps -->
 	<Map id="60002" type="1" file="maps/CityWorld0.tmx"/>
 	<Map id="60003" type="1" file="maps/CityWorld1.tmx"/>

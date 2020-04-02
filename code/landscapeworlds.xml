@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Maps>
+
+	<World id="50002">
+		<Scenes>
+		
+			<!-- LandscapeWorld0 -->
+			<Scene id="70000">
+				<Actions>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Enjoy the travel"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50002"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+				</Conexions>
+
+				<Maps>
+					<Map id="50130" file="maps/BKCity.xml"/>
+					<Map id="70000" file="maps/LandscapeWorld0.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Ladder_1"/> 
+					<Entity id="50101" layer="Ladder_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/>
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/>
+					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+			
+		</Scenes>
+		<Attributes>
+			<Attribute id="NAME" value="The Landscape"/>
+		</Attributes>
+	</World>
+	
+</Maps>

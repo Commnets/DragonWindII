@@ -81,6 +81,15 @@
     <ClInclude Include="doxy.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="LandscapeScenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="LandscapeWorlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -106,6 +115,15 @@
     </ClCompile>
     <ClCompile Include="CityWorlds.cpp">
       <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="LandscapeScenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="LandscapeWorlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities.cpp">
+      <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

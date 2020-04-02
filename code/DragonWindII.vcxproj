@@ -93,6 +93,9 @@
     <ClInclude Include="CityWorlds.hpp" />
     <ClInclude Include="Defs.hpp" />
     <ClInclude Include="doxy.hpp" />
+    <ClInclude Include="Entities.hpp" />
+    <ClInclude Include="LandscapeScenes.hpp" />
+    <ClInclude Include="LandscapeWorlds.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Scenes.hpp" />
     <ClInclude Include="stdafx.h" />
@@ -104,6 +107,9 @@
     <ClCompile Include="Builders.cpp" />
     <ClCompile Include="CityScenes.cpp" />
     <ClCompile Include="CityWorlds.cpp" />
+    <ClCompile Include="Entities.cpp" />
+    <ClCompile Include="LandscapeScenes.cpp" />
+    <ClCompile Include="LandscapeWorlds.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scenes.cpp" />
     <ClCompile Include="stdafx.cpp" />

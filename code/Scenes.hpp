@@ -18,6 +18,7 @@
 #include "Defs.hpp"
 
 #include "CityScenes.hpp"
+#include "LandscapeScenes.hpp"
 
 #endif
   
