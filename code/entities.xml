@@ -1286,5 +1286,147 @@
 
 	<!-- Includes -->
 	<Include file="dwentities.xml"/>
+	
+	<!-- Vultures -->
+	<SetOfEntities fromId="60000" number="10">
+		<Forms>
+			<Form id="70000"/>
+			<Form id="70001"/>
+		</Forms>
+		<MovementsBase>
+			<Movement id="70000"/>
+			<Movement id="70010"/>
+		</MovementsBase>
+		<Animations>
+			<!-- Moving the wings and looking to the right -->
+			<Animation id="0" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="70000"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Moving the wings and looking to the left -->
+			<Animation id="1" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="70001"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+		</Animations>
+		<States>
+			<!-- Flying to the right -->
+			<State id="0" animation="0" movementBase="70000"/>
+			<!-- Standing and looking to the right -->
+			<State id="1" animation="0" movementBase="70010"/>
+			<!-- Flying to the left -->
+			<State id="2" animation="1" movementBase="70000"/>
+			<!-- Standing and looking to the left -->
+			<State id="3" animation="1" movementBase="70010"/>
+		</States>
+	</SetOfEntities>
+	
+	<!-- Flocks of Vultures -->
+	<!-- Easy level -->
+	<CompositeEntity id="60120">
+		<RefSetOfEntities fromId="60000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> <!-- Max speed -->
+			<Physic id="1" value="150"/> <!-- Acceleration -->
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="2"/>
+			<Attribute id="RADIX" value="30"/>
+			<Attribute id="TIMETOMOVE" value="1"/>
+			<Attribute id="TIMEMOVING" value="30"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="60121">
+		<RefSetOfEntities fromId="60000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="3"/>
+			<Attribute id="RADIX" value="60"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="30"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+
+	<!-- Medium level -->
+	<CompositeEntity id="60122">
+		<RefSetOfEntities fromId="60000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="3"/>
+			<Attribute id="RADIX" value="60"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="20"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="60123">
+		<RefSetOfEntities fromId="60000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="5"/>
+			<Attribute id="RADIX" value="60"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="10"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+
+	<!-- Difficult level -->
+	<CompositeEntity id="60124">
+		<RefSetOfEntities fromId="60000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="7"/>
+			<Attribute id="RADIX" value="80"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="15"/>
+			<Attribute id="SHOOTINGENERGY" value="2"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="60125">
+		<RefSetOfEntities fromId="60000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="10"/>
+			<Attribute id="RADIX" value="80"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="7"/>
+			<Attribute id="SHOOTINGENERGY" value="2"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+	<!-- Flocks of Vultures -->
 
 </Entities>

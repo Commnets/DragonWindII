@@ -90,6 +90,9 @@
     <ClInclude Include="Entities.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="ActionBlolcks.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -123,6 +126,9 @@
       <Filter>Archivos de código fuente\Worlds</Filter>
     </ClCompile>
     <ClCompile Include="Entities.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionBlocks.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>

@@ -3,5 +3,14 @@
 
 	<!-- Includes -->
 	<Include file="dwmovements.xml"/>
+	
+	<!-- For Vulture -->
+	<!-- Linear movement -->
+	<SetOfMovements fromId="70000" number="10">
+		<Variable id="0" value="1"/> 
+	</SetOfMovements>
+	<!-- Standing -->
+	<SetOfMovements fromId="70010" number="10"/>
+	<!-- -->
 
 </Movements>

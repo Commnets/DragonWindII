@@ -43,6 +43,23 @@ namespace DragonTheRevenge
 		virtual StatesId statesIdForType (int t);
 	};
 
+	/** Specific flock of vultures. */
+	class FlockOfVultures : public DRAGONWIND::FlockOfMonsters
+	{
+		public:
+		FlockOfVultures (int cId, const QGAMES::Entities& eties, const QGAMES::Entity::Data& dt = QGAMES::Entity::Data ())
+			: DRAGONWIND::FlockOfMonsters (cId, eties, Properties (dt._parameters), dt)
+							{ }
+
+		/** @see parent. */
+		virtual QGAMES::Entity* clone () const;
+
+		/** @see parent 
+			The initialization of the sound is specific. */
+		virtual void initialize ();
+		virtual void finalize ();
+	};
+
 	// Defines to declare types of bad guys of this version of Dragonwind
 	#define __DRAGONWIND_DINOTYPEID__				4
 	#define __DRAGONWIND_MALEZOMBIETYPEID__			5

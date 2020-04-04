@@ -28,7 +28,24 @@ namespace DragonTheRevenge
 
 		protected:
 		/** @see parent. */
+		virtual QGAMES::Entity* createEntity (const QGAMES::EntityBuilder::EntityDefinition& def);
+		virtual QGAMES::CompositeEntity* createCompositeEntity (const QGAMES::EntityBuilder::EntityDefinition& def);
+
+		/** @see parent. */
 		virtual QGAMES::BadGuy* createBadGuy (const QGAMES::EntityBuilder::EntityDefinition& def);
+	};
+
+	/** To create the movements of the Dragonwind II. */
+	class MovementBuilder : public DRAGONWIND::MovementBuilder
+	{
+		public:
+		MovementBuilder (const std::string& fDef)
+			: DRAGONWIND::MovementBuilder (fDef)
+								{ }
+	
+		protected:
+		/** @see parent. */
+		virtual QGAMES::Movement* createMovement (const QGAMES::MovementBuilder::MovementDefinition& def);
 	};
 
 	/** To create the worlds and scenes of Dragonwind II. */

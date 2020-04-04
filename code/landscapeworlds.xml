@@ -7,6 +7,13 @@
 			<!-- LandscapeWorld0 -->
 			<Scene id="70000">
 				<Actions>
+					<!-- Vultures -->
+					<Action id="70030">
+						<Attributes>
+							<Attribute id="TypeOfMonster" value="2"/> 
+							<Attribute id="TimeToAppear" value="0"/> 
+						</Attributes>
+					</Action>
 				</Actions>
 				
 				<Attributes>

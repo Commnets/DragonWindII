@@ -320,4 +320,11 @@
     </Form>
 	<!-- -->
 	
+	<!-- The Vulture -->
+	<Form id="70000" name="VultureRight" file="forms/VultureRight.png" width="360" height="90" 
+            fSpacing="0" fMargin="0" fWidth="90" fHeight="90" aColor="255" nFrames="4"/>
+	<Form id="70001" name="VultureLeft" file="forms/VultureLeft.png" width="360" height="90" 
+            fSpacing="0" fMargin="0" fWidth="90" fHeight="90" aColor="255" nFrames="4"/>
+	<!-- -->
+	
 </Forms>

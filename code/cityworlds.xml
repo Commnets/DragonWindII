@@ -386,7 +386,7 @@
 				<Actions>
 					<!-- Flying Monsters -->
 					<!-- Bees -->
-					<Action id="70020">
+					<Action id="70025">
 						<Attributes>
 							<Attribute id="TypeOfMonster" value="0"/> 
 							<Attribute id="TimeToAppear" value="1"/> 

@@ -64,6 +64,8 @@ namespace DragonTheRevenge
 		virtual QGAMES::EntityBuilder* createEntityBuilder ()
 							{ return (new EntityBuilder (parameter (__GAME_PROPERTYENTITIESFILE__), 
 								formBuilder (), movementBuilder ())); }
+		virtual QGAMES::MovementBuilder* createMovementBuilder () 
+							{ return (new MovementBuilder (parameter (__GAME_PROPERTYMOVEMENTSFILE__))); }
 		virtual QGAMES::WorldBuilder* createWorldBuilder ()
 							{ return (new WorldBuilder (parameter (__GAME_PROPERTYWORLDSFILE__), 
 								mapBuilder ())); }
