@@ -18,6 +18,28 @@
 
 namespace DragonTheRevenge
 {
+	/** Some medifications over the type of shootings. */
+	class Shooting : public DRAGONWIND::Shooting
+	{
+		public:
+		Shooting (int cId, const QGAMES::Forms& f = QGAMES::Forms (), 
+				const QGAMES::PlatformArtist::Data& d = QGAMES::PlatformArtist::Data ())
+			: DRAGONWIND::Shooting (cId, f, d)
+							{ }
+
+		/** @see parent. */
+		virtual QGAMES::Entity* clone () const;
+
+		protected:
+		/** @see parent. */
+		virtual DRAGONWIND::Shooting::StatesId statesIdForType (int t);
+		virtual DRAGONWIND::Shooting::Behaviour* behaviourForType (int t);
+
+		#define __DRAGONWIND_FIREBALLSHOOTINGSTATESID__ \
+			DRAGONWIND::Shooting::StatesId (40, 41, 42, 43, 44, 45, -1, -1, -1, -1, 50, __BD 1.3, true)
+	};
+
+
 	/** The bad guys of the game. */
 	class BadGuy : public DRAGONWIND::BadGuy
 	{
@@ -29,6 +51,10 @@ namespace DragonTheRevenge
 			DRAGONWIND::BadGuy::StatesId (100, 110, 101, 111, 102, 112, 103, 113, 104, 114, 105, 115, 106, 116)
 		#define __DRAGONWIND_FEMALEZOMBIESTATESID__ \
 			DRAGONWIND::BadGuy::StatesId (120, 130, 121, 131, 122, 132, 123, 133, 124, 134, 125, 135, 126, 136)
+		#define __DRAGONWIND_KONGSTATESID__ \
+			DRAGONWIND::BadGuy::StatesId (140, 150, 141, 151, 142, 152, 143, 153, 144, 154, 145, 155, 146, 156)
+		#define __DRAGONWIND_ORCUSSTATESID__ \
+			DRAGONWIND::BadGuy::StatesId (160, 170, 161, 171, 162, 172, 163, 173, 164, 174, 165, 175, 166, 176)
 
 		BadGuy (int cId, const QGAMES::Forms& f = QGAMES::Forms (), 
 			const QGAMES::PlatformArtist::Data& d = QGAMES::PlatformArtist::Data ())
@@ -60,10 +86,39 @@ namespace DragonTheRevenge
 		virtual void finalize ();
 	};
 
-	// Defines to declare types of bad guys of this version of Dragonwind
-	#define __DRAGONWIND_DINOTYPEID__				4
-	#define __DRAGONWIND_MALEZOMBIETYPEID__			5
-	#define __DRAGONWIND_FEMALEZOMBIETYPEID__		6
+	/** Specific flock of Wasps. */
+	class FlockOfWasps : public DRAGONWIND::FlockOfMonsters
+	{
+		public:
+		FlockOfWasps (int cId, const QGAMES::Entities& eties, const QGAMES::Entity::Data& dt = QGAMES::Entity::Data ())
+			: DRAGONWIND::FlockOfMonsters (cId, eties, Properties (dt._parameters), dt)
+							{ }
+
+		/** @see parent. */
+		virtual QGAMES::Entity* clone () const;
+
+		/** @see parent 
+			The initialization of the sound is specific. */
+		virtual void initialize ();
+		virtual void finalize ();
+	};
+
+	/** Specific flock of bats. */
+	class FlockOfBats : public DRAGONWIND::FlockOfMonsters
+	{
+		public:
+		FlockOfBats (int cId, const QGAMES::Entities& eties, const QGAMES::Entity::Data& dt = QGAMES::Entity::Data ())
+			: DRAGONWIND::FlockOfMonsters (cId, eties, Properties (dt._parameters), dt)
+							{ }
+
+		/** @see parent. */
+		virtual QGAMES::Entity* clone () const;
+
+		/** @see parent 
+			The initialization of the sound is specific. */
+		virtual void initialize ();
+		virtual void finalize ();
+	};
 }
 
 #endif

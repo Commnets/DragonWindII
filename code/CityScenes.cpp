@@ -50,7 +50,7 @@ void DragonTheRevenge::CityScene1::updatePositions ()
 
 	bool someAlive = false;
 	for (QGAMES::Entities::const_iterator i = _theBadGuysToKill.begin (); 
-			i != _theBadGuysToKill.end () && !someAlive; someAlive |= ((DRAGONWIND::BadGuy*) (*i).second) -> isAlive ());
+			i != _theBadGuysToKill.end () && !someAlive; someAlive |= ((DRAGONWIND::BadGuy*) (*i++).second) -> isAlive ());
 	if (!someAlive && onOffSwitch (_SWITCHTOSHOWMOAT) -> isOn ())
 		onOffSwitch (_SWITCHTOSHOWMOAT) -> set (false); // All bad guys have died...
 

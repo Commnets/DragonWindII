@@ -2,6 +2,317 @@
 <Entities>
 	
 	<!-- This definition rewrites what is defined in the dwentities.xml -->
+	<!-- The shootings -->
+	<SetOfEntities fromId="51000" number="110"> 
+		<Forms>
+			<Form id="50200"/>
+			<Form id="50201"/>
+			<Form id="50202"/>
+			<Form id="50203"/>
+			<Form id="50204"/>
+
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+
+			<Form id="80000"/>
+			<Form id="80001"/>
+
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+
+		</Forms>
+		<MovementsBase>
+			<Movement id="57000"/>
+			<Movement id="57500"/>
+			<Movement id="58000"/>
+			<Movement id="58500"/>
+			<Movement id="59000"/>
+		</MovementsBase>
+		<Animations>
+			<Animation id="0" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50200"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="1" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50200"/>
+					<Attribute id="INITIALASPECT" value="6"/>
+					<Attribute id="FINALASPECT" value="12"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="2" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50201"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="3" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50201"/>
+					<Attribute id="INITIALASPECT" value="6"/>
+					<Attribute id="FINALASPECT" value="12"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="4" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50202"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="5" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50202"/>
+					<Attribute id="INITIALASPECT" value="6"/>
+					<Attribute id="FINALASPECT" value="12"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="6" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50203"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="32"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="7" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50203"/>
+					<Attribute id="INITIALASPECT" value="32"/>
+					<Attribute id="FINALASPECT" value="64"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<Animation id="8" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50204"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="25"/>
+					<Attribute id="FRACTIONTOCHANGE" value="2"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+			
+			<!-- Fire ball moving to the right -->
+			<Animation id="10" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="80000"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Fire ball moving to the left -->
+			<Animation id="1" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="80001"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+			
+		</Animations>
+		<States>
+			<State id="0" animation="0" movementBase="57000"/>
+			<State id="1" animation="1" movementBase="57000"/>
+			<State id="2" animation="0" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,-100,0"/> 
+					<Attribute id="ACCELERATION" value="50,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="3" animation="1" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,-100,0"/> 
+					<Attribute id="ACCELERATION" value="-50,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="4" animation="0" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="5" animation="1" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+
+			<State id="10" animation="2" movementBase="57000"/>
+			<State id="11" animation="3" movementBase="57000"/>
+			<State id="12" animation="2" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,-100,0"/> 
+					<Attribute id="ACCELERATION" value="50,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="13" animation="3" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,-100,0"/> 
+					<Attribute id="ACCELERATION" value="-50,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="14" animation="2" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="15" animation="3" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+
+			<State id="20" animation="4" movementBase="57000"/>
+			<State id="21" animation="5" movementBase="57000"/>
+			<State id="22" animation="4" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,-100,0"/> 
+					<Attribute id="ACCELERATION" value="50,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="23" animation="5" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,-100,0"/> 
+					<Attribute id="ACCELERATION" value="-50,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="24" animation="4" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="25" animation="5" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+
+			<State id="30" animation="6" movementBase="57000"/>
+			<State id="31" animation="7" movementBase="57000"/>
+			<State id="32" animation="6" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="33" animation="7" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="34" animation="6" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="35" animation="7" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<State id="36" animation="6" movementBase="58500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="200,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="37" animation="7" movementBase="58500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-200,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<State id="38" animation="6" movementBase="59000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,100,0"/> 
+					<Attribute id="ACCELERATION" value="0,500,0"/> 
+				</Attributes>
+			</State>
+			<State id="39" animation="7" movementBase="59000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,100,0"/> 
+					<Attribute id="ACCELERATION" value="0,500,0"/> 
+				</Attributes>
+			</State>
+
+			
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+
+			<!-- Related with the ball of fire -->
+			<!-- The ball of fire can just stand, fly, or bounce, or explode -->
+			<!-- Ball of fire standing to the right -->
+			<State id="40" animation="10" movementBase="57000"/>
+			<!-- Ball of fire standing to the left -->
+			<State id="41" animation="11" movementBase="57000"/>
+			<!-- Ball of fire flying to the right -->
+			<State id="42" animation="10" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,-100,0"/> 
+					<Attribute id="ACCELERATION" value="50,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Ball of fire flying to the left -->
+			<State id="43" animation="11" movementBase="57500">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,-100,0"/> 
+					<Attribute id="ACCELERATION" value="-50,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Ball of fire bouncing to the right -->
+			<State id="44" animation="10" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Ball of fire bouncing to the left -->
+			<State id="45" animation="11" movementBase="58000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+		
+			<State id="50" animation="8" movementBase="57000"/>
+		</States>
+	</SetOfEntities>
+	
+	<!-- This definition rewrites what is defined in the dwentities.xml -->
 	<!-- Bad Guys -->
 	<SetOfEntities fromId="32000" number="10">
 		<Forms>
@@ -28,6 +339,14 @@
 			<Form id="60015"/>
 			<!-- Female Zombie Left -->
 			<Form id="60016"/>
+			<!-- Kong Right -->
+			<Form id="60020"/>
+			<!-- Kong Left -->
+			<Form id="60021"/>
+			<!-- Orcus Right -->
+			<Form id="60030"/>
+			<!-- Orcus Left -->
+			<Form id="60031"/>
 	
 <!-- ADDED FOR DRAGONWINDII THE REVENGE -->
 		</Forms>
@@ -817,7 +1136,191 @@
 					<Attribute id="LOOP" value="0"/> 
 				</Attributes>
 			</Animation>
-			<!-- Male Zombie -->
+			<!-- Female Zombie -->
+
+			<!-- Kong -->
+			<!-- Right -->
+			<!-- Standing -->
+			<Animation id="140" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60020"/>
+					<Attribute id="INITIALASPECT" value="11"/>
+					<Attribute id="FINALASPECT" value="15"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="141" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60020"/>
+					<Attribute id="INITIALASPECT" value="15"/>
+					<Attribute id="FINALASPECT" value="25"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="142" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60020"/>
+					<Attribute id="INITIALASPECT" value="6"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="143" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60020"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<Animation id="150" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60021"/>
+					<Attribute id="INITIALASPECT" value="11"/>
+					<Attribute id="FINALASPECT" value="15"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="151" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60021"/>
+					<Attribute id="INITIALASPECT" value="15"/>
+					<Attribute id="FINALASPECT" value="25"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="152" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60021"/>
+					<Attribute id="INITIALASPECT" value="6"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="153" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60021"/>
+					<Attribute id="INITIALASPECT" value="9"/>
+					<Attribute id="FINALASPECT" value="9"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Kong -->
+
+			<!-- Orcus -->
+			<!-- Right -->
+			<!-- Standing -->
+			<Animation id="160" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60030"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="12"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="161" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60030"/>
+					<Attribute id="INITIALASPECT" value="12"/>
+					<Attribute id="FINALASPECT" value="16"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="162" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60030"/>
+					<Attribute id="INITIALASPECT" value="4"/>
+					<Attribute id="FINALASPECT" value="7"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="163" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60030"/>
+					<Attribute id="INITIALASPECT" value="6"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<Animation id="170" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60031"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="12"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="171" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60031"/>
+					<Attribute id="INITIALASPECT" value="12"/>
+					<Attribute id="FINALASPECT" value="16"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="172" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60031"/>
+					<Attribute id="INITIALASPECT" value="4"/>
+					<Attribute id="FINALASPECT" value="7"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="173" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60031"/>
+					<Attribute id="INITIALASPECT" value="6"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Orcus -->
 
 <!-- ADDED FOR DRAGONWINDII THE REVENGE -->
 			
@@ -1277,7 +1780,155 @@
 			<State id="135" animation="132" movementBase="60000"/>
 			<!-- Died -->
 			<State id="136" animation="133" movementBase="60000"/>
-			<!-- Male Zombie -->
+			<!-- Female Zombie -->
+			
+			<!-- Kong -->
+			<!-- Right -->
+			<!-- Standing -->
+			<State id="140" animation="140" movementBase="60000"/>
+			<!-- Running -->
+			<State id="141" animation="141" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="142" animation="141" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="143" animation="141" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="144" animation="141" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="145" animation="142" movementBase="60000"/>
+			<!-- Died -->
+			<State id="146" animation="143" movementBase="60000"/>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<State id="150" animation="150" movementBase="60000"/>
+			<!-- Running -->
+			<State id="151" animation="151" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="152" animation="151" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="153" animation="151" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="154" animation="151" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="155" animation="152" movementBase="60000"/>
+			<!-- Died -->
+			<State id="156" animation="153" movementBase="60000"/>
+			<!-- Kong -->
+			
+			<!-- Orcus -->
+			<!-- Right -->
+			<!-- Standing -->
+			<State id="160" animation="160" movementBase="60000"/>
+			<!-- Running -->
+			<State id="161" animation="161" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="162" animation="161" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="163" animation="161" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="164" animation="161" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="165" animation="162" movementBase="60000"/>
+			<!-- Died -->
+			<State id="166" animation="163" movementBase="60000"/>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<State id="170" animation="170" movementBase="60000"/>
+			<!-- Running -->
+			<State id="171" animation="171" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="172" animation="171" movement="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="173" animation="171" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="174" animation="171" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="175" animation="172" movementBase="60000"/>
+			<!-- Died -->
+			<State id="176" animation="173" movementBase="60000"/>
+			<!-- Orcus -->
 
 <!-- ADDED FOR DRAGONWINDII THE REVENGE -->
 
@@ -1304,7 +1955,7 @@
 					<Attribute id="FORM" value="70000"/>
 					<Attribute id="INITIALASPECT" value="0"/>
 					<Attribute id="FINALASPECT" value="4"/>
-					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="FRACTIONTOCHANGE" value="7"/>
 					<Attribute id="LOOP" value="1"/>
 				</Attributes>
 			</Animation>
@@ -1314,7 +1965,7 @@
 					<Attribute id="FORM" value="70001"/>
 					<Attribute id="INITIALASPECT" value="0"/>
 					<Attribute id="FINALASPECT" value="4"/>
-					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="FRACTIONTOCHANGE" value="7"/>
 					<Attribute id="LOOP" value="1"/>
 				</Attributes>
 			</Animation>
@@ -1330,6 +1981,7 @@
 			<State id="3" animation="1" movementBase="70010"/>
 		</States>
 	</SetOfEntities>
+	<!-- Vultures -->
 	
 	<!-- Flocks of Vultures -->
 	<!-- Easy level -->
@@ -1340,8 +1992,8 @@
 			<Physic id="1" value="150"/> <!-- Acceleration -->
 		</Physics>
 		<Attributes>
-			<Attribute id="NUMBEROFMONSTERS" value="2"/>
-			<Attribute id="RADIX" value="30"/>
+			<Attribute id="NUMBEROFMONSTERS" value="1"/>
+			<Attribute id="RADIX" value="100"/>
 			<Attribute id="TIMETOMOVE" value="1"/>
 			<Attribute id="TIMEMOVING" value="30"/>
 			<Attribute id="SHOOTINGENERGY" value="1"/>
@@ -1355,8 +2007,8 @@
 			<Physic id="1" value="150"/> 
 		</Physics>
 		<Attributes>
-			<Attribute id="NUMBEROFMONSTERS" value="3"/>
-			<Attribute id="RADIX" value="60"/>
+			<Attribute id="NUMBEROFMONSTERS" value="2"/>
+			<Attribute id="RADIX" value="100"/>
 			<Attribute id="TIMETOMOVE" value="0.5"/>
 			<Attribute id="TIMEMOVING" value="30"/>
 			<Attribute id="SHOOTINGENERGY" value="1"/>
@@ -1372,8 +2024,8 @@
 			<Physic id="1" value="150"/> 
 		</Physics>
 		<Attributes>
-			<Attribute id="NUMBEROFMONSTERS" value="3"/>
-			<Attribute id="RADIX" value="60"/>
+			<Attribute id="NUMBEROFMONSTERS" value="2"/>
+			<Attribute id="RADIX" value="100"/>
 			<Attribute id="TIMETOMOVE" value="0.5"/>
 			<Attribute id="TIMEMOVING" value="20"/>
 			<Attribute id="SHOOTINGENERGY" value="1"/>
@@ -1387,8 +2039,8 @@
 			<Physic id="1" value="150"/> 
 		</Physics>
 		<Attributes>
-			<Attribute id="NUMBEROFMONSTERS" value="5"/>
-			<Attribute id="RADIX" value="60"/>
+			<Attribute id="NUMBEROFMONSTERS" value="3"/>
+			<Attribute id="RADIX" value="100"/>
 			<Attribute id="TIMETOMOVE" value="0.5"/>
 			<Attribute id="TIMEMOVING" value="10"/>
 			<Attribute id="SHOOTINGENERGY" value="1"/>
@@ -1404,8 +2056,8 @@
 			<Physic id="1" value="150"/> 
 		</Physics>
 		<Attributes>
-			<Attribute id="NUMBEROFMONSTERS" value="7"/>
-			<Attribute id="RADIX" value="80"/>
+			<Attribute id="NUMBEROFMONSTERS" value="3"/>
+			<Attribute id="RADIX" value="100"/>
 			<Attribute id="TIMETOMOVE" value="0.5"/>
 			<Attribute id="TIMEMOVING" value="15"/>
 			<Attribute id="SHOOTINGENERGY" value="2"/>
@@ -1419,14 +2071,300 @@
 			<Physic id="1" value="150"/> 
 		</Physics>
 		<Attributes>
-			<Attribute id="NUMBEROFMONSTERS" value="10"/>
-			<Attribute id="RADIX" value="80"/>
+			<Attribute id="NUMBEROFMONSTERS" value="4"/>
+			<Attribute id="RADIX" value="120"/>
 			<Attribute id="TIMETOMOVE" value="0.5"/>
-			<Attribute id="TIMEMOVING" value="7"/>
+			<Attribute id="TIMEMOVING" value="15"/>
 			<Attribute id="SHOOTINGENERGY" value="2"/>
 			<Attribute id="DIEWHENHIT" value="NO"/>
 		</Attributes>
 	</CompositeEntity>
 	<!-- Flocks of Vultures -->
+	
+	<!-- Wasp -->
+	<SetOfEntities fromId="61000" number="10">
+		<Forms>
+			<Form id="70002"/>
+			<Form id="70003"/>
+		</Forms>
+		<MovementsBase>
+			<Movement id="71000"/>
+			<Movement id="71010"/>
+		</MovementsBase>
+		<Animations>
+			<!-- Moving and looking to the right -->
+			<Animation id="0" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="70002"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="8"/>
+					<Attribute id="FRACTIONTOCHANGE" value="4"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Moving and looking to the left -->
+			<Animation id="1" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="70003"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="8"/>
+					<Attribute id="FRACTIONTOCHANGE" value="4"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+		</Animations>
+		<States>
+			<!-- Flying to the right -->
+			<State id="0" animation="0" movementBase="71000"/>
+			<!-- Standing and looking to the right -->
+			<State id="1" animation="0" movementBase="71010"/>
+			<!-- Flying to the left -->
+			<State id="2" animation="1" movementBase="71000"/>
+			<!-- Standing and looking to the left -->
+			<State id="3" animation="1" movementBase="71010"/>
+		</States>
+	</SetOfEntities>
+	<!-- Wasp -->
+	
+	<!-- Flocks of Wasps -->
+	<!-- Easy level -->
+	<CompositeEntity id="61120">
+		<RefSetOfEntities fromId="61000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> <!-- Max speed -->
+			<Physic id="1" value="150"/> <!-- Acceleration -->
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="2"/>
+			<Attribute id="RADIX" value="40"/>
+			<Attribute id="TIMETOMOVE" value="1"/>
+			<Attribute id="TIMEMOVING" value="30"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="YES"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="61121">
+		<RefSetOfEntities fromId="61000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="3"/>
+			<Attribute id="RADIX" value="40"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="30"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="YES"/>
+		</Attributes>
+	</CompositeEntity>
+
+	<!-- Medium level -->
+	<CompositeEntity id="61122">
+		<RefSetOfEntities fromId="61000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="3"/>
+			<Attribute id="RADIX" value="60"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="20"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="YES"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="61123">
+		<RefSetOfEntities fromId="61000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="4"/>
+			<Attribute id="RADIX" value="60"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="10"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="YES"/>
+		</Attributes>
+	</CompositeEntity>
+
+	<!-- Difficult level -->
+	<CompositeEntity id="61124">
+		<RefSetOfEntities fromId="61000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="4"/>
+			<Attribute id="RADIX" value="80"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="15"/>
+			<Attribute id="SHOOTINGENERGY" value="2"/>
+			<Attribute id="DIEWHENHIT" value="YES"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="61125">
+		<RefSetOfEntities fromId="61000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="5"/>
+			<Attribute id="RADIX" value="80"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="15"/>
+			<Attribute id="SHOOTINGENERGY" value="2"/>
+			<Attribute id="DIEWHENHIT" value="YES"/>
+		</Attributes>
+	</CompositeEntity>
+	<!-- Flocks of Wasps -->
+	
+	<!-- Bats -->
+	<SetOfEntities fromId="62000" number="10">
+		<Forms>
+			<Form id="70004"/>
+			<Form id="70005"/>
+		</Forms>
+		<MovementsBase>
+			<Movement id="72000"/>
+			<Movement id="72010"/>
+		</MovementsBase>
+		<Animations>
+			<!-- Moving and looking to the right -->
+			<Animation id="0" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="70004"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="6"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Moving and looking to the left -->
+			<Animation id="1" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="70005"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="6"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+		</Animations>
+		<States>
+			<!-- Flying to the right -->
+			<State id="0" animation="0" movementBase="72000"/>
+			<!-- Standing and looking to the right -->
+			<State id="1" animation="0" movementBase="72010"/>
+			<!-- Flying to the left -->
+			<State id="2" animation="1" movementBase="72000"/>
+			<!-- Standing and looking to the left -->
+			<State id="3" animation="1" movementBase="72010"/>
+		</States>
+	</SetOfEntities>
+	<!-- Bats -->
+	
+	<!-- Flocks of Bats -->
+	<!-- Easy level -->
+	<CompositeEntity id="62120">
+		<RefSetOfEntities fromId="62000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> <!-- Max speed -->
+			<Physic id="1" value="150"/> <!-- Acceleration -->
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="2"/>
+			<Attribute id="RADIX" value="40"/>
+			<Attribute id="TIMETOMOVE" value="1"/>
+			<Attribute id="TIMEMOVING" value="30"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="62121">
+		<RefSetOfEntities fromId="62000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="3"/>
+			<Attribute id="RADIX" value="40"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="30"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+
+	<!-- Medium level -->
+	<CompositeEntity id="62122">
+		<RefSetOfEntities fromId="62000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="3"/>
+			<Attribute id="RADIX" value="60"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="20"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="62123">
+		<RefSetOfEntities fromId="62000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="4"/>
+			<Attribute id="RADIX" value="60"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="10"/>
+			<Attribute id="SHOOTINGENERGY" value="1"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+
+	<!-- Difficult level -->
+	<CompositeEntity id="62124">
+		<RefSetOfEntities fromId="62000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="4"/>
+			<Attribute id="RADIX" value="80"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="15"/>
+			<Attribute id="SHOOTINGENERGY" value="2"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+	<CompositeEntity id="62125">
+		<RefSetOfEntities fromId="62000" number="10"/>
+		<Physics>
+			<Physic id="0" value="200"/> 
+			<Physic id="1" value="150"/> 
+		</Physics>
+		<Attributes>
+			<Attribute id="NUMBEROFMONSTERS" value="5"/>
+			<Attribute id="RADIX" value="80"/>
+			<Attribute id="TIMETOMOVE" value="0.5"/>
+			<Attribute id="TIMEMOVING" value="15"/>
+			<Attribute id="SHOOTINGENERGY" value="2"/>
+			<Attribute id="DIEWHENHIT" value="NO"/>
+		</Attributes>
+	</CompositeEntity>
+	<!-- Flocks of Wasps -->
 
 </Entities>

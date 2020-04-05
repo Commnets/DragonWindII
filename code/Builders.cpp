@@ -10,8 +10,25 @@ QGAMES::Entity* DragonTheRevenge::EntityBuilder::createEntity (const QGAMES::Ent
 {
 	QGAMES::Entity* result = NULL;
 
+	QGAMES::Entity::Data dt;
+	dt._capacities = def._capacities;
+	dt._physics = def._physics;
+	dt._parameters = def._parameters;
+
+	if (def._id >= __DRAGONWIND_SHOOTINGBASEID__ && 
+		def._id < (__DRAGONWIND_SHOOTINGBASEID__ + __DRAGONWIND_MAXNUMBEROFSHOOTINGS__))
+		result = new DragonTheRevenge::Shooting (def._id, QGAMES::Forms (), dt);
+	else
 	if (def._id >= __DRAGONWINDTHEREVENGE_VULTUREBASEID__ &&
 		def._id < (__DRAGONWINDTHEREVENGE_VULTUREBASEID__ + __DRAGONWIND_MAXNUMBEROFFLYMONSTERSFLOCK__))
+		result = new DRAGONWIND::FlyingMonster (def._id);
+	else
+	if (def._id >= __DRAGONWINDTHEREVENGE_WASPBASEID__ &&
+		def._id < (__DRAGONWINDTHEREVENGE_WASPBASEID__ + __DRAGONWIND_MAXNUMBEROFFLYMONSTERSFLOCK__))
+		result = new DRAGONWIND::FlyingMonster (def._id);
+	else
+	if (def._id >= __DRAGONWINDTHEREVENGE_BATBASEID__ &&
+		def._id < (__DRAGONWINDTHEREVENGE_BATBASEID__ + __DRAGONWIND_MAXNUMBEROFFLYMONSTERSFLOCK__))
 		result = new DRAGONWIND::FlyingMonster (def._id);
 	else
 		result = DRAGONWIND::EntityBuilder::createEntity (def);
@@ -35,10 +52,17 @@ QGAMES::CompositeEntity* DragonTheRevenge::EntityBuilder::createCompositeEntity
 	dt._physics = def._physics;
 	dt._parameters = def._parameters;
 
-	// Creates the bees
 	if (def._id >= __DRAGONWINDTHEREVENGE_FLOACKOFVULTUREBASE__ &&
 		def._id < (__DRAGONWINDTHEREVENGE_FLOACKOFVULTUREBASE__ + __DRAGONWIND_MAXNUMBEROFFLOACKS__))
 		result = new DragonTheRevenge::FlockOfVultures (def._id, etiesClone, dt);
+	else
+	if (def._id >= __DRAGONWINDTHEREVENGE_FLOACKOFWASPBASE__ &&
+		def._id < (__DRAGONWINDTHEREVENGE_FLOACKOFWASPBASE__ + __DRAGONWIND_MAXNUMBEROFFLOACKS__))
+		result = new DragonTheRevenge::FlockOfWasps (def._id, etiesClone, dt);
+	else
+	if (def._id >= __DRAGONWINDTHEREVENGE_FLOACKOFBATBASE__ &&
+		def._id < (__DRAGONWINDTHEREVENGE_FLOACKOFBATBASE__ + __DRAGONWIND_MAXNUMBEROFFLOACKS__))
+		result = new DragonTheRevenge::FlockOfBats (def._id, etiesClone, dt);
 	else
 		result = DRAGONWIND::EntityBuilder::createCompositeEntity (def);
 
@@ -63,6 +87,22 @@ QGAMES::Movement* DragonTheRevenge::MovementBuilder::createMovement
 	else
 	if (def._id >= __DRAGONWINDTHEREVENGE_VULTURESTANDMOVEMENTBASEID__ && 
 		def._id < (__DRAGONWINDTHEREVENGE_VULTURESTANDMOVEMENTBASEID__ + __DRAGONWIND_MAXNUMBEROFFLYMONSTERSFLOCK__))
+		result = new QGAMES::NoMovement (def._id, def._variables);
+	else
+	if (def._id >= __DRAGONWINDTHEREVENGE_WASPFLYMOVEMENTBASEID__ && 
+		def._id < (__DRAGONWINDTHEREVENGE_WASPFLYMOVEMENTBASEID__ + __DRAGONWIND_MAXNUMBEROFFLYMONSTERSFLOCK__))
+		result = new QGAMES::IncrementalLinearMovement (def._id, def._variables);
+	else
+	if (def._id >= __DRAGONWINDTHEREVENGE_WASPSTANDMOVEMENTBASEID__ && 
+		def._id < (__DRAGONWINDTHEREVENGE_WASPSTANDMOVEMENTBASEID__ + __DRAGONWIND_MAXNUMBEROFFLYMONSTERSFLOCK__))
+		result = new QGAMES::NoMovement (def._id, def._variables);
+	else
+	if (def._id >= __DRAGONWINDTHEREVENGE_BATFLYMOVEMENTBASEID__ && 
+		def._id < (__DRAGONWINDTHEREVENGE_BATFLYMOVEMENTBASEID__ + __DRAGONWIND_MAXNUMBEROFFLYMONSTERSFLOCK__))
+		result = new QGAMES::IncrementalLinearMovement (def._id, def._variables);
+	else
+	if (def._id >= __DRAGONWINDTHEREVENGE_BATSTANDMOVEMENTBASEID__ && 
+		def._id < (__DRAGONWINDTHEREVENGE_BATSTANDMOVEMENTBASEID__ + __DRAGONWIND_MAXNUMBEROFFLYMONSTERSFLOCK__))
 		result = new QGAMES::NoMovement (def._id, def._variables);
 	else
 		result = DRAGONWIND::MovementBuilder::createMovement (def);

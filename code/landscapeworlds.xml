@@ -10,7 +10,7 @@
 					<!-- Vultures -->
 					<Action id="70030">
 						<Attributes>
-							<Attribute id="TypeOfMonster" value="2"/> 
+							<Attribute id="TypeOfMonster" value="4"/> 
 							<Attribute id="TimeToAppear" value="0"/> 
 						</Attributes>
 					</Action>
