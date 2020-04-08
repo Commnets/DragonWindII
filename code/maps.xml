@@ -4,6 +4,10 @@
 	<!-- Includes related with the library -->
 	<Include file="dwmaps.xml"/>
 	
+	<!-- new background maps --> 
+	<Map id="80130" type="10000" file="maps/BKLandscapeWithCave.xml"/>
+	<Map id="80136" type="10000" file="maps/BKCave.xml"/>
+	
 	<!-- Includes for this game -->
 	<Include file="citymaps.xml"/>
 	<Include file="landscapemaps.xml"/>

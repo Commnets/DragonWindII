@@ -122,7 +122,7 @@
 				</Attributes>
 			</Animation>
 			<!-- Fire ball moving to the left -->
-			<Animation id="1" type="0">
+			<Animation id="11" type="0">
 				<Attributes>
 					<Attribute id="FORM" value="80001"/>
 					<Attribute id="INITIALASPECT" value="0"/>

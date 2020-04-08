@@ -31,6 +31,7 @@ void DragonTheRevenge::CityScene1::initialize ()
 			std::find (tM.begin (), tM.end (), ((DRAGONWIND::BadGuy*) ((*i).second)) -> definition () -> _type) != tM.end ())
 			_theBadGuysToKill [(*i).first] = (*i).second; // The three elements to die...
 
+	// Which are the layers involved in the moat?
 	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
 	assert (pM); // Just in case...
 	_layersMoat [0] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Solid_Moat")));

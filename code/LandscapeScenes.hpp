@@ -62,6 +62,31 @@ namespace DragonTheRevenge
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
+
+		private:
+		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
+		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
+							{ return (new OnOffSwitches ()); }
+
+		/** To know whether the left / right removeable walls are or not visible. */
+		bool isLeftWallVisible ();
+		bool isRightWallVisible ();
+		/** To hide or show the left / right wall. */
+		void showLeftWall (bool a);
+		void showRightWall (bool a);
+
+		/** @see parent. */
+		virtual void explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx = __BD 50);
+
+		private:
+		// Implementation
+		/** A reference to the layers with the information to hide or show. */
+		QGAMES::TileLayers _layersLeftWall;
+		QGAMES::TileLayers _layersRightWall;
+
+		static const int _SWITCHTOSHOWLEFTWALL = 0;
+		static const int _SWITCHTOSHOWRIGHTWALL = 1;
 	};
 
 	/** LandscapeWorld Scene 2 */

@@ -5,7 +5,7 @@
 	<Include file="ptmonitor.xml"/>
 	
 	<!-- Simple step: 
-		 Just stands for ever looking to the right (left is defined in dwmonitor.xml) -->
+		 Just stands for ever looking to the right -->
 	<Monitor id="50000" cyclic="NO">
 		<!-- Single step: Staying -->
 		<Step type="50000">
@@ -84,7 +84,7 @@
 	</Monitor>
 	
 	<!-- Simple step: 
-		 Just stands for ever looking to the right (left is defined in dwmonitor.xml) -->
+		 Just stands for ever looking to the left -->
 	<Monitor id="50002" cyclic="NO">
 		<!-- 1: To stand for ever -->
 		<Step type="50000">

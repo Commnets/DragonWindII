@@ -7,40 +7,302 @@
 			<!-- LandscapeWorld0 -->
 			<Scene id="70000">
 				<Actions>
-					<!-- Vultures -->
+					<!-- Flying Monsters -->
+					<!-- WaspBees -->
 					<Action id="70030">
 						<Attributes>
-							<Attribute id="TypeOfMonster" value="4"/> 
+							<Attribute id="TypeOfMonster" value="3"/> 
 							<Attribute id="TimeToAppear" value="0"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Monsters -->
+					<!-- Block 1 -->
+					<Action id="71070"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="2"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					<!-- Block 2 -->
+					<Action id="71071"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50000"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="0.5"/>
+							<Attribute id="SecondsFiring" value="5"/>
+						</Attributes>
+					</Action>
+					<!-- Block 3 -->
+					<Action id="71072"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="6"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
+							<Attribute id="SecondsFiring" value="1"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Environment Condition -->
+					<Action id="72060">
+						<Attributes>
+							<Attribute id="TypeCondition" value="0"/> 
+							<Attribute id="SecondsToStart" value="0"/>
+							<Attribute id="SecondsCondition" value="-1"/> 
+							<Attribute id="ThundersProbability" value="75"/>
+							<Attribute id="ThundersFrecuency" value="2"/>
 						</Attributes>
 					</Action>
 				</Actions>
 				
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
-					<Attribute id="NAME" value="Enjoy the travel"/>
+					<Attribute id="NAME" value="Enjoy the sight"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="50002"/> 
 					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
 				</Attributes>
 				
 				<Conexions>
+					<Conexion id="0" with="70001" at="0"/>
 				</Conexions>
 
 				<Maps>
-					<Map id="50130" file="maps/BKCity.xml"/>
+					<Map id="50130" file="maps/BKLandscape.xml"/>
+					<Map id="80130" file="maps/BKLandscapeWithCave.xml"/>
 					<Map id="70000" file="maps/LandscapeWorld0.tmx"/>
 				</Maps>
 
 				<Entities>
 					<Entity id="50100" layer="Ladder_1"/> 
 					<Entity id="50101" layer="Ladder_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Ladder_1"/>
 					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
 					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
-					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/>
-					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+		
+			<!-- LandscapeWorld1 -->
+			<Scene id="70001">
+				<Actions>
+					<!-- Flying Monsters -->
+					<!-- WaspBees -->
+					<Action id="70035">
+						<Attributes>
+							<Attribute id="TypeOfMonster" value="3"/> 
+							<Attribute id="TimeToAppear" value="0"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Monsters -->
+					<!-- Block 1 -->
+					<Action id="71080"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
+							<Attribute id="SecondsFiring" value="5"/>
+						</Attributes>
+					</Action>
+					<!-- Block 2 -->
+					<Action id="71081"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50000"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="2"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					<!-- Block 3 -->
+					<Action id="71082"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="2.5"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					<!-- Block 4 -->
+					<Action id="71083"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50000"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					<!-- Block 5 -->
+					<Action id="71084"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="3.5"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					<!-- Block 6 -->
+					<Action id="71085"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50000"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					<!-- Block 7 -->
+					<Action id="71086"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Environment Condition -->
+					<Action id="72065">
+						<Attributes>
+							<Attribute id="TypeCondition" value="0"/> 
+							<Attribute id="SecondsToStart" value="0"/>
+							<Attribute id="SecondsCondition" value="-1"/> 
+							<Attribute id="ThundersProbability" value="75"/>
+							<Attribute id="ThundersFrecuency" value="2"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Go down for it"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50002"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="2" with="70002" at="0"/>
+					<Conexion id="1" with="70003" at="0"/>
+					<Conexion id="0" with="70004" at="0"/>
+				</Conexions>
+
+				<Maps>
+					<Map id="50130" file="maps/BKLandscape.xml"/>
+					<Map id="80130" file="maps/BKLandscapeWithCave.xml"/>
+					<Map id="70001" file="maps/LandscapeWorld1.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Ladder_1"/> 
+					<Entity id="50101" layer="Ladder_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Ladder_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+		
+			<!-- LandscapeWorld2 -->
+			<Scene id="70002">
+				<Actions>
+					<!-- Flying Monsters -->
+					<!-- WaspBees -->
+					<Action id="70040">
+						<Attributes>
+							<Attribute id="TypeOfMonster" value="3"/> 
+							<Attribute id="TimeToAppear" value="0"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Monsters -->
+					<!-- Block 1 -->
+					<Action id="71090"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50000"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="2"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="5"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Catch the gift"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50002"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="70001" at="2"/>
+				</Conexions>
+
+				<Maps>
+					<Map id="50130" file="maps/BKLandscape.xml"/>
+					<Map id="80136" file="maps/BKCave.xml"/>
+					<Map id="70002" file="maps/LandscapeWorld2.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Base_5"/> 
+					<Entity id="50101" layer="Base_5"/>
+					<SetOfEntities fromId="51000" number="110" layer="Base_5"/>
+					<SetOfEntities fromId="30000" number="200" layer="Base_5"/>
+					<SetOfEntities fromId="31000" number="200" layer="Base_5"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Base_5"/>
 				</Entities>
 			</Scene>
 			<!-- -->

@@ -61,13 +61,23 @@
 				</Maps>
 
 				<Entities>
+					<!-- Ninja:
+						 Base_lake is the bottom of the swimmingpools and it must be on top of everything (to resalt the limit) 
+						 Liquid_1 must be also over ninja to transmit the feeling of swimming -->
 					<Entity id="50100" layer="Ladder_1"/> 
 					<Entity id="50101" layer="Ladder_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<!-- Shooting: They are part of the ninja -->
+					<SetOfEntities fromId="51000" number="110" layer="Ladder_1"/>
+					<!-- Food & Things: They behave like ninja -->
 					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
 					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
-					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/>
-					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/>
+					<!-- Flying monsters: The move over all -->
+					<SetOfEntities fromId="50110" number="10" layer="ArmourFront_1"/> <!-- Bees -->
+					<SetOfEntities fromId="50120" number="10" layer="ArmourFront_1"/> <!-- Birds -->
+					<SetOfEntities fromId="60000" number="10" layer="ArmourFront_1"/> <!-- Vultures -->
+					<SetOfEntities fromId="61000" number="10" layer="ArmourFront_1"/> <!-- Wasps -->
+					<SetOfEntities fromId="62000" number="10" layer="ArmourFront_1"/> <!-- Bats -->
+					<!-- Bad Guys: Like ninja -->
 					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
 				</Entities>
 			</Scene>
@@ -165,12 +175,15 @@
 
 				<Entities>
 					<Entity id="50100" layer="Ladder_1"/> 
-					<Entity id="50101" layer="Ladder_1"/> 
-					<SetOfEntities fromId="51000" number="110" layer="Solid_Moat"/> 
+					<Entity id="50101" layer="Ladder_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Ladder_1"/>
 					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
-					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/> 
+					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
 				</Entities>
 			</Scene>
@@ -267,13 +280,16 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Ladder_1"/>
+					<Entity id="50100" layer="Ladder_1"/> 
 					<Entity id="50101" layer="Ladder_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Ladder_1"/>
 					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
 					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
-					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/>
-					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="Solid_1"/> 
 					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
 				</Entities>
 			</Scene>
@@ -369,13 +385,16 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Ladder_1"/>
+					<Entity id="50100" layer="Ladder_1"/> 
 					<Entity id="50101" layer="Ladder_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Ladder_1"/>
 					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
 					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
-					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/>
-					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
 				</Entities>
 			</Scene>
@@ -436,14 +455,17 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Ladder_1"/>
-					<Entity id="50101" layer="Ladder_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
-					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
-					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
-					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/>
-					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/>
-					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
+					<Entity id="50100" layer="Base_1"/> 
+					<Entity id="50101" layer="Base_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Base_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Base_1"/>
 				</Entities>
 			</Scene>
 			<!-- -->
