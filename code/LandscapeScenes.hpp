@@ -15,6 +15,7 @@
 #define __DRAGONWINDTHEREVENGE_LANDSCAPESCENES__
 
 #include <DragonwindLike/dwinclude.hpp>
+#include "Entities.hpp"
 #include "Defs.hpp"
 
 namespace DragonTheRevenge
@@ -57,7 +58,10 @@ namespace DragonTheRevenge
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: LandscapeScene (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1ID__, m, cn, p, ePL)
+			: LandscapeScene (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1ID__, m, cn, p, ePL),
+			  _layersLeftWall (), _layersRightWall (),
+			  _gorilla (NULL), 
+			  _gorillaActionBlock (NULL)
 							{ }
 
 		/** @see parent. */
@@ -86,6 +90,9 @@ namespace DragonTheRevenge
 		/** A reference to the layers with the information to hide or show. */
 		QGAMES::TileLayers _layersLeftWall;
 		QGAMES::TileLayers _layersRightWall;
+		/** A reference to the gorilla and the action block controlling it. */
+		DRAGONWIND::BadGuysActionBlock* _gorillaActionBlock;
+		DRAGONWIND::BadGuy* _gorilla;
 
 		static const int _SWITCHTOSHOWLEFTWALL = 0;
 		static const int _SWITCHTOSHOWRIGHTWALL = 1;

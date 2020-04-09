@@ -37,6 +37,11 @@ void DragonTheRevenge::LandscapeScene1::initialize ()
 	assert (_layersLeftWall [0] && _layersLeftWall [1] && 
 			_layersRightWall [0] && _layersRightWall [1]);
 
+	_gorilla = firstBadGuyType (__DRAGONWIND_KONGTYPEID__);
+	assert (_gorilla);
+	_gorillaActionBlock = actionBlockControlling (_gorilla);
+	assert (_gorillaActionBlock);
+
 	reStartAllOnOffSwitches ();
 
 	showLeftWall (onOffSwitch (_SWITCHTOSHOWLEFTWALL) -> isOn ());
@@ -48,13 +53,11 @@ void DragonTheRevenge::LandscapeScene1::updatePositions ()
 {
 	DragonTheRevenge::LandscapeScene::updatePositions ();
 
-	// Has the left wall to be shown or not?
 	if (onOffSwitch (_SWITCHTOSHOWLEFTWALL) -> isOn () && !isLeftWallVisible ())
 		showLeftWall (true);
 	if (!onOffSwitch (_SWITCHTOSHOWLEFTWALL) -> isOn () && isLeftWallVisible ())
 		showLeftWall (false);
 
-	// Same question but with the one on the right...
 	if (onOffSwitch (_SWITCHTOSHOWRIGHTWALL) -> isOn () && !isRightWallVisible ())
 		showRightWall (true);
 	if (!onOffSwitch (_SWITCHTOSHOWRIGHTWALL) -> isOn () && isRightWallVisible ())
@@ -62,8 +65,13 @@ void DragonTheRevenge::LandscapeScene1::updatePositions ()
 
 	// If the coin in the scene?
 	// If it is, the gorilla should move close to it and leave the portal empty!
-	if (isThingVisible (__DRAGONWIND_NINJATHINGCOINTYPE__))
+	if (isThingVisible (__DRAGONWIND_NINJATHINGCOINTYPE__) && _gorilla -> stepsMonitor () != NULL &&
+		_gorilla -> stepsMonitor () -> id () != __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__)
 	{
+		_gorilla -> addControlStepsMonitor 
+			(game () -> characterMonitorBuilder () -> monitorFor 
+				(__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__, _gorilla));
+		_gorillaActionBlock -> properties ()-> _monitorId = __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__;
 	}
 }
 

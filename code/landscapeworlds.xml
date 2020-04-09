@@ -118,7 +118,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="2"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
@@ -132,7 +132,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="2.5"/>
+							<Attribute id="SecondsToFire" value="3"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
@@ -144,7 +144,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="2.5"/>
+							<Attribute id="SecondsToFire" value="3"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
@@ -156,7 +156,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="2.5"/>
+							<Attribute id="SecondsToFire" value="3"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
@@ -168,7 +168,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="2.5"/>
+							<Attribute id="SecondsToFire" value="3"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
@@ -180,7 +180,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="2.5"/>
+							<Attribute id="SecondsToFire" value="3"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
@@ -192,7 +192,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="2.5"/>
+							<Attribute id="SecondsToFire" value="3"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
