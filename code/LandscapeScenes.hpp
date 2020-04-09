@@ -76,7 +76,9 @@ namespace DragonTheRevenge
 		void showLeftWall (bool a);
 		void showRightWall (bool a);
 
-		/** @see parent. */
+		/** @see parent. 
+			When the explosion happens the walls (right / left) could be destroyed too, 
+			cleaning up the way to interesting lateral caves. */
 		virtual void explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx = __BD 50);
 
 		private:

@@ -93,6 +93,12 @@
     <ClInclude Include="ActionBlolcks.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="DarkForestScenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="DarkForestWorlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -130,6 +136,12 @@
     </ClCompile>
     <ClCompile Include="ActionBlocks.cpp">
       <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="DarkForestScenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="DarkForestWorlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

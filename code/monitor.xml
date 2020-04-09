@@ -126,7 +126,7 @@
 		</Step>
 	</Monitor>
 	
-	<!-- Jumping and Jumping looking to the left --> 
+	<!-- Jumping with a random impulse and looking to the left --> 
 	<Monitor id="50006" cyclic="YES">
 		<!-- 1: To stand for a while -->
 		<Step type="50000">
@@ -142,6 +142,85 @@
 			<Variable id="Direction" value="1"/>
 			<Variable id="Impulse" value="-2"/> <!-- Normal impulse -->
 			<!-- Time makes no sense when jumping -->
+		</Step>
+	</Monitor>
+	
+	<!-- Jumping with a random impulse and looking to the right --> 
+	<Monitor id="50007" cyclic="YES">
+		<!-- 1: To stand for a while -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> <!-- Means standing -->
+			<Variable id="Direction" value="0"/> <!-- Meaning to the right -->
+			<!-- Impulse is not neceesary when standing -->
+			<Variable id="Seconds" value="1.0"/> <!-- Seconds -->
+		</Step>
+		
+		<!-- 2: Jump -->
+		<Step type="50000">
+			<Variable id="Type" value="2"/> <!-- Means Jump  -->
+			<Variable id="Direction" value="1"/>
+			<Variable id="Impulse" value="-2"/> <!-- Normal impulse -->
+			<!-- Time makes no sense when jumping -->
+		</Step>
+	</Monitor>
+	
+	<!-- Simple step: This is used in one of the caves -->
+	<Monitor id="50008" cyclic="YES">
+		<!-- 1: To stand nothing -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> <!-- Means standing -->
+			<Variable id="Direction" value="1"/> <!-- Meaning to the left -->
+			<!-- Impulse is not neceesary when standing -->
+			<Variable id="Seconds" value="0.0"/> <!-- Seconds -->
+		</Step>
+		
+		<!-- 2: Run -->
+		<Step type="50000">
+			<Variable id="Type" value="3"/> <!-- Means running -->
+			<Variable id="Direction" value="1"/>
+			<Variable id="Impulse" value="2"/> <!-- Quick -->
+			<Variable id="Seconds" value="0"/> <!-- Just finishes when starts -->
+		</Step>
+		
+		<!-- 3: Maintains the previous state for a distance -->
+		<Step type="8">
+			<Variable id="Point" value="816,-1,-1"/> <!-- It won't be ever this one... -->
+			<Variable id="Distance" value="6"/> <!-- It has to be close to the pixels really advanced per loop -->
+		</Step>
+		
+		<!-- 4: Stands looking to the left -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> 
+			<Variable id="Direction" value="1"/> 
+			<Variable id="Seconds" value="3.0"/>
+		</Step>
+		
+		<!-- 5: Turn around -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> 
+			<Variable id="Direction" value="0"/> 
+			<Variable id="Seconds" value="0.0"/>
+		</Step>
+		
+		<!-- 6: Runs but now to the right -->
+		<Step type="50000">
+			<Variable id="Type" value="3"/> 
+			<Variable id="Direction" value="0"/>
+			<Variable id="Impulse" value="1"/> <!-- Slower -->
+			<Variable id="Seconds" value="0"/> 
+		</Step>
+		
+		<!-- 7: Again, keep the situation for a distance -->
+		<Step type="8">
+			<Variable id="Point" value="1536,-1,-1"/> 
+			<Variable id="Distance" value="6"/> 
+		</Step>
+		
+		<!-- 8: Stands nothing finally  -->
+		<Step type="50000">
+			<Variable id="Type" value="0"/> 
+			<Variable id="Direction" value="0"/> 
+			<Variable id="Seconds" value="0.0"/>
 		</Step>
 	</Monitor>
 	

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Maps>
+
+	<World id="50003">
+		<Scenes>
+		
+			<!-- DarkForestWorld0 -->
+			<Scene id="80000">
+				<Actions>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Look carefully"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50008"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+				</Conexions>
+
+				<Maps>
+					<Map id="50110" file="maps/BKDarkForest.xml"/>
+					<Map id="80000" file="maps/DarkForestWorld0.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Ladder_1"/> 
+					<Entity id="50101" layer="Ladder_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Ladder_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+			
+		</Scenes>
+		<Attributes>
+			<Attribute id="NAME" value="The dark forest"/>
+		</Attributes>
+	</World>
+	
+</Maps>

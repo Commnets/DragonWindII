@@ -92,6 +92,8 @@
     <ClInclude Include="Builders.hpp" />
     <ClInclude Include="CityScenes.hpp" />
     <ClInclude Include="CityWorlds.hpp" />
+    <ClInclude Include="DarkForestScenes.hpp" />
+    <ClInclude Include="DarkForestWorlds.hpp" />
     <ClInclude Include="Defs.hpp" />
     <ClInclude Include="doxy.hpp" />
     <ClInclude Include="Entities.hpp" />
@@ -109,6 +111,8 @@
     <ClCompile Include="Builders.cpp" />
     <ClCompile Include="CityScenes.cpp" />
     <ClCompile Include="CityWorlds.cpp" />
+    <ClCompile Include="DarkForestScenes.cpp" />
+    <ClCompile Include="DarkForestWorlds.cpp" />
     <ClCompile Include="Entities.cpp" />
     <ClCompile Include="LandscapeScenes.cpp" />
     <ClCompile Include="LandscapeWorlds.cpp" />

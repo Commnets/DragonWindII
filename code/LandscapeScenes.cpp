@@ -48,15 +48,23 @@ void DragonTheRevenge::LandscapeScene1::updatePositions ()
 {
 	DragonTheRevenge::LandscapeScene::updatePositions ();
 
+	// Has the left wall to be shown or not?
 	if (onOffSwitch (_SWITCHTOSHOWLEFTWALL) -> isOn () && !isLeftWallVisible ())
 		showLeftWall (true);
 	if (!onOffSwitch (_SWITCHTOSHOWLEFTWALL) -> isOn () && isLeftWallVisible ())
 		showLeftWall (false);
 
+	// Same question but with the one on the right...
 	if (onOffSwitch (_SWITCHTOSHOWRIGHTWALL) -> isOn () && !isRightWallVisible ())
 		showRightWall (true);
 	if (!onOffSwitch (_SWITCHTOSHOWRIGHTWALL) -> isOn () && isRightWallVisible ())
 		showRightWall (false);
+
+	// If the coin in the scene?
+	// If it is, the gorilla should move close to it and leave the portal empty!
+	if (isThingVisible (__DRAGONWIND_NINJATHINGCOINTYPE__))
+	{
+	}
 }
 
 // ---
@@ -122,6 +130,10 @@ void DragonTheRevenge::LandscapeScene3::initialize ()
 	setMap (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE3MAPID__);
 
 	DragonTheRevenge::LandscapeScene::initialize ();
+
+	setBackgroundMap (__DRAGONWINDTHEREVENGE_CAVEWORLDBKMAPID__);
+	backgroundMap () -> initialize ();
+	backgroundMap () -> stop ();
 }
 
 // ---

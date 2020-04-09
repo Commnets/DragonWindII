@@ -7,5 +7,6 @@
 	<!-- Includes related with this game -->
 	<Include file="cityworlds.xml"/>
 	<Include file="landscapeworlds.xml"/>
+	<Include file="darkforestworlds.xml"/>
 	
 </Worlds>

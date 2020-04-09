@@ -34,11 +34,11 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="3"/>
-							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="10"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1.5"/>
+							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
 				</Actions>
@@ -197,7 +197,7 @@
 					<Action id="70015">
 						<Attributes>
 							<Attribute id="TypeOfMonster" value="1"/> 
-							<Attribute id="TimeToAppear" value="0"/> 
+							<Attribute id="TimeToAppear" value="2"/> 
 						</Attributes>
 					</Action>
 					
@@ -224,7 +224,7 @@
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="4"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
-							<Attribute id="SecondsFiring" value="5"/>
+							<Attribute id="SecondsFiring" value="6"/>
 						</Attributes>
 					</Action>
 
@@ -233,7 +233,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="10"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
@@ -263,7 +263,7 @@
 
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
-					<Attribute id="NAME" value="Run and Jump"/>
+					<Attribute id="NAME" value="Go and Back"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="50002"/>
 					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/>
@@ -303,7 +303,7 @@
 					<Action id="70020">
 						<Attributes>
 							<Attribute id="TypeOfMonster" value="0"/> 
-							<Attribute id="TimeToAppear" value="1"/> 
+							<Attribute id="TimeToAppear" value="2"/> 
 						</Attributes>
 					</Action>
 
@@ -369,7 +369,7 @@
 
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
-					<Attribute id="NAME" value="Run and Jump"/>
+					<Attribute id="NAME" value="Run Jump and Fire"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="50002"/>
 					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/>
@@ -408,7 +408,7 @@
 					<Action id="70025">
 						<Attributes>
 							<Attribute id="TypeOfMonster" value="0"/> 
-							<Attribute id="TimeToAppear" value="1"/> 
+							<Attribute id="TimeToAppear" value="0"/> 
 						</Attributes>
 					</Action>
 					
@@ -429,7 +429,7 @@
 					<!-- Environment Condition -->
 					<Action id="72050">
 						<Attributes>
-							<Attribute id="TypeCondition" value="7"/>
+							<Attribute id="TypeCondition" value="7"/> <!-- Clouds -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="CloudsDensity" value="2"/>
@@ -440,7 +440,7 @@
 
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
-					<Attribute id="NAME" value="Kill him"/>
+					<Attribute id="NAME" value="Just Kill him"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80006"/>
 					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/>
