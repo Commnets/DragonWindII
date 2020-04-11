@@ -121,14 +121,12 @@ void DragonTheRevenge::DarkForestScene1::drawOn (QGAMES::Screen* s, const QGAMES
 	DRAGONWIND::Ninja* n = dynamic_cast <DRAGONWIND::Ninja*> (g -> mainArtist ());
 	assert (n);
 	QGAMES::Position pN =
-		n -> position () + (__BD 10 * n -> orientation ());
-	int rdx = n -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__) ? 150 : 10;
+		n -> centerPosition () + (__BD 10 * n -> orientation ());
+	int rdx = n -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__) ? 150 : 150;
 
 	QGAMES::Mask* mask = new QGAMES::OUTCircleMask (10000 /* id */, 3,
 			QGAMES::OUTCircleMask::Properties (rdx, QGAMES::Position 
-				((pN.posX () - s -> position ().posX ()) / __BD sW, 
-					(pN.posY () - s -> position ().posY ()) / __BD sH, __BD 0), __QGAMES_WHITECOLOR__), 
-			sW, sH);
+				(pN.posX () / __BD sW, pN.posY () / __BD sH, __BD 0), __QGAMES_WHITECOLOR__), sW, sH);
 	QGAMES::Mask* oMask = mask -> opposite ();
 
 	QGAMES::Screen::Buffer* bA = mask -> bufferOver (s);			
