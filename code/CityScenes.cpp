@@ -142,6 +142,7 @@ void DragonTheRevenge::CityScene4::initialize ()
 // ---
 void DragonTheRevenge::CityScene4::finalize ()
 {
+	_badGuyEnergyLevel -> setVisible (false);
 	_badGuyEnergyLevel -> unObserve (_mainBadGuy);
 
 	DragonTheRevenge::CityScene::finalize ();

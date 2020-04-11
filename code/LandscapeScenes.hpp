@@ -136,11 +136,18 @@ namespace DragonTheRevenge
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: LandscapeScene (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE4ID__, m, cn, p, ePL)
+			: LandscapeScene (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE4ID__, m, cn, p, ePL),
+			  _mainBadGuy (NULL),
+			  _badGuyEnergyLevel (NULL)
 							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void finalize ();
+
+		private:
+		DRAGONWIND::BadGuy* _mainBadGuy;
+		DRAGONWIND::EntityEnergy* _badGuyEnergyLevel;
 	};
 }
 

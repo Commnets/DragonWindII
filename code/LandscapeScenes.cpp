@@ -119,7 +119,6 @@ __IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::LandscapeScene1::OnOffSwitches)
 	addOnOffSwitch (new QGAMES::OnOffSwitch (DragonTheRevenge::LandscapeScene1::_SWITCHTOSHOWRIGHTWALL, true));
 }
 
-
 // ---
 void DragonTheRevenge::LandscapeScene2::initialize ()
 {
@@ -150,4 +149,26 @@ void DragonTheRevenge::LandscapeScene4::initialize ()
 	setMap (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE4MAPID__);
 
 	DragonTheRevenge::LandscapeScene::initialize ();
+
+	assert (!_badGuys.empty ());
+	_mainBadGuy = dynamic_cast <DRAGONWIND::BadGuy*> ((*_badGuys.begin ()).second);
+	assert (_mainBadGuy);
+
+	DRAGONWIND::Game* dG = dynamic_cast <DRAGONWIND::Game*> (game ());
+	assert (dG);
+	_badGuyEnergyLevel = dG -> badGuyEnergyLevelScoreObject ();
+	assert (_badGuyEnergyLevel);
+
+	_badGuyEnergyLevel -> observe (_mainBadGuy);
+	_badGuyEnergyLevel -> setVisible (true);
 }
+
+// ---
+void DragonTheRevenge::LandscapeScene4::finalize ()
+{
+	_badGuyEnergyLevel -> setVisible (false);
+	_badGuyEnergyLevel -> unObserve (_mainBadGuy);
+
+	DragonTheRevenge::LandscapeScene::finalize ();
+}
+

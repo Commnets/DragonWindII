@@ -42,11 +42,31 @@ namespace DragonTheRevenge
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: DarkForestScene (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDSCENE0ID__, m, cn, p, ePL)
+			: DarkForestScene (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDSCENE0ID__, m, cn, p, ePL),
+			  _layersBase1 (), _layersBase2 ()
 							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
+
+		private:
+		__DECLARECOUNTERS__ (Counters);
+		virtual QGAMES::Counters* createCounters ()
+							{ return (new Counters ()); }
+		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
+		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
+							{ return (new OnOffSwitches ()); }
+
+		private:
+		// Implamentation
+		QGAMES::AdvancedTileLayers _layersBase1;
+		QGAMES::AdvancedTileLayers _layersBase2;
+
+		static const int _COUNTERTOSHOWDISAPPEARHOLE1 = 0;
+		static const int _COUNTERTOSHOWDISAPPEARHOLE2 = 1;
+		static const int _SWITCHHOLE1VISIBLE = 0;
+		static const int _SWITCHHOLE2VISIBLE = 1;
 	};
 
 	/** DarkForest Scene 1 */
@@ -62,6 +82,7 @@ namespace DragonTheRevenge
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void drawOn (QGAMES::Screen* s, const QGAMES::Position& p = QGAMES::Position::_noPoint);
 	};
 
 	/** DarkForest Scene 2 */
@@ -72,11 +93,18 @@ namespace DragonTheRevenge
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: DarkForestScene (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDSCENE2ID__, m, cn, p, ePL)
+			: DarkForestScene (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDSCENE2ID__, m, cn, p, ePL),
+			  _mainBadGuy (NULL),
+			  _badGuyEnergyLevel (NULL)
 							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void finalize ();
+
+		private:
+		DRAGONWIND::BadGuy* _mainBadGuy;
+		DRAGONWIND::EntityEnergy* _badGuyEnergyLevel;
 	};
 }
 
