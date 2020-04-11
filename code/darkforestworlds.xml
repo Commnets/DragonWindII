@@ -83,7 +83,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72080">
+					<Action id="72055">
 						<Attributes>
 							<Attribute id="TypeCondition" value="1"/>
 							<Attribute id="SecondsToStart" value="3"/>
@@ -278,7 +278,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72090">
+					<Action id="72065">
 						<Attributes>
 							<Attribute id="TypeCondition" value="4"/> 
 							<Attribute id="SecondsToStart" value="0"/>
@@ -298,6 +298,7 @@
 				</Attributes>
 				
 				<Conexions>
+					<Conexion id="0" with="90000" at="0"/>
 				</Conexions>
 
 				<Maps>

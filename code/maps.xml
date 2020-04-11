@@ -12,5 +12,6 @@
 	<Include file="citymaps.xml"/>
 	<Include file="landscapemaps.xml"/>
 	<Include file="darkforestmaps.xml"/>
+	<Include file="dessertmaps.xml"/>
 	
 </Maps>

@@ -20,6 +20,7 @@
 #include "CityWorlds.hpp"
 #include "LandscapeWorlds.hpp"
 #include "DarkForestWorlds.hpp"
+#include "DessertWorlds.hpp"
 
 #endif
   

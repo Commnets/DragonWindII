@@ -81,6 +81,12 @@
     <ClInclude Include="DarkForestWorlds.hpp">
       <Filter>Archivos de encabezado\Worlds</Filter>
     </ClInclude>
+    <ClInclude Include="DessertScenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="DessertWorlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -123,6 +129,12 @@
       <Filter>Archivos de código fuente\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="DarkForestWorlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="DessertScenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="DessertWorlds.cpp">
       <Filter>Archivos de código fuente\Worlds</Filter>
     </ClCompile>
   </ItemGroup>

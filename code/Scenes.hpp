@@ -20,6 +20,7 @@
 #include "CityScenes.hpp"
 #include "LandscapeScenes.hpp"
 #include "DarkForestScenes.hpp"
+#include "DessertScenes.hpp"
 
 #endif
   

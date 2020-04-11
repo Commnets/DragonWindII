@@ -55,7 +55,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72060">
+					<Action id="72030">
 						<Attributes>
 							<Attribute id="TypeCondition" value="0"/> 
 							<Attribute id="SecondsToStart" value="0"/>
@@ -211,7 +211,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72065">
+					<Action id="72035">
 						<Attributes>
 							<Attribute id="TypeCondition" value="0"/> 
 							<Attribute id="SecondsToStart" value="0"/>
@@ -407,7 +407,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72070">
+					<Action id="72050">
 						<Attributes>
 							<Attribute id="TypeCondition" value="2"/> <!-- Earthquake -->
 							<Attribute id="SecondsToStart" value="0"/>

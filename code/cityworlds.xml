@@ -144,7 +144,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72020" active="NO"> 
+					<Action id="72010" active="NO"> 
 						<Attributes>
 							<Attribute id="TypeCondition" value="4"/> 
 							<Attribute id="SecondsToStart" value="2"/>
@@ -250,7 +250,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72030">
+					<Action id="72015">
 						<Attributes>
 							<Attribute id="TypeCondition" value="4"/> 
 							<Attribute id="SecondsToStart" value="0"/>
@@ -356,7 +356,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72040">
+					<Action id="72020">
 						<Attributes>
 							<Attribute id="TypeCondition" value="1"/>
 							<Attribute id="SecondsToStart" value="0"/>
@@ -427,7 +427,7 @@
 					</Action>
 					
 					<!-- Environment Condition -->
-					<Action id="72050">
+					<Action id="72025">
 						<Attributes>
 							<Attribute id="TypeCondition" value="7"/> <!-- Clouds -->
 							<Attribute id="SecondsToStart" value="0"/>
