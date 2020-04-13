@@ -92,5 +92,67 @@
 		</Attributes>
 	</Background>
 	<!-- Cave -->
-
+	
+	<!-- Mountains large -->
+	<Background id="80140" form="80140" times="2">
+		<Attributes>
+			<Attribute id="FADEGRADE" value="255"/>
+			<Attribute id="AUTOMATICMOVE" value="YES"/>
+			<Attribute id="MOVDIRECTION" value="1,0,0"/>
+			<Attribute id="SPEED" value="0"/>
+			<Attribute id="PIXELS" value="1"/>
+			<Attribute id="LINKEDBK" value="80141"/>
+			<Attribute id="SPEEDLINKEDBK" value="2"/>
+			<Attribute id="ROLL" value="YES"/>
+		</Attributes>
+	</Background>
+	<Background id="80141" form="80141" times="2">
+		<Attributes>
+			<Attribute id="FADEGRADE" value="255"/>
+			<Attribute id="AUTOMATICMOVE" value="YES"/>
+			<Attribute id="MOVDIRECTION" value="1,0,0"/>
+			<Attribute id="SPEED" value="0"/>
+			<Attribute id="PIXELS" value="1"/>
+			<Attribute id="LINKEDBK" value="80142"/>
+			<Attribute id="SPEEDLINKEDBK" value="2"/>
+			<Attribute id="ROLL" value="YES"/>
+		</Attributes>
+	</Background>
+	<Background id="80142" form="80142" times="2">
+		<Attributes>
+			<Attribute id="FADEGRADE" value="255"/>
+			<Attribute id="AUTOMATICMOVE" value="YES"/>
+			<Attribute id="MOVDIRECTION" value="1,0,0"/>
+			<Attribute id="SPEED" value="0"/>
+			<Attribute id="PIXELS" value="1"/>
+			<Attribute id="LINKEDBK" value="80143"/>
+			<Attribute id="SPEEDLINKEDBK" value="2"/>
+			<Attribute id="ROLL" value="YES"/>
+		</Attributes>
+	</Background>
+	<Background id="80143" form="80143" times="2">
+		<Attributes>
+			<Attribute id="FADEGRADE" value="255"/>
+			<Attribute id="AUTOMATICMOVE" value="YES"/>
+			<Attribute id="MOVDIRECTION" value="1,0,0"/>
+			<Attribute id="SPEED" value="0"/>
+			<Attribute id="PIXELS" value="1"/>
+			<Attribute id="LINKEDBK" value="80144"/>
+			<Attribute id="SPEEDLINKEDBK" value="0"/>
+			<Attribute id="ROLL" value="YES"/>
+		</Attributes>
+	</Background>
+	<Background id="80144" form="80144" times="1">
+		<Attributes>
+			<Attribute id="FADEGRADE" value="255"/>
+			<Attribute id="AUTOMATICMOVE" value="YES"/>
+			<Attribute id="MOVDIRECTION" value="0,0,0"/>
+			<Attribute id="SPEED" value="0"/>
+			<Attribute id="PIXELS" value="1"/>
+			<Attribute id="ROLL" value="NO"/>
+			<Attribute id="FIX" value="YES"/>
+		</Attributes>
+	</Background>
+	<!-- Mountains large -->
+	
 </Objects>

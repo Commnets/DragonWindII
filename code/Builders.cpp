@@ -123,8 +123,8 @@ QGAMES::World* DragonTheRevenge::WorldBuilder::createWorldObject (int no, const 
 	if (no == __DRAGONWINDTHEREVENGE_DARKFORESTWORLDID__)
 		return (new DragonTheRevenge::DarkForestWorld (s, p));
 	else
-	if (no == __DRAGONWINDTHEREVENGE_DESSERTWORLDID__)
-		return (new DragonTheRevenge::DessertWorld (s, p));
+	if (no == __DRAGONWINDTHEREVENGE_MOUNTAINSWORLDID__)
+		return (new DragonTheRevenge::MountainsWorld (s, p));
 
 	__WLOGPLUS (std::string ("DRAGONWINDII World: ") + 
 		std::to_string (no) + std::string (" not defined"));
@@ -174,16 +174,16 @@ QGAMES::Scene* DragonTheRevenge::WorldBuilder::createSceneObject (int ns, const 
 	else
 
 	// The dessert scenes...
-	if (ns ==  __DRAGONWINDTHEREVENGE_DESSERTWORLDSCENE0ID__)
-		return (new DragonTheRevenge::DessertScene0 (m, cn, p, ePL));
-	else if (ns == __DRAGONWINDTHEREVENGE_DESSERTWORLDSCENE1ID__)
-		return (new DragonTheRevenge::DessertScene1 (m, cn, p, ePL));
-	else if (ns == __DRAGONWINDTHEREVENGE_DESSERTWORLDSCENE2ID__)
-		return (new DragonTheRevenge::DessertScene2 (m, cn, p, ePL));
-	else if (ns == __DRAGONWINDTHEREVENGE_DESSERTWORLDSCENE3ID__)
-		return (new DragonTheRevenge::DessertScene3 (m, cn, p, ePL));
-	else if (ns == __DRAGONWINDTHEREVENGE_DESSERTWORLDSCENE4ID__)
-		return (new DragonTheRevenge::DessertScene4 (m, cn, p, ePL));
+	if (ns ==  __DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE0ID__)
+		return (new DragonTheRevenge::MountainsScene0 (m, cn, p, ePL));
+	else if (ns == __DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE1ID__)
+		return (new DragonTheRevenge::MountainsScene1 (m, cn, p, ePL));
+	else if (ns == __DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE2ID__)
+		return (new DragonTheRevenge::MountainsScene2 (m, cn, p, ePL));
+	else if (ns == __DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE3ID__)
+		return (new DragonTheRevenge::MountainsScene3 (m, cn, p, ePL));
+	else if (ns == __DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE4ID__)
+		return (new DragonTheRevenge::MountainsScene4 (m, cn, p, ePL));
 
 	__WLOGPLUS (std::string ("DRAGONWINDII Scene: ") + 
 		std::to_string (ns) + std::string (" not defined"));
@@ -202,6 +202,10 @@ QGAMES::SceneActionBlock* DragonTheRevenge::WorldBuilder::createSceneActionBlock
 		nAB < (__DRAGONWIND_ACTIONBLOCKFLYMONSTERBASEID__ + __DRAGONWIND_ACTIONBLOCKFLYMONSTERNUMBER__))
 		return (new DragonTheRevenge::FlyingMonstersActionBlock (nAB, 
 					new DRAGONWIND::FlyingMonstersActionBlock::Properties (prps)));
+	else
+	if (nAB == __DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE2ABLOCKID__)
+		return (new DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock (nAB,
+					new DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::Properties (prps)));
 
 	__WLOGPLUS (std::string ("DRAGONWINDII Action Block: ") + 
 		std::to_string (nAB) + std::string (" not defined"));

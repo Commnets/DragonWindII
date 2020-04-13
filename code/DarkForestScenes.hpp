@@ -19,7 +19,7 @@
 
 namespace DragonTheRevenge
 {
-	/** Base for DarkForestScenes */
+	/** Base for any DarkForest scene. */
 	class DarkForestScene : public DRAGONWIND::PlayingScene
 	{
 		public:

@@ -19,7 +19,7 @@
 
 namespace DragonTheRevenge
 {
-	/** Class to define common funtionality to any world in a DragonWind II game. */
+	/** Class to define common funtionality to any DarkForest World in a DragonWind II game. */
 	class DarkForestWorld : public DRAGONWIND::World
 	{
 		public:
@@ -27,12 +27,6 @@ namespace DragonTheRevenge
 				const QGAMES::WorldProperties& prps = QGAMES::WorldProperties ())
 			: DRAGONWIND::World (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDID__, scns, prps)
 							{ }
-
-		/** @see parent. */
-		virtual void initialize ();
-		virtual void finalize ();
-
-		protected:
 	};
 }
 

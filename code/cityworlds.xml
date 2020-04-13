@@ -116,9 +116,9 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="16"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="10"/>
+							<Attribute id="SecondsFiring" value="5"/>
 						</Attributes>
 					</Action>
 
@@ -129,7 +129,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="16"/> <!-- Star flying -->
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="2"/>
+							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
 							<Attribute id="SecondsFiring" value="10"/>
 						</Attributes>
@@ -349,7 +349,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="11"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="10"/>
+							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
 							<Attribute id="SecondsFiring" value="6"/>
 						</Attributes>

@@ -48,9 +48,9 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="6"/>
+							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
-							<Attribute id="SecondsFiring" value="1"/>
+							<Attribute id="SecondsFiring" value="4"/>
 						</Attributes>
 					</Action>
 					
@@ -71,7 +71,7 @@
 					<Attribute id="NAME" value="Enjoy the sight"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80005"/> 
-					<Attribute id="LIQUIDSFLUIDITY" value="7.50"/> <!-- A little thicker -->
+					<Attribute id="LIQUIDSFLUIDITY" value="7.50"/> <!-- A little thicker, because it is green -->
 				</Attributes>
 				
 				<Conexions>
@@ -210,7 +210,9 @@
 						</Attributes>
 					</Action>
 					
-					<!-- Environment Condition -->
+					<!-- Environment Condition 
+						 It desactivates when entering the cave, and activates back when exiting
+						 It simply tries to scare you a little bit. -->
 					<Action id="72035">
 						<Attributes>
 							<Attribute id="TypeCondition" value="0"/> 

@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<Maps>
+
+	<World id="50004">
+		<Scenes>
+		
+			<!-- MountainsWorld0 -->
+			<Scene id="90000">
+				<Actions>
+					<!-- Flying Monsters -->
+					<!-- Vultures -->
+					<Action id="70070">
+						<Attributes>
+							<Attribute id="TypeOfMonster" value="2"/> 
+							<Attribute id="TimeToAppear" value="2"/> 
+						</Attributes>
+					</Action>
+
+					<!-- Monsters -->
+					<!-- Block 1 -->
+					<Action id="71150"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50000"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="1"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Block 2 -->
+					<Action id="71151"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="ImpulseOfFire" value="-1"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="2"/>
+						</Attributes>
+					</Action>
+
+					<!-- Block 3 -->
+					<Action id="71152"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50006"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="10"/> 
+							<Attribute id="ImpulseOfFire" value="-1"/>
+							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
+							<Attribute id="SecondsFiring" value="6"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Environment Condition -->
+					<Action id="72070">
+						<Attributes>
+							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="SecondsToStart" value="0"/>
+							<Attribute id="SecondsCondition" value="-1"/> 
+							<Attribute id="LightningsProbability" value="70"/>
+							<Attribute id="LightningsFrecuency" value="3"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Through the cave"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="8.50"/> <!-- Even thicker, because it is orange -->
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="90001" at="0"/>
+				</Conexions>
+
+				<Maps>
+					<Map id="50140" file="maps/BKMountains.xml"/>
+					<Map id="90000" file="maps/MountainsWorld0.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Base_3"/> 
+					<Entity id="50101" layer="Base_3"/>
+					<SetOfEntities fromId="51000" number="110" layer="Base_3"/>
+					<SetOfEntities fromId="30000" number="200" layer="Base_3"/>
+					<SetOfEntities fromId="31000" number="200" layer="Base_3"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Base_3"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+		
+			<!-- MountainsWorld1 -->
+			<Scene id="90001">
+				<Actions>
+					<!-- Flying Monsters -->
+					<!-- Vultures -->
+					<Action id="70075">
+						<Attributes>
+							<Attribute id="TypeOfMonster" value="2"/> 
+							<Attribute id="TimeToAppear" value="0"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Environment Condition -->
+					<Action id="72075">
+						<Attributes>
+							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="SecondsToStart" value="0"/>
+							<Attribute id="SecondsCondition" value="-1"/> 
+							<Attribute id="LightningsProbability" value="70"/>
+							<Attribute id="LightningsFrecuency" value="3"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Up Up Up"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="90002" at="0"/>
+				</Conexions>
+
+				<Maps>
+					<Map id="50140" file="maps/BKMountains.xml"/>
+					<Map id="90001" file="maps/MountainsWorld1.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Base_1"/> 
+					<Entity id="50101" layer="Base_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Base_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Base_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+		
+			<!-- MountainsWorld2 -->
+			<Scene id="90002">
+				<Actions>
+					<!-- Flying Monsters -->
+					<!-- Vultures -->
+					<Action id="70080">
+						<Attributes>
+							<Attribute id="TypeOfMonster" value="2"/> 
+							<Attribute id="TimeToAppear" value="2"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Block 1 -->
+					<Action id="71170"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50000"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="ImpulseOfFire" value="-1"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="4"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Block 2 -->
+					<Action id="71171"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Block 3 -->
+					<Action id="71172"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="ImpulseOfFire" value="-1"/>
+							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="4"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Environment Condition -->
+					<Action id="72080">
+						<Attributes>
+							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="SecondsToStart" value="0"/>
+							<Attribute id="SecondsCondition" value="-1"/> 
+							<Attribute id="LightningsProbability" value="70"/>
+							<Attribute id="LightningsFrecuency" value="3"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Special Condition in that display to move the layers 
+						 Only an attribute that is the time to go back to the original position. -->
+					<Action id="900021" active="NO"> 
+						<Attributes>
+							<Attribute id="SecondsToGoBack" value="4"/> 
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Jump over the clouds"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="90003" at="0"/>
+				</Conexions>
+
+				<Maps>
+					<Map id="50140" file="maps/BKMountains.xml"/>
+					<Map id="90002" file="maps/MountainsWorld2.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Base_5"/> 
+					<Entity id="50101" layer="Base_5"/>
+					<SetOfEntities fromId="51000" number="110" layer="Base_5"/>
+					<SetOfEntities fromId="30000" number="200" layer="Base_5"/>
+					<SetOfEntities fromId="31000" number="200" layer="Base_5"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_3"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_3"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_3"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_3"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_3"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Base_5"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+		
+			<!-- MountainsWorld3 -->
+			<Scene id="90003">
+				<Actions>
+					<!-- Flying Monsters -->
+					<!-- Vultures -->
+					<Action id="70085">
+						<Attributes>
+							<Attribute id="TypeOfMonster" value="2"/> 
+							<Attribute id="TimeToAppear" value="0"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Environment Condition -->
+					<Action id="72085">
+						<Attributes>
+							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="SecondsToStart" value="0"/>
+							<Attribute id="SecondsCondition" value="-1"/> 
+							<Attribute id="LightningsProbability" value="70"/>
+							<Attribute id="LightningsFrecuency" value="3"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="You almost get it"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="90004" at="0"/>
+				</Conexions>
+
+				<Maps>
+					<Map id="50140" file="maps/BKMountains.xml"/>
+					<Map id="80140" file="maps/BKMountainsLarge.xml"/>
+					<Map id="90003" file="maps/MountainsWorld3.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Base_1"/> 
+					<Entity id="50101" layer="Base_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Base_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Base_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+		
+			<!-- MountainsWorld4 -->
+			<Scene id="90004">
+				<Actions>
+					<!-- Flying Monsters -->
+					<!-- Vultures -->
+					<Action id="70090">
+						<Attributes>
+							<Attribute id="TypeOfMonster" value="2"/> 
+							<Attribute id="TimeToAppear" value="0"/> 
+						</Attributes>
+					</Action>
+
+					<!-- Monsters -->
+					<!-- Block 1 -->
+					<Action id="71190"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50006"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="2"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="5"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Environment Condition -->
+					<Action id="72090">
+						<Attributes>
+							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="SecondsToStart" value="0"/>
+							<Attribute id="SecondsCondition" value="-1"/> 
+							<Attribute id="LightningsProbability" value="70"/>
+							<Attribute id="LightningsFrecuency" value="3"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Finally I will kill you"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="80006"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+				</Conexions>
+
+				<Maps>
+					<Map id="50140" file="maps/BKMountains.xml"/>
+					<Map id="90004" file="maps/MountainsWorld4.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Base_1"/> 
+					<Entity id="50101" layer="Base_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Base_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Base_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+			
+		</Scenes>
+		<Attributes>
+			<Attribute id="NAME" value="The mountains"/>
+		</Attributes>
+	</World>
+	
+</Maps>

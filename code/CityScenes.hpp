@@ -19,7 +19,7 @@
 
 namespace DragonTheRevenge
 {
-	/** Base for CityScenes */
+	/** Base for any City scene. */
 	class CityScene : public DRAGONWIND::PlayingScene
 	{
 		public:

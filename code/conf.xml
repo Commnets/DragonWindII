@@ -3,7 +3,7 @@
 
 	<!-- General Properties -->
 	<!-- The name of the game -->
-	<Property id="GAMENAME" value="Dragonwind"/>
+	<Property id="GAMENAME" value="Dragonwind II The Revenge"/>
 	<!-- The icon of the game -->
 	<Property id="GAMEICON" value="50000"/> <!-- Represents the logo of dragonwind -->
 	<!-- Where the temporal files are stored in release version, and also the configuration saved -->
@@ -21,7 +21,7 @@
 	<!-- The initial world -->
 	<Property id="INITIALWORLD" value="50004"/>
 	<!-- The initial scene -->
-	<Property id="INITIALSCENE" value="90004"/>
+	<Property id="INITIALSCENE" value="90000"/>
 	<!-- The number of lives -->
 	<Property id="LIVES" value="5"/>
 	<!-- Whether to show the FPS -->

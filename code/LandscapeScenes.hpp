@@ -20,7 +20,7 @@
 
 namespace DragonTheRevenge
 {
-	/** Base for LandscapeScenes */
+	/** Base for any Landscape scene. */
 	class LandscapeScene : public DRAGONWIND::PlayingScene
 	{
 		public:

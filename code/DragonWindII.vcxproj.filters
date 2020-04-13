@@ -81,10 +81,10 @@
     <ClInclude Include="DarkForestWorlds.hpp">
       <Filter>Archivos de encabezado\Worlds</Filter>
     </ClInclude>
-    <ClInclude Include="DessertScenes.hpp">
+    <ClInclude Include="MountainsScenes.hpp">
       <Filter>Archivos de encabezado\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="DessertWorlds.hpp">
+    <ClInclude Include="MountainsWorlds.hpp">
       <Filter>Archivos de encabezado\Worlds</Filter>
     </ClInclude>
   </ItemGroup>
@@ -131,11 +131,11 @@
     <ClCompile Include="DarkForestWorlds.cpp">
       <Filter>Archivos de código fuente\Worlds</Filter>
     </ClCompile>
-    <ClCompile Include="DessertScenes.cpp">
-      <Filter>Archivos de código fuente\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="DessertWorlds.cpp">
+    <ClCompile Include="MountainsWorlds.cpp">
       <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="MountainsScenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
