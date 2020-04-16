@@ -1,5 +1,8 @@
 #include "DarkforestScenes.hpp"
 
+const int DragonTheRevenge::DarkForestScene0::_COUNTERTOSHOWDISAPPEARHOLE [_NUMBERHOLES] = { 0, 1 };
+const int DragonTheRevenge::DarkForestScene0::_SWITCHHOLEVISIBLE [_NUMBERHOLES] = { 0, 1 };
+
 // ---
 void DragonTheRevenge::DarkForestScene::initialize ()
 {
@@ -15,17 +18,28 @@ void DragonTheRevenge::DarkForestScene0::initialize ()
 
 	DragonTheRevenge::DarkForestScene::initialize ();
 
-	// Which are the layers involved in the base movement?
 	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
 	assert (pM); // Just in case...
-	_layersBase1 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Base_2")));
-	_layersBase1 [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
-	_layersBase2 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Base_3")));
-	_layersBase2 [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_3")));
-	assert (_layersBase1 [0] && _layersBase1 [1] && _layersBase2 [0] && _layersBase2 [1]);
+
+	// Which are the layers involved in the base movement?
+	// Extracted one by one from the list of those...
+	QGAMES::AdvancedTileLayers tL1;
+	tL1 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Base_2")));
+	tL1 [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
+	assert (tL1 [0] && tL1 [1]);
+	QGAMES::AdvancedTileLayers tL2;
+	tL2 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Base_3")));
+	tL2 [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_3")));
+	assert (tL2 [0] && tL2 [1]);
+	
+	_layersHole.resize (_NUMBERHOLES);
+	_layersHole [0] = tL1;
+	_layersHole [1] = tL2;
 
 	reStartAllCounters ();
 	reStartAllOnOffSwitches ();
+
+	// No previous situation of how much visible or invisible are the layers is considered
 }
 
 // ---
@@ -33,73 +47,118 @@ void DragonTheRevenge::DarkForestScene0::updatePositions ()
 {
 	DragonTheRevenge::DarkForestScene::updatePositions ();
 
-	if (onOffSwitch (_SWITCHHOLE1VISIBLE) -> isOn ())
+	for (int i = 0; i < _NUMBERHOLES; i++)
+	if (onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> isOn ())
 	{
-		if (!_layersBase1 [0] -> isDisappearing () &&
-			counter (_COUNTERTOSHOWDISAPPEARHOLE1) -> isEnd ())
-		{
-			_layersBase1 [0] -> disappear (game () -> framesPerSecond () / 6);
-			_layersBase1 [1] -> disappear (game () -> framesPerSecond () / 6);
-		}
-
-		if (_layersBase1 [0] -> transparent (__BD 0))
-			onOffSwitch (_SWITCHHOLE1VISIBLE) -> set (false);
+		if (!isHoleDisappearing (i) && counter (_COUNTERTOSHOWDISAPPEARHOLE [i]) -> isEnd ())
+			dissapearHole (i);
+		if (hasHoleDissapear (i))
+			onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> set (false);
 	}
 	else
 	{
-		if (!_layersBase1 [0] -> isAppearing () &&
-			counter (_COUNTERTOSHOWDISAPPEARHOLE1) -> isEnd ())
-		{
-			_layersBase1 [0] -> appear (game () -> framesPerSecond () / 6);
-			_layersBase1 [1] -> appear (game () -> framesPerSecond () / 6);
-		}
-
-		if (_layersBase1 [0] -> solid (__BD 1))
-			onOffSwitch (_SWITCHHOLE1VISIBLE) -> set (true);
+		if (!isHoleAppearing (i) && counter (_COUNTERTOSHOWDISAPPEARHOLE [i]) -> isEnd ())
+			appearHole (i);
+		if (hasHoleAppear (i))
+			onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> set (true);
 	}
+}
 
-	if (onOffSwitch (_SWITCHHOLE2VISIBLE) -> isOn ())
-	{
-		if (!_layersBase2 [0] -> isDisappearing () &&
-			counter (_COUNTERTOSHOWDISAPPEARHOLE2) -> isEnd ())
-		{
-			_layersBase2 [0] -> disappear (game () -> framesPerSecond () / 6);
-			_layersBase2 [1] -> disappear (game () -> framesPerSecond () / 6);
-		}
+// ---
+void DragonTheRevenge::DarkForestScene0::finalize ()
+{
+	DragonTheRevenge::DarkForestScene::finalize ();
 
-		if (_layersBase2 [0] -> transparent (__BD 0))
-			onOffSwitch (_SWITCHHOLE2VISIBLE) -> set (false);
-	}
-	else
-	{
-		if (!_layersBase2 [0] -> isAppearing () &&
-			counter (_COUNTERTOSHOWDISAPPEARHOLE2) -> isEnd ())
-		{
-			_layersBase2 [0] -> appear (game () -> framesPerSecond () / 6);
-			_layersBase2 [1] -> appear (game () -> framesPerSecond () / 6);
-		}
+	_layersHole = std::vector <QGAMES::AdvancedTileLayers> ();
+}
 
-		if (_layersBase2 [0] -> solid (__BD 1))
-			onOffSwitch (_SWITCHHOLE2VISIBLE) -> set (true);
-	}
+// ---
+bool DragonTheRevenge::DarkForestScene0::isHoleDisappearing (int h)
+{
+	assert (h >= 0 && h < (int) _layersHole.size ());
+
+	bool result = true;
+	for (QGAMES::AdvancedTileLayers::const_iterator i = _layersHole [h].begin (); 
+			i != _layersHole [h].end () && result; 
+			result &= (((QGAMES::AdvancedTileLayer*) (*i++).second)) -> isDisappearing ());
+	
+	return (result);
+}
+
+// ---
+void DragonTheRevenge::DarkForestScene0::dissapearHole (int h)
+{
+	assert (h >= 0 && h < (int) _layersHole.size ());
+
+	for (QGAMES::AdvancedTileLayers::const_iterator i = _layersHole [h].begin (); 
+			i != _layersHole [h].end (); 
+			(((QGAMES::AdvancedTileLayer*) (*i++).second)) -> disappear (_secondsToVanishPerFrame));
+}
+
+// ---
+bool DragonTheRevenge::DarkForestScene0::hasHoleDissapear (int h)
+{
+	assert (h >= 0 && h < (int) _layersHole.size ());
+
+	bool result = true;
+	for (QGAMES::AdvancedTileLayers::const_iterator i = _layersHole [h].begin (); 
+			i != _layersHole [h].end () && result; 
+			result &= (((QGAMES::AdvancedTileLayer*) (*i++).second)) -> transparent (__BD 0));
+	
+	return (result);
+}
+
+// ---
+bool DragonTheRevenge::DarkForestScene0::isHoleAppearing (int h)
+{
+	assert (h >= 0 && h < (int) _layersHole.size ());
+
+	bool result = true;
+	for (QGAMES::AdvancedTileLayers::const_iterator i = _layersHole [h].begin (); 
+			i != _layersHole [h].end () && result; 
+			result &= (((QGAMES::AdvancedTileLayer*) (*i++).second)) -> isAppearing ());
+	
+	return (result);
+}
+
+// ---
+void DragonTheRevenge::DarkForestScene0::appearHole (int h)
+{
+	assert (h >= 0 && h < (int) _layersHole.size ());
+
+	for (QGAMES::AdvancedTileLayers::const_iterator i = _layersHole [h].begin (); 
+			i != _layersHole [h].end (); 
+			(((QGAMES::AdvancedTileLayer*) (*i++).second)) -> appear (_secondsToVanishPerFrame));
+}
+
+// ---
+bool DragonTheRevenge::DarkForestScene0::hasHoleAppear (int h)
+{
+	assert (h >= 0 && h < (int) _layersHole.size ());
+
+	bool result = true;
+	for (QGAMES::AdvancedTileLayers::const_iterator i = _layersHole [h].begin (); 
+			i != _layersHole [h].end () && result; 
+			result &= (((QGAMES::AdvancedTileLayer*) (*i++).second)) -> solid (__BD 1));
+	
+	return (result);
 }
 
 // ---
 __IMPLEMENTCOUNTERS__ (DragonTheRevenge::DarkForestScene0::Counters)
 {
-	addCounter (new QGAMES::Counter 
-		(DragonTheRevenge::DarkForestScene0::_COUNTERTOSHOWDISAPPEARHOLE1, 
-			(int) (QGAMES::Game::game () -> framesPerSecond () * 2.1) /** To avoid a little bit the "control" */, 0, true, true));
-	addCounter (new QGAMES::Counter 
-		(DragonTheRevenge::DarkForestScene0::_COUNTERTOSHOWDISAPPEARHOLE2, 
-			(int) (QGAMES::Game::game () -> framesPerSecond () * 1.1) /** Idem */, 0, true, true));
+	for (int i = 0; i < _NUMBERHOLES; i++)
+		addCounter (new QGAMES::Counter 
+			(DragonTheRevenge::DarkForestScene0::_COUNTERTOSHOWDISAPPEARHOLE [i], 
+				(int) (QGAMES::Game::game () -> framesPerSecond () * 2.1), 0, true, true));
 }
 
 // ---
 __IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::DarkForestScene0::OnOffSwitches)
 {
-	addOnOffSwitch (new QGAMES::OnOffSwitch (DragonTheRevenge::DarkForestScene0::_SWITCHHOLE1VISIBLE, false));
-	addOnOffSwitch (new QGAMES::OnOffSwitch (DragonTheRevenge::DarkForestScene0::_SWITCHHOLE2VISIBLE, false));
+	for (int i = 0; i < _NUMBERHOLES;i++)
+		addOnOffSwitch (new QGAMES::OnOffSwitch 
+			(DragonTheRevenge::DarkForestScene0::_SWITCHHOLEVISIBLE [i], false));
 }
 
 // ---
@@ -179,6 +238,7 @@ void DragonTheRevenge::DarkForestScene2::finalize ()
 {
 	_badGuyEnergyLevel -> setVisible (false);
 	_badGuyEnergyLevel -> unObserve (_mainBadGuy);
+	_badGuyEnergyLevel = NULL;
 
 	DragonTheRevenge::DarkForestScene::finalize ();
 }

@@ -86,17 +86,17 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Base_3"/> 
-					<Entity id="50101" layer="Base_3"/>
-					<SetOfEntities fromId="51000" number="110" layer="Base_3"/>
-					<SetOfEntities fromId="30000" number="200" layer="Base_3"/>
-					<SetOfEntities fromId="31000" number="200" layer="Base_3"/>
+					<Entity id="50100" layer="Solid_4"/> 
+					<Entity id="50101" layer="Solid_4"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_4"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_4"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_4"/>
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
-					<SetOfEntities fromId="32000" number="10" layer="Base_3"/>
+					<SetOfEntities fromId="32000" number="10" layer="Solid_4"/>
 				</Entities>
 			</Scene>
 			<!-- -->
@@ -143,17 +143,17 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Base_1"/> 
-					<Entity id="50101" layer="Base_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Base_1"/>
-					<SetOfEntities fromId="30000" number="200" layer="Base_1"/>
-					<SetOfEntities fromId="31000" number="200" layer="Base_1"/>
+					<Entity id="50100" layer="Solid_1"/> 
+					<Entity id="50101" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
-					<SetOfEntities fromId="32000" number="10" layer="Base_1"/>
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
 				</Entities>
 			</Scene>
 			<!-- -->
@@ -222,7 +222,7 @@
 					
 					<!-- Special Condition in that display to move the layers 
 						 Only an attribute that is the time to go back to the original position. -->
-					<Action id="900021" active="NO"> 
+					<Action id="900021" active="YES"> 
 						<Attributes>
 							<Attribute id="SecondsToGoBack" value="4"/> 
 						</Attributes>
@@ -247,17 +247,17 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Base_5"/> 
-					<Entity id="50101" layer="Base_5"/>
-					<SetOfEntities fromId="51000" number="110" layer="Base_5"/>
-					<SetOfEntities fromId="30000" number="200" layer="Base_5"/>
-					<SetOfEntities fromId="31000" number="200" layer="Base_5"/>
+					<Entity id="50100" layer="Solid_1"/> 
+					<Entity id="50101" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_3"/> 
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_3"/> 
 					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_3"/> 
 					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_3"/> 
 					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_3"/> 
-					<SetOfEntities fromId="32000" number="10" layer="Base_5"/>
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
 				</Entities>
 			</Scene>
 			<!-- -->
@@ -300,22 +300,23 @@
 
 				<Maps>
 					<Map id="50140" file="maps/BKMountains.xml"/>
+					<Map id="80130" file="maps/BKLandscapeWithCave.xml"/>
 					<Map id="80140" file="maps/BKMountainsLarge.xml"/>
 					<Map id="90003" file="maps/MountainsWorld3.tmx"/>
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Base_1"/> 
-					<Entity id="50101" layer="Base_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Base_1"/>
-					<SetOfEntities fromId="30000" number="200" layer="Base_1"/>
-					<SetOfEntities fromId="31000" number="200" layer="Base_1"/>
+					<Entity id="50100" layer="Solid_1"/> 
+					<Entity id="50101" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
-					<SetOfEntities fromId="32000" number="10" layer="Base_1"/>
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
 				</Entities>
 			</Scene>
 			<!-- -->
@@ -375,17 +376,17 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Base_1"/> 
-					<Entity id="50101" layer="Base_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Base_1"/>
-					<SetOfEntities fromId="30000" number="200" layer="Base_1"/>
-					<SetOfEntities fromId="31000" number="200" layer="Base_1"/>
+					<Entity id="50100" layer="Solid_1"/> 
+					<Entity id="50101" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
-					<SetOfEntities fromId="32000" number="10" layer="Base_1"/>
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
 				</Entities>
 			</Scene>
 			<!-- -->

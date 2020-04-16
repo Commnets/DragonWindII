@@ -76,6 +76,18 @@ void DragonTheRevenge::LandscapeScene1::updatePositions ()
 }
 
 // ---
+void DragonTheRevenge::LandscapeScene1::finalize ()
+{
+	DragonTheRevenge::LandscapeScene::finalize ();
+
+	_layersLeftWall = QGAMES::TileLayers ();
+	_layersRightWall = QGAMES::TileLayers ();
+
+	_gorilla = NULL;
+	_gorillaActionBlock = NULL;
+}
+
+// ---
 bool DragonTheRevenge::LandscapeScene1::isLeftWallVisible ()
 {
 	return (_layersLeftWall [0] -> isVisible () && !_layersLeftWall [1] -> isVisible ());
@@ -168,6 +180,7 @@ void DragonTheRevenge::LandscapeScene4::finalize ()
 {
 	_badGuyEnergyLevel -> setVisible (false);
 	_badGuyEnergyLevel -> unObserve (_mainBadGuy);
+	_badGuyEnergyLevel = NULL;
 
 	DragonTheRevenge::LandscapeScene::finalize ();
 }

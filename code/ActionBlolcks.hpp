@@ -77,6 +77,10 @@ namespace DragonTheRevenge
 		const Properties* properties () const
 							{ return (_properties); }
 
+		/** @see parent. 
+			starts or stops the moevement of the lifts. */
+		virtual void setActive (bool a);
+
 		/** @see parent. */
 		virtual void initialize ();
 		virtual void updatePositions ();
@@ -85,7 +89,7 @@ namespace DragonTheRevenge
 		protected:
 		/** To move the lifts. */
 		void liftsToMove (bool m);
-		bool areLiftsMoving () const;
+		bool areLiftsMoving ();
 
 		__DECLARECOUNTERS__ (Counters);
 		virtual QGAMES::Counters* createCounters ()
@@ -98,6 +102,7 @@ namespace DragonTheRevenge
 		Properties* _properties;
 		QGAMES::TileLayers _lift;
 
+		static const int _NUMBERLIFTS = 2;
 		static const int _COUNTERTOGOBACK = 0;
 		static const int _SWITCHLIFTSTOMOVE = 0;
 	};

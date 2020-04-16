@@ -49,22 +49,16 @@ namespace DragonTheRevenge
 		/** @see parent. */
 		virtual void initialize ();
 		virtual void updatePositions ();
+		virtual void finalize ();
 
 		private:
 		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
 		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
 							{ return (new OnOffSwitches ()); }
 
-		/** To know whether the different removeable solid walss are or not visible. */
-		bool isSolid1Visible ()
-							{ return (_solidLayers [0] -> isVisible ()); }
-		bool isSolid2Visible ()
-							{ return (_solidLayers [1] -> isVisible ()); }
-		/** To hide or show the different removeable walls. */
-		void showSolid1Wall (bool a)
-							{ _solidLayers [0] -> setVisible (a); }
-		void showSolid2Wall (bool a)
-							{ _solidLayers [1] -> setVisible (a); }
+		/** To manage the solid parts of the map. */
+		bool isSolidVisible (int s);
+		void showSolidWall (int s, bool a);
 
 		/** @see parent. 
 			When the explosion happens the walls (1 / 2) could be destroyed too, 
@@ -73,10 +67,10 @@ namespace DragonTheRevenge
 
 		private:
 		// Implementation
-		QGAMES::AdvancedTileLayers _solidLayers;
+		std::vector <QGAMES::AdvancedTileLayers> _solidLayers;
 
-		static const int _SWITCHTOSHOWSOLID1WALL = 0;
-		static const int _SWITCHTOSHOWSOLID2WALL = 1;
+		static const int _NUMBERSOLIDS = 2;
+		static const int _SWITCHTOSHOWSOLIDWALL [_NUMBERSOLIDS];
 	};
 
 	/** Mountain Scene 1 */
@@ -122,6 +116,7 @@ namespace DragonTheRevenge
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
 	};
 
 	/** Mountain Scene 4 */

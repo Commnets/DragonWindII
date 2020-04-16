@@ -37,11 +37,20 @@ void DragonTheRevenge::CityScene1::initialize ()
 	_layersMoat [0] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Solid_Moat")));
 	_layersMoat [1] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_Moat")));
 	_layersMoat [2] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Liquid_Moat")));
-	assert (_layersMoat [0] && _layersMoat [1] && _layersMoat [2]);
+	_layersMoat [3] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_LakeMoat")));
+	assert (_layersMoat [0] && _layersMoat [1] && _layersMoat [2] && _layersMoat [3]);
 
 	reStartAllOnOffSwitches ();
 
 	showMoat (onOffSwitch (_SWITCHTOSHOWMOAT) -> isOn ());
+}
+
+// ---
+void DragonTheRevenge::CityScene1::finalize ()
+{
+	DragonTheRevenge::CityScene::finalize ();
+
+	_layersMoat = QGAMES::TileLayers ();
 }
 
 // ---
@@ -66,9 +75,8 @@ void DragonTheRevenge::CityScene1::updatePositions ()
 // ---
 bool DragonTheRevenge::CityScene1::isMoatVisible ()
 {
-	return (!_layersMoat [0] -> isVisible () && 
-			!_layersMoat [1] -> isVisible () &&
-			_layersMoat [2] -> isVisible ());
+	return (!_layersMoat [0] -> isVisible () &&	!_layersMoat [1] -> isVisible () &&
+			_layersMoat [2] -> isVisible () && _layersMoat [3] -> isVisible ());
 }
 
 // ---
@@ -76,7 +84,8 @@ void DragonTheRevenge::CityScene1::showMoat (bool a)
 {
 	_layersMoat [0] -> setVisible (!a);
 	_layersMoat [1] -> setVisible (!a);
-	_layersMoat [2] -> setVisible (a); 
+	_layersMoat [2] -> setVisible (a);
+	_layersMoat [3] -> setVisible (a);
 }
 
 // ---
@@ -144,6 +153,7 @@ void DragonTheRevenge::CityScene4::finalize ()
 {
 	_badGuyEnergyLevel -> setVisible (false);
 	_badGuyEnergyLevel -> unObserve (_mainBadGuy);
+	_badGuyEnergyLevel = NULL;
 
 	DragonTheRevenge::CityScene::finalize ();
 }

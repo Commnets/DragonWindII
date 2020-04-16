@@ -98,11 +98,11 @@
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
-			<Attribute id="MOVDIRECTION" value="1,0,0"/>
+			<Attribute id="MOVDIRECTION" value="1,1,0"/>
 			<Attribute id="SPEED" value="0"/>
 			<Attribute id="PIXELS" value="1"/>
 			<Attribute id="LINKEDBK" value="80141"/>
-			<Attribute id="SPEEDLINKEDBK" value="2"/>
+			<Attribute id="SPEEDLINKEDBK" value="0"/>
 			<Attribute id="ROLL" value="YES"/>
 		</Attributes>
 	</Background>
@@ -110,11 +110,11 @@
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
-			<Attribute id="MOVDIRECTION" value="1,0,0"/>
+			<Attribute id="MOVDIRECTION" value="1,1,0"/>
 			<Attribute id="SPEED" value="0"/>
 			<Attribute id="PIXELS" value="1"/>
 			<Attribute id="LINKEDBK" value="80142"/>
-			<Attribute id="SPEEDLINKEDBK" value="2"/>
+			<Attribute id="SPEEDLINKEDBK" value="0"/>
 			<Attribute id="ROLL" value="YES"/>
 		</Attributes>
 	</Background>
@@ -122,11 +122,11 @@
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
-			<Attribute id="MOVDIRECTION" value="1,0,0"/>
+			<Attribute id="MOVDIRECTION" value="1,1,0"/>
 			<Attribute id="SPEED" value="0"/>
 			<Attribute id="PIXELS" value="1"/>
 			<Attribute id="LINKEDBK" value="80143"/>
-			<Attribute id="SPEEDLINKEDBK" value="2"/>
+			<Attribute id="SPEEDLINKEDBK" value="0"/>
 			<Attribute id="ROLL" value="YES"/>
 		</Attributes>
 	</Background>
@@ -134,7 +134,7 @@
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
-			<Attribute id="MOVDIRECTION" value="1,0,0"/>
+			<Attribute id="MOVDIRECTION" value="1,1,0"/>
 			<Attribute id="SPEED" value="0"/>
 			<Attribute id="PIXELS" value="1"/>
 			<Attribute id="LINKEDBK" value="80144"/>
@@ -142,13 +142,13 @@
 			<Attribute id="ROLL" value="YES"/>
 		</Attributes>
 	</Background>
-	<Background id="80144" form="80144" times="1">
+	<Background id="80144" form="80144" times="2">
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
 			<Attribute id="MOVDIRECTION" value="0,0,0"/>
 			<Attribute id="SPEED" value="0"/>
-			<Attribute id="PIXELS" value="1"/>
+			<Attribute id="PIXELS" value="0"/>
 			<Attribute id="ROLL" value="NO"/>
 			<Attribute id="FIX" value="YES"/>
 		</Attributes>

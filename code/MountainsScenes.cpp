@@ -1,4 +1,6 @@
 #include "MountainsScenes.hpp"
+		
+const int DragonTheRevenge::MountainsScene0::_SWITCHTOSHOWSOLIDWALL [_NUMBERSOLIDS] = { 0, 1 };
 
 // ---
 void DragonTheRevenge::MountainsScene::initialize ()
@@ -17,12 +19,21 @@ void DragonTheRevenge::MountainsScene0::initialize ()
 
 	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
 	assert (pM); // Just in case...
-	_solidLayers [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
-	_solidLayers [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_3")));
-	assert (_solidLayers [0] && _solidLayers [1]);
 
-	showSolid1Wall (onOffSwitch (_SWITCHTOSHOWSOLID1WALL) -> isOn ());
-	showSolid2Wall (onOffSwitch (_SWITCHTOSHOWSOLID2WALL) -> isOn ());
+	// The layers involved in the solid appearence are extraxted one by one...
+	QGAMES::AdvancedTileLayers tL1;
+	tL1 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
+	assert (tL1 [0]);
+	QGAMES::AdvancedTileLayers tL2;
+	tL2 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_3")));
+	assert (tL2 [0]);
+
+	_solidLayers.resize (2);
+	_solidLayers [0] = tL1;
+	_solidLayers [1] = tL2;
+
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+		showSolidWall (i, onOffSwitch (_SWITCHTOSHOWSOLIDWALL [i]) -> isOn ());
 }
 
 // ---
@@ -30,15 +41,42 @@ void DragonTheRevenge::MountainsScene0::updatePositions ()
 {
 	DragonTheRevenge::MountainsScene::updatePositions ();
 
-	if (onOffSwitch (_SWITCHTOSHOWSOLID1WALL) -> isOn () && !isSolid1Visible ())
-		showSolid1Wall (true);
-	if (!onOffSwitch (_SWITCHTOSHOWSOLID1WALL) -> isOn () && isSolid1Visible ())
-		showSolid1Wall (false);
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+	{
+		if (onOffSwitch (_SWITCHTOSHOWSOLIDWALL [i]) -> isOn () && !isSolidVisible (i))
+			showSolidWall (i, true);
+		if (!onOffSwitch (_SWITCHTOSHOWSOLIDWALL [i]) -> isOn () && isSolidVisible (i))
+			showSolidWall (i, false);
+	}
+}
 
-	if (onOffSwitch (_SWITCHTOSHOWSOLID2WALL) -> isOn () && !isSolid2Visible ())
-		showSolid2Wall (true);
-	if (!onOffSwitch (_SWITCHTOSHOWSOLID2WALL) -> isOn () && isSolid2Visible ())
-		showSolid2Wall (false);
+// ---
+void DragonTheRevenge::MountainsScene0::finalize ()
+{
+	DragonTheRevenge::MountainsScene::finalize ();
+
+	_solidLayers = std::vector <QGAMES::AdvancedTileLayers> ();
+}
+
+// ---
+bool DragonTheRevenge::MountainsScene0::isSolidVisible (int s)
+{
+	assert (s >= 0 && s < _NUMBERSOLIDS);
+
+	bool result = true;
+	for (QGAMES::AdvancedTileLayers::const_iterator i = _solidLayers [s].begin ();
+			i != _solidLayers [s].end () && result; result &= (*i++).second -> isVisible ());
+
+	return (result);
+}
+
+// ---
+void DragonTheRevenge::MountainsScene0::showSolidWall (int s, bool a)
+{
+	assert (s >= 0 && s < _NUMBERSOLIDS);
+
+	for (QGAMES::AdvancedTileLayers::const_iterator i = _solidLayers [s].begin ();
+			i != _solidLayers [s].end (); (*i++).second -> setVisible (a));
 }
 
 // ---
@@ -47,18 +85,17 @@ void DragonTheRevenge::MountainsScene0::explosionAround (const QGAMES::Position&
 	DragonTheRevenge::MountainsScene::explosionAround (pos, rdx);
 
 	if ((pos - QGAMES::Position (__BD 864, __BD 96, __BD 0)).module () < (rdx * __BD 2))
-		onOffSwitch (_SWITCHTOSHOWSOLID1WALL) -> set (false);
+		onOffSwitch (_SWITCHTOSHOWSOLIDWALL [0]) -> set (false);
 	if ((pos - QGAMES::Position (__BD 1728, __BD 120, __BD 0)).module () < (rdx * __BD 2))
-		onOffSwitch (_SWITCHTOSHOWSOLID2WALL) -> set (false);
+		onOffSwitch (_SWITCHTOSHOWSOLIDWALL [1]) -> set (false);
 }
 
 // ---
 __IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::MountainsScene0::OnOffSwitches)
 {
-	addOnOffSwitch (new QGAMES::OnOffSwitch 
-		(DragonTheRevenge::MountainsScene0::_SWITCHTOSHOWSOLID1WALL, true));
-	addOnOffSwitch (new QGAMES::OnOffSwitch 
-		(DragonTheRevenge::MountainsScene0::_SWITCHTOSHOWSOLID2WALL, true));
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+		addOnOffSwitch (new QGAMES::OnOffSwitch 
+			(DragonTheRevenge::MountainsScene0::_SWITCHTOSHOWSOLIDWALL [i], true));
 }
 
 // ---
@@ -84,9 +121,16 @@ void DragonTheRevenge::MountainsScene3::initialize ()
 
 	DragonTheRevenge::MountainsScene::initialize ();
 
+// setBackgroundMap (__DRAGONWINDTHEREVENGE_LANDSCAPEWITHCAVEWORLDBKMAPID__);
 	setBackgroundMap (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDLARGEWORLDBKMAPID__);
 	backgroundMap () -> initialize ();
 	backgroundMap () -> stop ();
+}
+
+// ---
+void DragonTheRevenge::MountainsScene3::updatePositions ()
+{
+	DragonTheRevenge::MountainsScene::updatePositions ();
 }
 
 // ---
@@ -114,6 +158,7 @@ void DragonTheRevenge::MountainsScene4::finalize ()
 {
 	_badGuyEnergyLevel -> setVisible (false);
 	_badGuyEnergyLevel -> unObserve (_mainBadGuy);
+	_badGuyEnergyLevel = NULL;
 
 	DragonTheRevenge::MountainsScene::finalize ();
 }

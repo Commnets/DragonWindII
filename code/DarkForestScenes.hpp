@@ -43,14 +43,24 @@ namespace DragonTheRevenge
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: DarkForestScene (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDSCENE0ID__, m, cn, p, ePL),
-			  _layersBase1 (), _layersBase2 ()
+			  _layersHole (), 
+			  _secondsToVanishPerFrame (QGAMES::Game::game () -> framesPerSecond () / 6)
 							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
 		virtual void updatePositions ();
+		virtual void finalize ();
 
 		private:
+		// To manage the holes
+		bool isHoleDisappearing (int h);
+		void dissapearHole (int h);
+		bool hasHoleDissapear (int h);
+		bool isHoleAppearing (int h);
+		void appearHole (int h);
+		bool hasHoleAppear (int h);
+
 		__DECLARECOUNTERS__ (Counters);
 		virtual QGAMES::Counters* createCounters ()
 							{ return (new Counters ()); }
@@ -60,13 +70,12 @@ namespace DragonTheRevenge
 
 		private:
 		// Implamentation
-		QGAMES::AdvancedTileLayers _layersBase1;
-		QGAMES::AdvancedTileLayers _layersBase2;
+		std::vector <QGAMES::AdvancedTileLayers> _layersHole;
+		int _secondsToVanishPerFrame;
 
-		static const int _COUNTERTOSHOWDISAPPEARHOLE1 = 0;
-		static const int _COUNTERTOSHOWDISAPPEARHOLE2 = 1;
-		static const int _SWITCHHOLE1VISIBLE = 0;
-		static const int _SWITCHHOLE2VISIBLE = 1;
+		static const int _NUMBERHOLES = 2;
+		static const int _COUNTERTOSHOWDISAPPEARHOLE [_NUMBERHOLES];
+		static const int _SWITCHHOLEVISIBLE [_NUMBERHOLES];
 	};
 
 	/** DarkForest Scene 1 */

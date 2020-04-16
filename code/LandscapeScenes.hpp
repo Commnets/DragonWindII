@@ -67,6 +67,7 @@ namespace DragonTheRevenge
 		/** @see parent. */
 		virtual void initialize ();
 		virtual void updatePositions ();
+		virtual void finalize ();
 
 		private:
 		__DECLAREONOFFSWITCHES__ (OnOffSwitches);

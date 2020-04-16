@@ -66,6 +66,17 @@ void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::Properties::fromSetO
 }
 
 // ---
+void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::setActive (bool a)
+{
+	DRAGONWIND::SceneActionBlock::setActive (a);
+
+	if (a && !areLiftsMoving ())
+		liftsToMove (true);
+	if (!a && areLiftsMoving ())
+		liftsToMove (false);
+}
+
+// ---
 void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::initialize ()
 {
 	DRAGONWIND::SceneActionBlock::initialize ();
@@ -76,18 +87,14 @@ void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::initialize ()
 	// Which are the layers involved in the contingency?
 	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (scn -> activeMap ());
 	assert (pM); // Just in case...
-	_lift [0] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_3")));
-	_lift [1] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_4")));
+	_lift [0] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_3"))); // The ciclic lift
+	_lift [1] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_4"))); // The one shoot lift
 	assert (_lift [0] && _lift [1]);
 	
-	_lift [0] -> setPosition (QGAMES::Position::_cero);
-	_lift [0] -> setMove (false);
-	_lift [1] -> setPosition (QGAMES::Position::_cero);
-	_lift [1] -> setMove (false);
-
 	reStartAllCounters ();
 	reStartAllOnOffSwitches ();
 
+	onOffSwitch (_SWITCHLIFTSTOMOVE) -> set (initialActive ());
 	liftsToMove (onOffSwitch (_SWITCHLIFTSTOMOVE) -> isOn ());
 }
 
@@ -96,30 +103,47 @@ void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::updatePositions ()
 {
 	DRAGONWIND::SceneActionBlock::updatePositions ();
 
-	if (isActive () && !areLiftsMoving ())
-		liftsToMove (true);
-	if (!isActive () && areLiftsMoving ())
-		liftsToMove (false);
+	QGAMES::Layer::SetOfMovementsBehaviour* mBhv = 
+		dynamic_cast <QGAMES::Layer::SetOfMovementsBehaviour*> (_lift [0] -> movement ());
+	assert (mBhv);
+
+	// The movement has already been defined as ciclic,
+	// But the position has also to be moved back to the very benining before starting back the cycle.
+	if (mBhv -> hasCurrentMovementFinished ())
+		_lift [0] -> setPosition (QGAMES::Position::_cero);
 }
 
 // ---
 void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::finalize ()
 {
 	DRAGONWIND::SceneActionBlock::finalize ();
+
+	_lift = QGAMES::TileLayers ();
 }
 
 // ---
 void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::liftsToMove (bool m)
 {
-	// TODO
+	if (_lift.empty ())
+		return; // Not defined yect, so nothing to do!
+
+	assert (_lift.size () == _NUMBERLIFTS);
+
+	_lift [0] -> setMove (m);
+	_lift [1] -> setMove (m);
+
+	// Some sound to indicate whether it moves or not...
 }
 
 // ---
-bool DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::areLiftsMoving () const
+bool DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::areLiftsMoving ()
 {
-	// TODO
+	if (_lift.empty ())
+		return (false); // Not defined yet, no moving is understood!
 
-	return (false);
+	assert (_lift.size () == _NUMBERLIFTS);
+
+	return (_lift [0] -> moves () && _lift [1] -> moves ());
 }
 
 // ---

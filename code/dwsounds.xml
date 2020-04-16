@@ -27,5 +27,6 @@
 	<Sound id="50018" type="1" loop="-1" file="sounds/playerwins.wav"/>
 	<Sound id="50019" type="1" loop=" 0" file="sounds/crywhendie.wav"/>
 	<Sound id="50020" type="1" loop="-1" file="sounds/energybackground.wav"/>
+	<Sound id="50021" type="1" loop=" 0" file="sounds/click.wav"/>
 	
 </Sounds>
