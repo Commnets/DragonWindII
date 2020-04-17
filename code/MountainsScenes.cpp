@@ -115,22 +115,21 @@ void DragonTheRevenge::MountainsScene2::initialize ()
 }
 
 // ---
+void DragonTheRevenge::MountainsScene2::updatePositions ()
+{
+	DragonTheRevenge::MountainsScene::updatePositions ();
+}
+
+// ---
 void DragonTheRevenge::MountainsScene3::initialize ()
 {
 	setMap (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE3MAPID__);
 
 	DragonTheRevenge::MountainsScene::initialize ();
 
-// setBackgroundMap (__DRAGONWINDTHEREVENGE_LANDSCAPEWITHCAVEWORLDBKMAPID__);
 	setBackgroundMap (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDLARGEWORLDBKMAPID__);
 	backgroundMap () -> initialize ();
 	backgroundMap () -> stop ();
-}
-
-// ---
-void DragonTheRevenge::MountainsScene3::updatePositions ()
-{
-	DragonTheRevenge::MountainsScene::updatePositions ();
 }
 
 // ---

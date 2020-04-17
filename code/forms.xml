@@ -420,6 +420,47 @@
     </Form>
 	<!-- -->
 	
+	<!-- Boar -->
+    <Form id="60040" name="BoarRight" file="forms/BoarRight.png" width="445" height="409"
+		fSpacing="0" fMargin="0" fWidth="1" fHeight="1" aColor="255" nFrames="16">
+		<Frame id="0 " fPosX="223" fPosY="202" fWidth="109" fHeight="102" xoffset="10" yoffset="13" width="109" height="102"/>
+		<Frame id="1 " fPosX="111" fPosY="100" fWidth="109" fHeight="98 " xoffset="20" yoffset="18" width="109" height="98 "/>
+		<Frame id="2 " fPosX="114" fPosY="1  " fWidth="110" fHeight="91 " xoffset="19" yoffset="23" width="110" height="91 "/>
+		<Frame id="3 " fPosX="1  " fPosY="1  " fWidth="111" fHeight="90 " xoffset="20" yoffset="25" width="111" height="90 "/>
+		<Frame id="4 " fPosX="222" fPosY="100" fWidth="109" fHeight="98 " xoffset="10" yoffset="15" width="109" height="98 "/>
+		<Frame id="5 " fPosX="336" fPosY="1  " fWidth="108" fHeight="97 " xoffset="11" yoffset="16" width="108" height="97 "/>
+		<Frame id="6 " fPosX="226" fPosY="1  " fWidth="108" fHeight="96 " xoffset="11" yoffset="17" width="108" height="96 "/>
+		<Frame id="7 " fPosX="1  " fPosY="100" fWidth="108" fHeight="97 " xoffset="11" yoffset="16" width="108" height="97 "/>
+		<Frame id="8 " fPosX="333" fPosY="100" fWidth="109" fHeight="100" xoffset="10" yoffset="13" width="109" height="100"/>
+		<Frame id="9 " fPosX="334" fPosY="202" fWidth="109" fHeight="102" xoffset="10" yoffset="13" width="109" height="102"/>
+		<Frame id="10" fPosX="1  " fPosY="306" fWidth="109" fHeight="102" xoffset="10" yoffset="13" width="109" height="102"/>
+		<Frame id="11" fPosX="112" fPosY="306" fWidth="109" fHeight="102" xoffset="10" yoffset="13" width="109" height="102"/>
+		<Frame id="12" fPosX="1  " fPosY="202" fWidth="109" fHeight="100" xoffset="10" yoffset="13" width="109" height="100"/>
+		<Frame id="13" fPosX="223" fPosY="306" fWidth="109" fHeight="102" xoffset="10" yoffset="13" width="109" height="102"/>
+		<Frame id="14" fPosX="112" fPosY="202" fWidth="109" fHeight="101" xoffset="10" yoffset="13" width="109" height="101"/>
+		<Frame id="15" fPosX="334" fPosY="306" fWidth="109" fHeight="102" xoffset="10" yoffset="13" width="109" height="102"/>
+    </Form>
+    <Form id="60041" name="BoarLeft" file="forms/BoarLeft.png" width="445" height="409"
+		fSpacing="0" fMargin="0" fWidth="1" fHeight="1" aColor="255" nFrames="16">
+		<Frame id="0 " fPosX="223" fPosY="202" fWidth="109" fHeight="102" xoffset="41" yoffset="13" width="109" height="102"/>
+		<Frame id="1 " fPosX="111" fPosY="100" fWidth="109" fHeight="98 " xoffset="31" yoffset="18" width="109" height="98 "/>
+		<Frame id="2 " fPosX="114" fPosY="1  " fWidth="110" fHeight="91 " xoffset="31" yoffset="23" width="110" height="91 "/>
+		<Frame id="3 " fPosX="1  " fPosY="1  " fWidth="111" fHeight="90 " xoffset="29" yoffset="25" width="111" height="90 "/>
+		<Frame id="4 " fPosX="222" fPosY="100" fWidth="109" fHeight="98 " xoffset="41" yoffset="15" width="109" height="98 "/>
+		<Frame id="5 " fPosX="336" fPosY="1  " fWidth="108" fHeight="97 " xoffset="41" yoffset="16" width="108" height="97 "/>
+		<Frame id="6 " fPosX="226" fPosY="1  " fWidth="108" fHeight="96 " xoffset="41" yoffset="17" width="108" height="96 "/>
+		<Frame id="7 " fPosX="1  " fPosY="100" fWidth="108" fHeight="97 " xoffset="41" yoffset="16" width="108" height="97 "/>
+		<Frame id="8 " fPosX="333" fPosY="100" fWidth="109" fHeight="100" xoffset="41" yoffset="13" width="109" height="100"/>
+		<Frame id="9 " fPosX="334" fPosY="202" fWidth="109" fHeight="102" xoffset="41" yoffset="13" width="109" height="102"/>
+		<Frame id="10" fPosX="1  " fPosY="306" fWidth="109" fHeight="102" xoffset="41" yoffset="13" width="109" height="102"/>
+		<Frame id="11" fPosX="112" fPosY="306" fWidth="109" fHeight="102" xoffset="41" yoffset="13" width="109" height="102"/>
+		<Frame id="12" fPosX="1  " fPosY="202" fWidth="109" fHeight="100" xoffset="41" yoffset="13" width="109" height="100"/>
+		<Frame id="13" fPosX="223" fPosY="306" fWidth="109" fHeight="102" xoffset="41" yoffset="13" width="109" height="102"/>
+		<Frame id="14" fPosX="112" fPosY="202" fWidth="109" fHeight="101" xoffset="41" yoffset="13" width="109" height="101"/>
+		<Frame id="15" fPosX="334" fPosY="306" fWidth="109" fHeight="102" xoffset="41" yoffset="13" width="109" height="102"/>
+    </Form>
+	<!-- -->
+	
 	<!-- Vulture -->
 	<Form id="70000" name="VultureRight" file="forms/VultureRight.png" width="360" height="90" 
             fSpacing="0" fMargin="0" fWidth="90" fHeight="90" aColor="255" nFrames="4"/>

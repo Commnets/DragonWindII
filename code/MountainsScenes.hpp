@@ -101,6 +101,7 @@ namespace DragonTheRevenge
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
 	};
 
 	/** Mountain Scene 3 */
@@ -116,7 +117,6 @@ namespace DragonTheRevenge
 
 		/** @see parent. */
 		virtual void initialize ();
-		virtual void updatePositions ();
 	};
 
 	/** Mountain Scene 4 */

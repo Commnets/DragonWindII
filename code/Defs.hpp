@@ -90,6 +90,7 @@
 #define __DRAGONWIND_FEMALEZOMBIETYPEID__							6
 #define __DRAGONWIND_KONGTYPEID__									7
 #define __DRAGONWIND_ORCUSTYPEID__									8
+#define __DRAGONWIND_BOARTYPEID__									9
 
 // Flock of vultures
 #define __DRAGONWINDTHEREVENGE_VULTUREBASEID__						60000

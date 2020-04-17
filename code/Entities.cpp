@@ -66,6 +66,10 @@ DRAGONWIND::BadGuy::StatesId DragonTheRevenge::BadGuy::statesIdForType (int t)
 			result = __DRAGONWIND_ORCUSSTATESID__;
 			break;
 
+		case __DRAGONWIND_BOARTYPEID__:
+			result = __DRAGONWIND_BOARSTATESID__;
+			break;
+
 		default:
 			result = DRAGONWIND::BadGuy::statesIdForType (t);
 			break;

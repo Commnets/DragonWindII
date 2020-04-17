@@ -347,6 +347,10 @@
 			<Form id="60030"/>
 			<!-- Orcus Left -->
 			<Form id="60031"/>
+			<!-- Boar Right -->
+			<Form id="60040"/>
+			<!-- Boar Left -->
+			<Form id="60041"/>
 	
 <!-- ADDED FOR DRAGONWINDII THE REVENGE -->
 		</Forms>
@@ -1322,6 +1326,98 @@
 			</Animation>
 			<!-- Orcus -->
 
+			<!-- Boar -->
+			<!-- Right -->
+			<!-- Standing -->
+			<Animation id="180" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60040"/>
+					<Attribute id="INITIALASPECT" value="4"/>
+					<Attribute id="FINALASPECT" value="8"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="181" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60040"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="16"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="182" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60040"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="183" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60040"/>
+					<Attribute id="INITIALASPECT" value="4"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<Animation id="190" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60041"/>
+					<Attribute id="INITIALASPECT" value="4"/>
+					<Attribute id="FINALASPECT" value="8"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Running -->
+			<Animation id="191" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60041"/>
+					<Attribute id="INITIALASPECT" value="8"/>
+					<Attribute id="FINALASPECT" value="16"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="1"/>
+				</Attributes>
+			</Animation>
+			<!-- Jumping is like running in terms of animation -->
+			<!-- Falling is like running in terms of animation -->
+			<!-- Sliding is like running in terms of animation -->
+			<!-- Dieing -->
+			<Animation id="192" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60041"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="5"/>
+					<Attribute id="LOOP" value="0"/>
+				</Attributes>
+			</Animation>
+			<!-- Died -->
+			<Animation id="193" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60041"/>
+					<Attribute id="INITIALASPECT" value="4"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="0"/>
+					<Attribute id="LOOP" value="0"/> 
+				</Attributes>
+			</Animation>
+			<!-- Boar -->
+
 <!-- ADDED FOR DRAGONWINDII THE REVENGE -->
 			
 		</Animations>
@@ -1929,6 +2025,80 @@
 			<!-- Died -->
 			<State id="176" animation="173" movementBase="60000"/>
 			<!-- Orcus -->
+
+			<!-- Boar -->
+			<!-- Right -->
+			<!-- Standing -->
+			<State id="180" animation="180" movementBase="60000"/>
+			<!-- Running -->
+			<State id="181" animation="181" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="182" animation="181" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="183" animation="181" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="184" animation="181" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="185" animation="182" movementBase="60000"/>
+			<!-- Died -->
+			<State id="186" animation="183" movementBase="60000"/>
+
+			<!-- Left -->
+			<!-- Standing -->
+			<State id="190" animation="190" movementBase="60000"/>
+			<!-- Running -->
+			<State id="191" animation="191" movementBase="61000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-50,0,0"/> 
+					<Attribute id="ACCELERATION" value="0,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Jumping -->
+			<State id="192" animation="191" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,-100,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Falling -->
+			<State id="193" animation="191" movementBase="62000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/> 
+				</Attributes>
+			</State>
+			<!-- Sliding -->
+			<State id="194" animation="191" movementBase="63000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="-100,0,0"/> 
+					<Attribute id="ACCELERATION" value="-100,0,0"/> 
+				</Attributes>
+			</State>
+			<!-- Dieing -->
+			<State id="195" animation="192" movementBase="60000"/>
+			<!-- Died -->
+			<State id="196" animation="193" movementBase="60000"/>
+			<!-- Boar -->
 
 <!-- ADDED FOR DRAGONWINDII THE REVENGE -->
 

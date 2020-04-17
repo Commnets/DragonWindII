@@ -80,14 +80,14 @@
 				</Maps>
 				<Entities>
 					<!-- Over which layer have the entities to be located? -->
-					<Entity id="50100" layer="Ladder_1"/> <!-- The male main ninja -->
-					<Entity id="50101" layer="Ladder_1"/> <!-- The female main ninja -->
-					<SetOfEntities fromId="51000" number="110" layer="Ladder_1"/> <!-- The shootings -->
-					<SetOfEntities fromId="30000" number="200" layer="Ladder_1"/> <!-- The food -->
-					<SetOfEntities fromId="31000" number="200" layer="Ladder_1"/> <!-- Things to be caught -->
+					<Entity id="50100" layer="Solid_1"/> <!-- The male main ninja -->
+					<Entity id="50101" layer="Solid_1"/> <!-- The female main ninja -->
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/> <!-- The shootings -->
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/> <!-- The food -->
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/> <!-- Things to be caught -->
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> <!-- The bees -->
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> <!-- The birds -->
-					<SetOfEntities fromId="32000" number="10" layer="Ladder_1"/> <!-- The bad guys -->
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/> <!-- The bad guys -->
 				</Entities>
 			</Scene>
 			

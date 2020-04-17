@@ -55,6 +55,8 @@ namespace DragonTheRevenge
 			DRAGONWIND::BadGuy::StatesId (140, 150, 141, 151, 142, 152, 143, 153, 144, 154, 145, 155, 146, 156)
 		#define __DRAGONWIND_ORCUSSTATESID__ \
 			DRAGONWIND::BadGuy::StatesId (160, 170, 161, 171, 162, 172, 163, 173, 164, 174, 165, 175, 166, 176)
+		#define __DRAGONWIND_BOARSTATESID__ \
+			DRAGONWIND::BadGuy::StatesId (180, 190, 181, 191, 182, 192, 183, 193, 184, 194, 185, 195, 186, 196)
 
 		BadGuy (int cId, const QGAMES::Forms& f = QGAMES::Forms (), 
 			const QGAMES::PlatformArtist::Data& d = QGAMES::PlatformArtist::Data ())
