@@ -1,6 +1,8 @@
 #include "MountainsScenes.hpp"
 		
 const int DragonTheRevenge::MountainsScene0::_SWITCHTOSHOWSOLIDWALL [_NUMBERSOLIDS] = { 0, 1 };
+const int DragonTheRevenge::MountainsScene1::_COUNTERSOLIDTOMOVE [_NUMBERSOLIDS] = { 0, 1, 2, 3 };
+const int DragonTheRevenge::MountainsScene1::_SWITCHSOLIDMOVING [_NUMBERSOLIDS] = { 0, 1, 2, 3 };
 
 // ---
 void DragonTheRevenge::MountainsScene::initialize ()
@@ -104,6 +106,100 @@ void DragonTheRevenge::MountainsScene1::initialize ()
 	setMap (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE1MAPID__);
 
 	DragonTheRevenge::MountainsScene::initialize ();
+
+	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
+	assert (pM); // Just in case...
+
+	// The layers involved in the pillars movement...
+	_solidLayers [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_1")));
+	_solidLayers [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
+	_solidLayers [2] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_3")));
+	_solidLayers [3] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_4")));
+	assert (_solidLayers [0] && _solidLayers [1] && _solidLayers [2]);
+
+	reStartAllCounters ();
+	reStartAllOnOffSwitches ();
+
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+		counter (_COUNTERSOLIDTOMOVE [i]) -> initialize 
+			((int) (2.1 * (rand () % (game () -> framesPerSecond ()) + 1)), 0, true, true);
+
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+		movePillar (i, onOffSwitch (_SWITCHSOLIDMOVING [i]) -> isOn ());
+}
+
+// ---
+void DragonTheRevenge::MountainsScene1::updatePositions ()
+{
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+		if (onOffSwitch (_SWITCHSOLIDMOVING [i]) -> isOn () && !isPillarMoving (i))
+			movePillar (i, true);
+
+	DragonTheRevenge::MountainsScene::updatePositions ();
+
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+		onOffSwitch (_SWITCHSOLIDMOVING [i]) -> set (isPillarMoving (i));
+
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+	{
+		if (!onOffSwitch (_SWITCHSOLIDMOVING [i]) -> isOn () &&
+			counter (_COUNTERSOLIDTOMOVE [i]) -> isEnd ())
+		{
+			onOffSwitch (_SWITCHSOLIDMOVING [i]) -> set (true);
+
+			counter (_COUNTERSOLIDTOMOVE [i]) -> initialize 
+				((int) (1.1 * (rand () % (game () -> framesPerSecond ()) + 1)), 0, true, true);
+		}
+	}
+}
+
+// ---
+void DragonTheRevenge::MountainsScene1::finalize ()
+{
+	DragonTheRevenge::MountainsScene::finalize ();
+
+	_solidLayers = QGAMES::AdvancedTileLayers ();
+}
+
+// ---
+bool DragonTheRevenge::MountainsScene1::isPillarMoving (int nP)
+{
+	assert (nP >= 0 && nP < _NUMBERSOLIDS);
+
+	return (_solidLayers [nP] -> moves () &&
+			!_solidLayers [nP] -> movement () -> hasFinished ());
+}
+
+// ---
+void DragonTheRevenge::MountainsScene1::movePillar (int nP, bool m)
+{
+	assert (nP >= 0 && nP < _NUMBERSOLIDS);
+
+	if (m)
+	{
+		QGAMES::Layer::MovementBehaviour* mov = _solidLayers [nP] -> movement ();
+		assert (mov);
+		mov -> initialize ();
+	}
+
+	_solidLayers [nP] -> setMove (m);
+}
+
+// ---
+__IMPLEMENTCOUNTERS__ (DragonTheRevenge::MountainsScene1::Counters)
+{
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+		addCounter (new QGAMES::Counter 
+			(DragonTheRevenge::MountainsScene1::_COUNTERSOLIDTOMOVE [i], 
+				(int) (QGAMES::Game::game () -> framesPerSecond () * 2.1), 0, true, true));
+}
+
+// ---
+__IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::MountainsScene1::OnOffSwitches)
+{
+	for (int i = 0; i < _NUMBERSOLIDS; i++)
+		addOnOffSwitch (new QGAMES::OnOffSwitch 
+			(DragonTheRevenge::MountainsScene1::_SWITCHSOLIDMOVING [i], false));
 }
 
 // ---
@@ -112,12 +208,6 @@ void DragonTheRevenge::MountainsScene2::initialize ()
 	setMap (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE2MAPID__);
 
 	DragonTheRevenge::MountainsScene::initialize ();
-}
-
-// ---
-void DragonTheRevenge::MountainsScene2::updatePositions ()
-{
-	DragonTheRevenge::MountainsScene::updatePositions ();
 }
 
 // ---

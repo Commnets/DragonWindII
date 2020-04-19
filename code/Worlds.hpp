@@ -21,6 +21,7 @@
 #include "LandscapeWorlds.hpp"
 #include "DarkForestWorlds.hpp"
 #include "MountainsWorlds.hpp"
+#include "TempleWorlds.hpp"
 
 #endif
   

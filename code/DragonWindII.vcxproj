@@ -106,6 +106,8 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="TempleScenes.hpp" />
+    <ClInclude Include="TempleWorlds.hpp" />
     <ClInclude Include="Worlds.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +126,8 @@
     <ClCompile Include="Scenes.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="TempleScenes.cpp" />
+    <ClCompile Include="TempleWorlds.cpp" />
     <ClCompile Include="Worlds.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -86,6 +86,27 @@ namespace DragonTheRevenge
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
+		virtual void finalize ();
+
+		private:
+		bool isPillarMoving (int nP);
+		void movePillar (int nP, bool m);
+
+		__DECLARECOUNTERS__ (Counters);
+		virtual QGAMES::Counters* createCounters ()
+							{ return (new Counters ()); }
+		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
+		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
+							{ return (new OnOffSwitches ()); }
+
+		private:
+		// Implementation
+		QGAMES::AdvancedTileLayers _solidLayers;
+
+		static const int _NUMBERSOLIDS = 4;
+		static const int _COUNTERSOLIDTOMOVE [_NUMBERSOLIDS];
+		static const int _SWITCHSOLIDMOVING [_NUMBERSOLIDS];
 	};
 
 	/** Mountain Scene 2 */
@@ -101,7 +122,6 @@ namespace DragonTheRevenge
 
 		/** @see parent. */
 		virtual void initialize ();
-		virtual void updatePositions ();
 	};
 
 	/** Mountain Scene 3 */

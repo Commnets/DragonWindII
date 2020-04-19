@@ -9,5 +9,6 @@
 	<Include file="landscapeworlds.xml"/>
 	<Include file="darkforestworlds.xml"/>
 	<Include file="mountainsworlds.xml"/>
+	<Include file="templeworlds.xml"/>
 	
 </Worlds>

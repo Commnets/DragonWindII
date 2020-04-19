@@ -105,29 +105,49 @@
 			<Scene id="90001">
 				<Actions>
 					<!-- Flying Monsters -->
-					<!-- Vultures -->
+					<!-- Birds -->
 					<Action id="70075">
 						<Attributes>
+							<Attribute id="TypeOfMonster" value="1"/> 
+							<Attribute id="TimeToAppear" value="3"/> 
+						</Attributes>
+					</Action>
+
+					<!-- Vultures -->
+					<Action id="70076">
+						<Attributes>
 							<Attribute id="TypeOfMonster" value="2"/> 
-							<Attribute id="TimeToAppear" value="0"/> 
+							<Attribute id="TimeToAppear" value="5"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Block 1 -->
+					<Action id="71160"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="ImpulseOfFire" value="-1"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="4"/>
 						</Attributes>
 					</Action>
 					
 					<!-- Environment Condition -->
 					<Action id="72075">
 						<Attributes>
-							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="TypeCondition" value="2"/> 
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
-							<Attribute id="LightningsProbability" value="70"/>
-							<Attribute id="LightningsFrecuency" value="3"/>
+							<Attribute id="EarthquakeIntensity" value="1"/>
 						</Attributes>
 					</Action>
 				</Actions>
 				
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
-					<Attribute id="NAME" value="Up Up Up"/>
+					<Attribute id="NAME" value="Pillars"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
 					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
@@ -143,17 +163,17 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Solid_1"/> 
-					<Entity id="50101" layer="Solid_1"/>
-					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
-					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
-					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
+					<Entity id="50100" layer="Base_1"/> 
+					<Entity id="50101" layer="Base_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Base_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Base_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Base_1"/>
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
-					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
+					<SetOfEntities fromId="32000" number="10" layer="Base_1"/>
 				</Entities>
 			</Scene>
 			<!-- -->
@@ -166,7 +186,7 @@
 					<Action id="70080">
 						<Attributes>
 							<Attribute id="TypeOfMonster" value="2"/> 
-							<Attribute id="TimeToAppear" value="2"/> 
+							<Attribute id="TimeToAppear" value="5"/> 
 						</Attributes>
 					</Action>
 					
@@ -231,7 +251,7 @@
 				
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
-					<Attribute id="NAME" value="Jump over the clouds"/>
+					<Attribute id="NAME" value="The hidden things"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
 					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
@@ -274,6 +294,45 @@
 						</Attributes>
 					</Action>
 					
+					<!-- Block 1 -->
+					<Action id="71180"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50000"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="ImpulseOfFire" value="-1"/>
+							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="4"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Block 2 -->
+					<Action id="71181"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="3"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Block 3 -->
+					<Action id="71182"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="ImpulseOfFire" value="-1"/>
+							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsFiring" value="4"/>
+						</Attributes>
+					</Action>
+					
 					<!-- Environment Condition -->
 					<Action id="72085">
 						<Attributes>
@@ -288,7 +347,7 @@
 				
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
-					<Attribute id="NAME" value="You almost get it"/>
+					<Attribute id="NAME" value="Up Up Up"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
 					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
@@ -361,13 +420,14 @@
 				
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
-					<Attribute id="NAME" value="Finally I will kill you"/>
+					<Attribute id="NAME" value="Always you"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80006"/> 
 					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
 				</Attributes>
 				
 				<Conexions>
+					<Conexion id="0" with="100000" at="0"/>
 				</Conexions>
 
 				<Maps>

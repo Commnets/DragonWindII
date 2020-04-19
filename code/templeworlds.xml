@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<Maps>
+
+	<World id="50005">
+		<Scenes>
+		
+			<!-- TempleWorld0 -->
+			<Scene id="100000">
+				<Actions>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Hi Hi"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50008"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="100001" at="0"/>
+				</Conexions>
+
+				<Maps>
+					<Map id="50150" file="maps/BKTemple.xml"/>
+					<Map id="100000" file="maps/TempleWorld0.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Solid_1"/> 
+					<Entity id="50101" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+		
+			<!-- TempleWorld1 -->
+			<Scene id="100001">
+				<Actions>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Kill Kill"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50008"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="100002" at="0"/>
+				</Conexions>
+
+				<Maps>
+					<Map id="50150" file="maps/BKTemple.xml"/>
+					<Map id="100001" file="maps/TempleWorld1.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Solid_1"/> 
+					<Entity id="50101" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+		
+			<!-- TempleWorld2 -->
+			<Scene id="100002">
+				<Actions>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="NAME" value="Fanally, you are mine"/>
+					<Attribute id="MOVEMENT" value="1,0,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50008"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+				</Attributes>
+				
+				<Conexions>
+					<!-- The end of the game -->
+				</Conexions>
+
+				<Maps>
+					<Map id="50150" file="maps/BKTemple.xml"/>
+					<Map id="100002" file="maps/TempleWorld2.tmx"/>
+				</Maps>
+
+				<Entities>
+					<Entity id="50100" layer="Solid_1"/> 
+					<Entity id="50101" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
+				</Entities>
+			</Scene>
+			<!-- -->
+			
+		</Scenes>
+		<Attributes>
+			<Attribute id="NAME" value="The temple"/>
+		</Attributes>
+	</World>
+	
+</Maps>

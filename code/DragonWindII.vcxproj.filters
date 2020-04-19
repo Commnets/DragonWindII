@@ -87,6 +87,12 @@
     <ClInclude Include="MountainsWorlds.hpp">
       <Filter>Archivos de encabezado\Worlds</Filter>
     </ClInclude>
+    <ClInclude Include="TempleScenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="TempleWorlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -136,6 +142,12 @@
     </ClCompile>
     <ClCompile Include="MountainsScenes.cpp">
       <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="TempleScenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="TempleWorlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

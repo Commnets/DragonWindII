@@ -21,6 +21,7 @@
 #include "LandscapeScenes.hpp"
 #include "DarkForestScenes.hpp"
 #include "MountainsScenes.hpp"
+#include "TempleScenes.hpp"
 
 #endif
   
