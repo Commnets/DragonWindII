@@ -240,10 +240,10 @@
 						</Attributes>
 					</Action>
 					
-					<!-- Special Condition in that display to move the layers 
-						 Only an attribute that is the time to go back to the original position. -->
+					<!-- Special Condition in that scene to move a couple of lifts -->
 					<Action id="900021" active="YES"> 
 						<Attributes>
+							<Attribute id="Lifts" value="Base_3"/> 
 							<Attribute id="SecondsToGoBack" value="4"/> 
 						</Attributes>
 					</Action>
@@ -325,7 +325,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="3"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
@@ -341,6 +341,13 @@
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="LightningsProbability" value="70"/>
 							<Attribute id="LightningsFrecuency" value="3"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Special Condition in that scene to move a couple of lifts -->
+					<Action id="80000" active="YES"> 
+						<Attributes>
+							<Attribute id="Lifts" value="Base_3"/> 
 						</Attributes>
 					</Action>
 				</Actions>

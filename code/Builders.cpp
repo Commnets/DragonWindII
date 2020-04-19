@@ -215,6 +215,11 @@ QGAMES::SceneActionBlock* DragonTheRevenge::WorldBuilder::createSceneActionBlock
 		return (new DragonTheRevenge::FlyingMonstersActionBlock (nAB, 
 					new DRAGONWIND::FlyingMonstersActionBlock::Properties (prps)));
 	else
+	if (nAB >= __DRAGONWINDTHEREVENTE_LIFTACTIONBLOCKBASEID__ && 
+		nAB < (__DRAGONWINDTHEREVENTE_LIFTACTIONBLOCKBASEID__ + __DRAGONWINDTHEREVENGE_LIFTACTIONBLOCKNUMBER__))
+		return (new DragonTheRevenge::MoveLiftsCiclicActionBlock (nAB, 
+					new DragonTheRevenge::MoveLiftsCiclicActionBlock::Properties (prps)));
+	else
 	if (nAB == __DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE2ABLOCKID__)
 		return (new DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock (nAB,
 					new DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::Properties (prps)));
