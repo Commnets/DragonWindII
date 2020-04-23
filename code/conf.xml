@@ -19,12 +19,16 @@
 	<Property id="SCREENYPOSITION" value="10"/>
 	
 	<!-- The initial world -->
-	<Property id="INITIALWORLD" value="50004"/>
+	<Property id="INITIALWORLD" value="50003"/>
 	<!-- The initial scene -->
-	<Property id="INITIALSCENE" value="90003"/>
+	<Property id="INITIALSCENE" value="80000"/>
 	<!-- The number of lives -->
 	<Property id="LIVES" value="5"/>
 	<!-- Whether to show the FPS -->
 	<Property id="FPS" value="YES"/>
+	
+	<!-- Password -->
+	<Property id="PASSWORD" value="ICF"/>
+	<!-- This avoid e.g. that the ninja loses additional nergy when playing. -->
 
 </Properties>

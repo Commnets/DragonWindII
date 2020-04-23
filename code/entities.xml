@@ -1,6 +1,36 @@
 <?xml version="1.0"?>
 <Entities>
 	
+	<!-- This definition rewrites the things to be caught 
+		 The form is selected using the code -->
+	<SetOfEntities fromId="31000" number="200">
+		<Forms>
+		
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+
+			<Form id="80005"/>
+
+<!-- ADDED FOR DRAGONWINDII THE REVENGE -->
+
+		</Forms>
+		<MovementsBase>
+			<Movement id="53300"/>
+			<Movement id="54300"/>
+		</MovementsBase>
+		<Animations>
+			<Animation id="0" type="-1"/>
+		</Animations>
+		<States>
+			<State id="0" animation="0" movementBase="53300"/>
+			<State id="1" animation="0" movementBase="54300">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/> 
+					<Attribute id="ACCELERATION" value="0,100,0"/>
+				</Attributes>
+			</State>
+		</States>
+	</SetOfEntities>
+	
 	<!-- This definition rewrites what is defined in the dwentities.xml -->
 	<!-- The shootings -->
 	<SetOfEntities fromId="51000" number="110"> 

@@ -499,6 +499,34 @@
             fSpacing="0" fMargin="0" fWidth="50" fHeight="50" aColor="255" nFrames="6"/>
 	<!-- -->
 	
+	<!-- New set of things -->
+    <Form id="80005" name="MoreThings" file="forms/MoreThings.png" width="207" height="126"
+		fSpacing="0" fMargin="0" fWidth="1" fHeight="1" aColor="255" nFrames="11">
+		<!-- Arrow -->
+		<Frame id=" 0" fPosX="56 " fPosY="1 " fWidth="80" fHeight="24" xoffset="1" yoffset="1" width="80" height="24"/>
+		<!-- Bomb -->
+		<Frame id=" 1" fPosX="156" fPosY="1 " fWidth="46" fHeight="40" xoffset="2" yoffset="2" width="46" height="40"/>
+		<!-- Coin -->
+		<Frame id=" 2" fPosX="166" fPosY="43" fWidth="38" fHeight="38" xoffset="1" yoffset="1" width="38" height="38"/>
+		<!-- Heart -->
+		<Frame id=" 3" fPosX="166" fPosY="83" fWidth="40" fHeight="37" xoffset="1" yoffset="2" width="40" height="37"/>
+		<!-- Paper -->
+		<Frame id=" 4" fPosX="108" fPosY="27" fWidth="46" fHeight="44" xoffset="1" yoffset="1" width="46" height="44"/>
+		<!-- Question -->
+		<Frame id=" 5" fPosX="98 " fPosY="75" fWidth="28" fHeight="50" xoffset="0" yoffset="0" width="28" height="50"/>
+		<!-- Star -->
+		<Frame id=" 6" fPosX="1  " fPosY="1 " fWidth="53" fHeight="52" xoffset="1" yoffset="1" width="53" height="52"/>
+		<!-- Thunder -->
+		<Frame id=" 7" fPosX="128" fPosY="73" fWidth="36" fHeight="42" xoffset="1" yoffset="1" width="36" height="42"/>
+		<!-- Hammer -->
+		<Frame id=" 8" fPosX="56 " fPosY="27" fWidth="50" fHeight="46" xoffset="0" yoffset="2" width="50" height="46"/>
+		<!-- Key -->
+		<Frame id=" 9" fPosX="1  " fPosY="55" fWidth="50" fHeight="50" xoffset="0" yoffset="0" width="50" height="50"/>
+		<!-- Light -->
+		<Frame id="10" fPosX="53 " fPosY="75" fWidth="43" fHeight="50" xoffset="4" yoffset="0" width="43" height="50"/>
+    </Form>
+	<!-- -->
+	
 	<!-- Landscape with Cave -->
 	<Form id="80130" name="Landscape0Large" file="forms/BKLandscape0l.png" width="1978" height="1800" 
             fSpacing="0" fMargin="0" fWidth="1978" fHeight="1800" aColor="255" nFrames="1"/>
@@ -517,10 +545,10 @@
 	<!-- -->
 
 	<!-- Mountains large -->
-	<Form id="80140" name="Mountains3Large" file="forms/BKMountains3l.png" width="2134" height="900" 
-            fSpacing="0" fMargin="0" fWidth="2134" fHeight="900" aColor="255" nFrames="1"/>
-	<Form id="80141" name="Mountains4Large" file="forms/BKMountains4l.png" width="2134" height="900" 
-            fSpacing="0" fMargin="0" fWidth="2134" fHeight="900" aColor="255" nFrames="1"/>
+	<Form id="80140" name="Mountains3Large" file="forms/BKMountains3l.png" width="2134" height="1200" 
+            fSpacing="0" fMargin="0" fWidth="2134" fHeight="1200" aColor="255" nFrames="1"/>
+	<Form id="80141" name="Mountains4Large" file="forms/BKMountains4l.png" width="2134" height="1200" 
+            fSpacing="0" fMargin="0" fWidth="2134" fHeight="1200" aColor="255" nFrames="1"/>
 	<!-- -->
 	
 </Forms>

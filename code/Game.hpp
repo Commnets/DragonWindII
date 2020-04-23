@@ -16,6 +16,7 @@
 
 #include <DragonwindLike/dwinclude.hpp>
 #include "Defs.hpp"
+#include "DataGame.hpp"
 #include "Builders.hpp"
 
 namespace DragonTheRevenge
@@ -49,7 +50,7 @@ namespace DragonTheRevenge
 		Game ()
 			: DRAGONWIND::Game (),
 			  _showFPS (false) // Not to show by default...
-							{ }
+							{ delete (_theDataGame); /** The new */ _theDataGame = new DataGame; }
 
 		/** To switch the visualization of the fPS. */
 		void setShowFPS (bool s);
@@ -69,6 +70,7 @@ namespace DragonTheRevenge
 		virtual QGAMES::WorldBuilder* createWorldBuilder ()
 							{ return (new WorldBuilder (parameter (__GAME_PROPERTYWORLDSFILE__), 
 								mapBuilder ())); }
+		virtual QGAMES::MapBuilder* createMapBuilder ();
 		virtual QGAMES::CharacterControlStepsMonitorBuilder* createCharacterMonitorBuilder ()
 							{ return (new DRAGONWIND::CharacterControlStepsMonitorBuilder 
 								(parameter (__GAME_PROPERTUCHARACTERMONITORFILE__))); }

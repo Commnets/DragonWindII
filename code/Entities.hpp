@@ -18,7 +18,24 @@
 
 namespace DragonTheRevenge
 {
-	/** Some medifications over the type of shootings. */
+	/** Some little modifications about how the thing is created from description. */
+	class Thing : public DRAGONWIND::Thing
+	{
+		public:
+		Thing (int cId, const QGAMES::Forms& f = QGAMES::Forms (), 
+			const QGAMES::PlatformArtist::Data& d = QGAMES::PlatformArtist::Data ())
+			: DRAGONWIND::Thing (cId, f, d)
+							{ }
+
+		/** @see parent. */
+		virtual QGAMES::Entity* clone () const;
+
+		/** @see parent. */
+		virtual int aspectAssociatedToThingType (int t);
+		virtual int thingTypeAssociatedToAspect (int a);
+	};
+
+	/** Some modifications over the type of shootings. */
 	class Shooting : public DRAGONWIND::Shooting
 	{
 		public:
@@ -36,7 +53,7 @@ namespace DragonTheRevenge
 		virtual DRAGONWIND::Shooting::Behaviour* behaviourForType (int t);
 
 		#define __DRAGONWIND_FIREBALLSHOOTINGSTATESID__ \
-			DRAGONWIND::Shooting::StatesId (40, 41, 42, 43, 44, 45, -1, -1, -1, -1, 50, __BD 1.3, true)
+			DRAGONWIND::Shooting::StatesId (40, 41, 42, 43, 44, 45, -1, -1, -1, -1, 50, __BD 1.2, true)
 	};
 
 

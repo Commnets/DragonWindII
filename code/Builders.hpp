@@ -32,6 +32,8 @@ namespace DragonTheRevenge
 		virtual QGAMES::CompositeEntity* createCompositeEntity (const QGAMES::EntityBuilder::EntityDefinition& def);
 
 		/** @see parent. */
+		virtual QGAMES::SomethingToCatch* createSomethingToCatch 
+			(const QGAMES::EntityBuilder::EntityDefinition& def);
 		virtual QGAMES::BadGuy* createBadGuy (const QGAMES::EntityBuilder::EntityDefinition& def);
 	};
 
@@ -46,6 +48,30 @@ namespace DragonTheRevenge
 		protected:
 		/** @see parent. */
 		virtual QGAMES::Movement* createMovement (const QGAMES::MovementBuilder::MovementDefinition& def);
+	};
+
+	/** The tiles used to referrer locations are now a little bit different. */
+	struct ToKnowTileFrameInformation : public DRAGONWIND::ToKnowTileFrameInformation
+	{
+		public:
+		ToKnowTileFrameInformation ();
+
+		private:
+		static int _defaultTileFramesRepresentingSomethingToCatch [];
+	};
+
+	/** To use the previous. */
+	class TMXMapBuilder : public DRAGONWIND::TMXMapBuilder
+	{
+		public:
+		TMXMapBuilder (QGAMES::Sprite2DBuilder* sB)
+			: DRAGONWIND::TMXMapBuilder (sB)
+							{ }
+
+		protected:
+		/** @see parent. */
+		virtual DRAGONWIND::ToKnowTileFrameInformation* createTileFrameInformationObject ()
+							{ return (new ToKnowTileFrameInformation ()); }
 	};
 
 	/** To create the worlds and scenes of Dragonwind II. */

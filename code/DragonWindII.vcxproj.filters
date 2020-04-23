@@ -93,6 +93,9 @@
     <ClInclude Include="TempleWorlds.hpp">
       <Filter>Archivos de encabezado\Worlds</Filter>
     </ClInclude>
+    <ClInclude Include="DataGame.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

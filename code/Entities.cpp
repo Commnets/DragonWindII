@@ -1,5 +1,29 @@
-#include "Defs.hpp"
 #include "Entities.hpp"
+#include "Defs.hpp"
+
+// ---
+QGAMES::Entity* DragonTheRevenge::Thing::clone () const
+{
+	QGAMES::Entity* result = new DragonTheRevenge::Shooting (_id, _forms, _data);
+
+	result -> setMovements (movements ());
+	result -> setAnimations (cloneAnimations ());
+	result -> setStates (cloneStates ());
+
+	return (result);
+}
+
+// ---
+int DragonTheRevenge::Thing::aspectAssociatedToThingType (int t)
+{
+	return ((t >= 10 && t < 20) ? t - 10 : ((t >= 50 && t < 60) ? t - 40 : 5 /** Question by default. */));
+}
+
+// ---
+int DragonTheRevenge::Thing::thingTypeAssociatedToAspect (int a)
+{ 
+	return ((a >= 0 && a < 10) ? a + 10 : ((a >= 10 && a < 20) ? a + 40 : 15 /** Question by default. */));
+}
 
 // ---
 QGAMES::Entity* DragonTheRevenge::Shooting::clone () const

@@ -5,6 +5,9 @@
 #include "ActionBlolcks.hpp"
 #include "Defs.hpp"
 
+int DragonTheRevenge::ToKnowTileFrameInformation::_defaultTileFramesRepresentingSomethingToCatch [] =
+	{ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 50 };
+
 // ---
 QGAMES::Entity* DragonTheRevenge::EntityBuilder::createEntity (const QGAMES::EntityBuilder::EntityDefinition& def)
 {
@@ -70,6 +73,13 @@ QGAMES::CompositeEntity* DragonTheRevenge::EntityBuilder::createCompositeEntity
 }
 
 // ---
+QGAMES::SomethingToCatch* DragonTheRevenge::EntityBuilder::EntityBuilder::createSomethingToCatch 
+	(const QGAMES::EntityBuilder::EntityDefinition& def)
+{
+	return (new DragonTheRevenge::Thing (def._id));
+}
+
+// ---
 QGAMES::BadGuy* DragonTheRevenge::EntityBuilder::createBadGuy (const QGAMES::EntityBuilder::EntityDefinition& def)
 {
 	return (new DragonTheRevenge::BadGuy (def._id));
@@ -108,6 +118,17 @@ QGAMES::Movement* DragonTheRevenge::MovementBuilder::createMovement
 		result = DRAGONWIND::MovementBuilder::createMovement (def);
 
 	return (result);
+}
+
+// ---
+DragonTheRevenge::ToKnowTileFrameInformation::ToKnowTileFrameInformation ()
+	: DRAGONWIND::ToKnowTileFrameInformation ()
+{ 
+	// Rewrite what is done in the parent class
+	_thingsToCatchLocationTileFrames =
+		std::vector <int> (_defaultTileFramesRepresentingSomethingToCatch, 
+			_defaultTileFramesRepresentingSomethingToCatch + 
+				(sizeof (_defaultTileFramesRepresentingSomethingToCatch) / sizeof (int))); 
 }
 
 // ---

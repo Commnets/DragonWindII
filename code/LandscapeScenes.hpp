@@ -59,7 +59,7 @@ namespace DragonTheRevenge
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: LandscapeScene (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1ID__, m, cn, p, ePL),
-			  _layersLeftWall (), _layersRightWall (),
+			  _blockRemoveableActionBlocks (),
 			  _gorilla (NULL), 
 			  _gorillaActionBlock (NULL)
 							{ }
@@ -74,13 +74,6 @@ namespace DragonTheRevenge
 		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
 							{ return (new OnOffSwitches ()); }
 
-		/** To know whether the left / right removeable walls are or not visible. */
-		bool isLeftWallVisible ();
-		bool isRightWallVisible ();
-		/** To hide or show the left / right wall. */
-		void showLeftWall (bool a);
-		void showRightWall (bool a);
-
 		/** @see parent. 
 			When the explosion happens the walls (right / left) could be destroyed too, 
 			cleaning up the way to interesting lateral caves. */
@@ -88,15 +81,14 @@ namespace DragonTheRevenge
 
 		private:
 		// Implementation
-		/** A reference to the layers with the information to hide or show. */
-		QGAMES::TileLayers _layersLeftWall;
-		QGAMES::TileLayers _layersRightWall;
+		/** The blocks managing how the lefta nd right wall appears & disappears. */
+		std::vector <DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock*> _blockRemoveableActionBlocks;
 		/** A reference to the gorilla and the action block controlling it. */
 		DRAGONWIND::BadGuysActionBlock* _gorillaActionBlock;
 		DRAGONWIND::BadGuy* _gorilla;
 
-		static const int _SWITCHTOSHOWLEFTWALL = 0;
-		static const int _SWITCHTOSHOWRIGHTWALL = 1;
+		static const int _NUMBERWALLS = 2;
+		static const int _SWITCHTOSHOWWALLS [_NUMBERWALLS];
 	};
 
 	/** LandscapeWorld Scene 2 */

@@ -19,23 +19,27 @@ void DragonTheRevenge::MountainsScene0::initialize ()
 
 	DragonTheRevenge::MountainsScene::initialize ();
 
-	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
-	assert (pM); // Just in case...
-
-	// The layers involved in the solid appearence are extraxted one by one...
-	QGAMES::AdvancedTileLayers tL1;
-	tL1 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
-	assert (tL1 [0]);
-	QGAMES::AdvancedTileLayers tL2;
-	tL2 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_3")));
-	assert (tL2 [0]);
-
-	_solidLayers.resize (2);
-	_solidLayers [0] = tL1;
-	_solidLayers [1] = tL2;
-
+	_blockRemoveableActionBlocks = 
+		std::vector <DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock*> (_NUMBERSOLIDS);
 	for (int i = 0; i < _NUMBERSOLIDS; i++)
-		showSolidWall (i, onOffSwitch (_SWITCHTOSHOWSOLIDWALL [i]) -> isOn ());
+	{
+		_blockRemoveableActionBlocks [i] = 
+			dynamic_cast <DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock*> 
+				(actionBlock (73005 + i)); // The base is 73005 in this screen...
+		assert (_blockRemoveableActionBlocks [i]);
+	}
+
+	_doorActionBlock = dynamic_cast <DRAGONWIND::MoveLinearASetOfLayersActionBlock*> (actionBlock (74000));
+	assert (_doorActionBlock);
+
+	if (!_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGQUESTIONTYPE__))
+		_ninja -> toSay (std::string ("A question symbol is needed to open door"),
+			DRAGONWIND::DragonArtist::DialogProperties (__QGAMES_COURIER10WHITELETTERS__, 5, 10, 
+				__QGAMES_SHADOWCOLOR__, __QGAMES_WHITECOLOR__, 255, __BD 1.5, 
+				QGAMES::Vector (__BD -100, __BD -100, __BD 0)));
+
+	onOffSwitch (_SWITCHDOOROPEN) -> 
+		set (_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGQUESTIONTYPE__));
 }
 
 // ---
@@ -43,13 +47,17 @@ void DragonTheRevenge::MountainsScene0::updatePositions ()
 {
 	DragonTheRevenge::MountainsScene::updatePositions ();
 
+	onOffSwitch (_SWITCHDOOROPEN) -> 
+		set (_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGQUESTIONTYPE__));
+
 	for (int i = 0; i < _NUMBERSOLIDS; i++)
-	{
-		if (onOffSwitch (_SWITCHTOSHOWSOLIDWALL [i]) -> isOn () && !isSolidVisible (i))
-			showSolidWall (i, true);
-		if (!onOffSwitch (_SWITCHTOSHOWSOLIDWALL [i]) -> isOn () && isSolidVisible (i))
-			showSolidWall (i, false);
-	}
+		_blockRemoveableActionBlocks [i] -> activeSetOfLayers 
+			(onOffSwitch (_SWITCHTOSHOWSOLIDWALL [i]) -> isOn () ? 0 : -1);
+
+	if (onOffSwitch (_SWITCHDOOROPEN) -> isOn ())
+		_doorActionBlock -> toMoveForward ();
+	else
+		_doorActionBlock -> toMoveBackward ();
 }
 
 // ---
@@ -57,28 +65,10 @@ void DragonTheRevenge::MountainsScene0::finalize ()
 {
 	DragonTheRevenge::MountainsScene::finalize ();
 
-	_solidLayers = std::vector <QGAMES::AdvancedTileLayers> ();
-}
+	_blockRemoveableActionBlocks = 
+		std::vector <DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock*> ();
 
-// ---
-bool DragonTheRevenge::MountainsScene0::isSolidVisible (int s)
-{
-	assert (s >= 0 && s < _NUMBERSOLIDS);
-
-	bool result = true;
-	for (QGAMES::AdvancedTileLayers::const_iterator i = _solidLayers [s].begin ();
-			i != _solidLayers [s].end () && result; result &= (*i++).second -> isVisible ());
-
-	return (result);
-}
-
-// ---
-void DragonTheRevenge::MountainsScene0::showSolidWall (int s, bool a)
-{
-	assert (s >= 0 && s < _NUMBERSOLIDS);
-
-	for (QGAMES::AdvancedTileLayers::const_iterator i = _solidLayers [s].begin ();
-			i != _solidLayers [s].end (); (*i++).second -> setVisible (a));
+	_doorActionBlock = NULL;
 }
 
 // ---
@@ -98,6 +88,9 @@ __IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::MountainsScene0::OnOffSwitches)
 	for (int i = 0; i < _NUMBERSOLIDS; i++)
 		addOnOffSwitch (new QGAMES::OnOffSwitch 
 			(DragonTheRevenge::MountainsScene0::_SWITCHTOSHOWSOLIDWALL [i], true));
+
+	addOnOffSwitch (new QGAMES::OnOffSwitch 
+		(DragonTheRevenge::MountainsScene0::_SWITCHDOOROPEN, false));
 }
 
 // ---
@@ -208,6 +201,47 @@ void DragonTheRevenge::MountainsScene2::initialize ()
 	setMap (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE2MAPID__);
 
 	DragonTheRevenge::MountainsScene::initialize ();
+
+	_doorActionBlock = dynamic_cast <DRAGONWIND::MoveLinearASetOfLayersActionBlock*> (actionBlock (74001));
+	assert (_doorActionBlock);
+
+	if (!_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__))
+		_ninja -> toSay (std::string ("A paper symbol is needed to open doors"),
+			DRAGONWIND::DragonArtist::DialogProperties (__QGAMES_COURIER10WHITELETTERS__, 5, 14, 
+				__QGAMES_SHADOWCOLOR__, __QGAMES_WHITECOLOR__, 255, __BD 1.5, 
+				QGAMES::Vector (__BD -100, __BD -100, __BD 0)));
+
+	onOffSwitch (_SWITCHDOOROPEN) -> 
+		set (_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__));
+}
+
+// ---
+void DragonTheRevenge::MountainsScene2::updatePositions ()
+{
+	DragonTheRevenge::MountainsScene::updatePositions ();
+
+	onOffSwitch (_SWITCHDOOROPEN) -> 
+		set (_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__));
+
+	if (onOffSwitch (_SWITCHDOOROPEN) -> isOn ())
+		_doorActionBlock -> toMoveForward ();
+	else
+		_doorActionBlock -> toMoveBackward ();
+}
+
+// ---
+void DragonTheRevenge::MountainsScene2::finalize ()
+{
+	DragonTheRevenge::MountainsScene::finalize ();
+
+	_doorActionBlock = NULL;
+}
+
+// ---
+__IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::MountainsScene2::OnOffSwitches)
+{
+	addOnOffSwitch (new QGAMES::OnOffSwitch 
+		(DragonTheRevenge::MountainsScene2::_SWITCHDOOROPEN, false));
 }
 
 // ---

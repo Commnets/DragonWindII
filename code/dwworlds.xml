@@ -36,7 +36,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50001"/> <!-- @see dwmonitor.xml -->
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="10"/> <!-- Arrow flying -->
+							<Attribute id="TypeOfFire" value="0"/> <!-- Arrow flying -->
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
@@ -98,7 +98,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="10"/> 
+							<Attribute id="TypeOfFire" value="0"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>

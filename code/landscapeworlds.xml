@@ -49,8 +49,8 @@
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="5"/>
-							<Attribute id="SecondsBetweenFires" value="2"/>
-							<Attribute id="SecondsFiring" value="4"/>
+							<Attribute id="SecondsBetweenFires" value="1.5"/>
+							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
 					
@@ -222,6 +222,26 @@
 							<Attribute id="ThundersFrecuency" value="3"/>
 						</Attributes>
 					</Action>
+					
+					<!-- Layers Removeable Left -->
+					<Action id="73000">
+						<Attributes>
+							<Attribute id="NumberSets" value="2"/> 
+							<Attribute id="Set0" value="SolidRemoveable_Left"/>
+							<Attribute id="Set1" value="BaseRemoveable_Left"/>
+							<Attribute id="DefaultSet" value="0"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Layers Removeable Condition 2 -->
+					<Action id="73001">
+						<Attributes>
+							<Attribute id="NumberSets" value="2"/> 
+							<Attribute id="Set0" value="SolidRemoveable_Right"/>
+							<Attribute id="Set1" value="BaseRemoveable_Right"/>
+							<Attribute id="DefaultSet" value="0"/> 
+						</Attributes>
+					</Action>
 				</Actions>
 				
 				<Attributes>
@@ -278,7 +298,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50000"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="6"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="2"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
@@ -339,7 +359,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50008"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="6"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="2"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>

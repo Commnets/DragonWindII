@@ -35,7 +35,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="10"/> 
+							<Attribute id="TypeOfFire" value="0"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="2"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
@@ -48,7 +48,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50000"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="11"/> 
+							<Attribute id="TypeOfFire" value="1"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="2"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
@@ -74,7 +74,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50006"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="TypeOfFire" value="1"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="4"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
@@ -88,7 +88,7 @@
 							<Attribute id="TypeCondition" value="1"/>
 							<Attribute id="SecondsToStart" value="3"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
-							<Attribute id="RainDensity" value="0.15"/>
+							<Attribute id="RainDensity" value="0.10"/>
 							<Attribute id="RainBackgroundId" value="50160"/>
 						</Attributes>
 					</Action>
@@ -144,7 +144,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="6"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="3"/>
@@ -157,7 +157,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="10"/> 
+							<Attribute id="TypeOfFire" value="0"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="2.5"/>
@@ -170,7 +170,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="6"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="3"/>
@@ -183,7 +183,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="10"/> 
+							<Attribute id="TypeOfFire" value="0"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="3.5"/>
 							<Attribute id="SecondsBetweenFires" value="3"/>
@@ -196,7 +196,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="11"/> 
+							<Attribute id="TypeOfFire" value="1"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="4"/>
 							<Attribute id="SecondsBetweenFires" value="3"/>
@@ -228,6 +228,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="80002" at="0"/>
+					<Conexion id="1" with="80000" at="2"/>
 				</Conexions>
 
 				<Maps>

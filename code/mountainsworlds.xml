@@ -48,7 +48,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50006"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="10"/> 
+							<Attribute id="TypeOfFire" value="0"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
@@ -64,6 +64,36 @@
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="LightningsProbability" value="70"/>
 							<Attribute id="LightningsFrecuency" value="3"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Layers Removeable Condition 1 -->
+					<Action id="73005">
+						<Attributes>
+							<Attribute id="NumberSets" value="1"/> 
+							<Attribute id="Set0" value="Solid_2"/>
+							<Attribute id="DefaultSet" value="0"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Layers Removeable Condition 2 -->
+					<Action id="73006">
+						<Attributes>
+							<Attribute id="NumberSets" value="1"/> 
+							<Attribute id="Set0" value="Solid_3"/>
+							<Attribute id="DefaultSet" value="0"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Door Moving Condition -->
+					<Action id="74000">
+						<Attributes>
+							<Attribute id="Set" value="Solid_Door"/> 
+							<Attribute id="Direction" value="0,-1,0"/>
+							<Attribute id="Length" value="96"/> 
+							<Attribute id="Speed" value="1"/>
+							<Attribute id="Sound" value="-1"/>
+							<Attribute id="SoundChannel" value="-1"/>
 						</Attributes>
 					</Action>
 				</Actions>
@@ -126,11 +156,24 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="21"/> 
+							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="4"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Block 2 -->
+					<Action id="71161"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50002"/>
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="1"/> 
+							<Attribute id="ImpulseOfFire" value="-1"/>
+							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="SecondsBetweenFires" value="1.5"/>
+							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
 					
@@ -195,7 +238,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50000"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="6"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="4"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
@@ -237,6 +280,18 @@
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="LightningsProbability" value="70"/>
 							<Attribute id="LightningsFrecuency" value="3"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Door Moving Condition -->
+					<Action id="74001">
+						<Attributes>
+							<Attribute id="Set" value="Solid_Door"/> 
+							<Attribute id="Direction" value="0,-1,0"/>
+							<Attribute id="Length" value="72"/> 
+							<Attribute id="Speed" value="1"/>
+							<Attribute id="Sound" value="-1"/>
+							<Attribute id="SoundChannel" value="-1"/>
 						</Attributes>
 					</Action>
 					
@@ -299,7 +354,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50000"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="6"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
 							<Attribute id="SecondsToFire" value="4"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>

@@ -35,6 +35,17 @@ void DragonTheRevenge::Game::processEvent (const QGAMES::Event& evnt)
 }
 
 // ---
+QGAMES::MapBuilder* DragonTheRevenge::Game::createMapBuilder ()
+{
+	QGAMES::MapBuilder* result = QGAMES::PlatformGame::createMapBuilder ();
+	DragonTheRevenge::TMXMapBuilder* aOn = 
+		new DragonTheRevenge::TMXMapBuilder ((QGAMES::Sprite2DBuilder*) formBuilder ());
+	result -> addAddsOn (aOn);
+
+	return (result);
+}
+
+// ---
 QGAMES::Game::Configuration* DragonTheRevenge::Game::createConfiguration ()
 { 
 	return (new Conf 

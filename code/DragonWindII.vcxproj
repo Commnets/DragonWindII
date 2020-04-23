@@ -94,6 +94,7 @@
     <ClInclude Include="CityWorlds.hpp" />
     <ClInclude Include="DarkForestScenes.hpp" />
     <ClInclude Include="DarkForestWorlds.hpp" />
+    <ClInclude Include="DataGame.hpp" />
     <ClInclude Include="Defs.hpp" />
     <ClInclude Include="MountainsScenes.hpp" />
     <ClInclude Include="MountainsWorlds.hpp" />

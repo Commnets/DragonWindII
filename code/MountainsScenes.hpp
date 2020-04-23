@@ -43,7 +43,8 @@ namespace DragonTheRevenge
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: MountainsScene (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE0ID__, m, cn, p, ePL),
-			  _solidLayers ()
+			  _doorActionBlock (NULL),
+			  _blockRemoveableActionBlocks ()
 							{ }
 
 		/** @see parent. */
@@ -52,25 +53,23 @@ namespace DragonTheRevenge
 		virtual void finalize ();
 
 		private:
-		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
-		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
-							{ return (new OnOffSwitches ()); }
-
-		/** To manage the solid parts of the map. */
-		bool isSolidVisible (int s);
-		void showSolidWall (int s, bool a);
-
 		/** @see parent. 
 			When the explosion happens the walls (1 / 2) could be destroyed too, 
 			cleaning up the way to interesting lateral caves. */
 		virtual void explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx = __BD 50);
 
+		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
+		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
+							{ return (new OnOffSwitches ()); }
+
 		private:
 		// Implementation
-		std::vector <QGAMES::AdvancedTileLayers> _solidLayers;
+		DRAGONWIND::MoveLinearASetOfLayersActionBlock* _doorActionBlock;
+		std::vector <DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock*> _blockRemoveableActionBlocks;
 
 		static const int _NUMBERSOLIDS = 2;
 		static const int _SWITCHTOSHOWSOLIDWALL [_NUMBERSOLIDS];
+		static const int _SWITCHDOOROPEN = 2;
 	};
 
 	/** Mountain Scene 1 */
@@ -117,11 +116,25 @@ namespace DragonTheRevenge
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: MountainsScene (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE2ID__, m, cn, p, ePL)
+			: MountainsScene (__DRAGONWINDTHEREVENGE_MOUNTAINSWORLDSCENE2ID__, m, cn, p, ePL),
+			  _doorActionBlock (NULL)
 							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
+		virtual void finalize ();
+
+		private:
+		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
+		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
+							{ return (new OnOffSwitches ()); }
+
+		private:
+		// Implementation
+		DRAGONWIND::MoveLinearASetOfLayersActionBlock* _doorActionBlock;
+
+		static const int _SWITCHDOOROPEN = 0;
 	};
 
 	/** Mountain Scene 3 */

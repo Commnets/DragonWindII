@@ -167,6 +167,13 @@ void DragonTheRevenge::DarkForestScene1::initialize ()
 	setMap (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDSCENE1MAPID__);
 
 	DragonTheRevenge::DarkForestScene::initialize ();
+
+	// Just and advise...
+	if (!_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGLIGHTTYPE__))
+		_ninja -> toSay (std::string ("Light is needed,  look for it before"),
+			DRAGONWIND::DragonArtist::DialogProperties (__QGAMES_COURIER10WHITELETTERS__, 5, 9, 
+				__QGAMES_SHADOWCOLOR__, __QGAMES_WHITECOLOR__, 255, __BD 1.5, 
+				QGAMES::Vector (__BD -100, __BD -100, __BD 0)));
 }
 
 // ---
@@ -181,7 +188,7 @@ void DragonTheRevenge::DarkForestScene1::drawOn (QGAMES::Screen* s, const QGAMES
 	assert (n);
 	QGAMES::Position pN =
 		n -> centerPosition () + (__BD 10 * n -> orientation ());
-	int rdx = n -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__) ? 150 : 150;
+	int rdx = n -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGLIGHTTYPE__) ? 150 : 50;
 
 	QGAMES::Mask* mask = new QGAMES::OUTCircleMask (10000 /* id */, 3,
 			QGAMES::OUTCircleMask::Properties (rdx, QGAMES::Position 
