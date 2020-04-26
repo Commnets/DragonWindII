@@ -168,12 +168,27 @@ void DragonTheRevenge::DarkForestScene1::initialize ()
 
 	DragonTheRevenge::DarkForestScene::initialize ();
 
+	_blockRemoveableWallActionBlock = 
+		dynamic_cast <DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock*> (actionBlock (73015));
+	assert (_blockRemoveableWallActionBlock);
+
+	reStartAllOnOffSwitches ();
+
 	// Just and advise...
 	if (!_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGLIGHTTYPE__))
 		_ninja -> toSay (std::string ("Light is needed,  look for it before"),
 			DRAGONWIND::DragonArtist::DialogProperties (__QGAMES_COURIER10WHITELETTERS__, 5, 9, 
 				__QGAMES_SHADOWCOLOR__, __QGAMES_WHITECOLOR__, 255, __BD 1.5, 
 				QGAMES::Vector (__BD -100, __BD -100, __BD 0)));
+}
+
+// ---
+void DragonTheRevenge::DarkForestScene1::updatePositions ()
+{
+	DragonTheRevenge::DarkForestScene::updatePositions ();
+
+	_blockRemoveableWallActionBlock -> activeSetOfLayers 
+		(onOffSwitch (_SWITCHTOSHOWWALL) -> isOn () ? 0 : -1);
 }
 
 // ---
@@ -218,6 +233,30 @@ void DragonTheRevenge::DarkForestScene1::drawOn (QGAMES::Screen* s, const QGAMES
 
 	delete (oMask);
 	delete (mask);
+}
+
+// ---
+void DragonTheRevenge::DarkForestScene1::finalize ()
+{
+	DragonTheRevenge::DarkForestScene::finalize ();
+
+	_blockRemoveableWallActionBlock = NULL;
+}
+
+// ---
+void DragonTheRevenge::DarkForestScene1::explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx)
+{
+	DragonTheRevenge::DarkForestScene::explosionAround (pos, rdx);
+
+	if ((pos - QGAMES::Position (__BD 1656, __BD 168, __BD 0)).module () < (rdx * __BD 2))
+		onOffSwitch (_SWITCHTOSHOWWALL) -> set (false);
+}
+
+// ---
+__IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::DarkForestScene1::OnOffSwitches)
+{
+	addOnOffSwitch (new QGAMES::OnOffSwitch 
+		(DragonTheRevenge::DarkForestScene1::_SWITCHTOSHOWWALL, true));
 }
 
 // ---

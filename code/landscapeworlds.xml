@@ -34,7 +34,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50000"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="16"/> 
+							<Attribute id="TypeOfFire" value="6"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="4"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
@@ -76,6 +76,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="70001" at="0"/>
+					<Conexion id="1" with="60006" at="1"/>
 				</Conexions>
 
 				<Maps>
@@ -253,9 +254,10 @@
 				</Attributes>
 				
 				<Conexions>
-					<Conexion id="2" with="70002" at="0"/>
-					<Conexion id="1" with="70003" at="0"/>
 					<Conexion id="0" with="70004" at="0"/>
+					<Conexion id="1" with="70003" at="0"/>
+					<Conexion id="2" with="70002" at="0"/>
+					<Conexion id="3" with="70000" at="2"/>
 				</Conexions>
 
 				<Maps>
@@ -369,7 +371,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="FUNDAMENTAL" value="YES"/>
+					<Attribute id="FUNDAMENTAL" value="NO"/>
 					<Attribute id="NAME" value="Fill up the bag"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
@@ -449,6 +451,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="80000" at="0"/>
+					<Conexion id="1" with="70001" at="4"/>
 				</Conexions>
 
 				<Maps>

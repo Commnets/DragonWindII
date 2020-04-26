@@ -31,18 +31,9 @@ void DragonTheRevenge::CityScene1::initialize ()
 			std::find (tM.begin (), tM.end (), ((DRAGONWIND::BadGuy*) ((*i).second)) -> definition () -> _type) != tM.end ())
 			_theBadGuysToKill [(*i).first] = (*i).second; // The three elements to die...
 
-	// Which are the layers involved in the moat?
-	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
-	assert (pM); // Just in case...
-	_layersMoat [0] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Solid_Moat")));
-	_layersMoat [1] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_Moat")));
-	_layersMoat [2] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Liquid_Moat")));
-	_layersMoat [3] = dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_LakeMoat")));
-	assert (_layersMoat [0] && _layersMoat [1] && _layersMoat [2] && _layersMoat [3]);
-
-	reStartAllOnOffSwitches ();
-
-	showMoat (onOffSwitch (_SWITCHTOSHOWMOAT) -> isOn ());
+	_blockMoatActionBlock = 
+		dynamic_cast <DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock*> (actionBlock (73010));
+	assert (_blockMoatActionBlock);
 }
 
 // ---
@@ -50,7 +41,7 @@ void DragonTheRevenge::CityScene1::finalize ()
 {
 	DragonTheRevenge::CityScene::finalize ();
 
-	_layersMoat = QGAMES::TileLayers ();
+	_blockMoatActionBlock = NULL;
 }
 
 // ---
@@ -61,37 +52,12 @@ void DragonTheRevenge::CityScene1::updatePositions ()
 	bool someAlive = false;
 	for (QGAMES::Entities::const_iterator i = _theBadGuysToKill.begin (); 
 			i != _theBadGuysToKill.end () && !someAlive; someAlive |= ((DRAGONWIND::BadGuy*) (*i++).second) -> isAlive ());
-	if (!someAlive && onOffSwitch (_SWITCHTOSHOWMOAT) -> isOn ())
-		onOffSwitch (_SWITCHTOSHOWMOAT) -> set (false); // All bad guys have died...
 
-	if (isMoatVisible () && !onOffSwitch (_SWITCHTOSHOWMOAT) -> isOn ())
-	{
-		game () -> sound (__DRAGONWINDTHEREVENGE_OPENDOORSOUNDID__) -> play (-1);
-
-		showMoat (false);
-	}
-}
-
-// ---
-bool DragonTheRevenge::CityScene1::isMoatVisible ()
-{
-	return (!_layersMoat [0] -> isVisible () &&	!_layersMoat [1] -> isVisible () &&
-			_layersMoat [2] -> isVisible () && _layersMoat [3] -> isVisible ());
-}
-
-// ---
-void DragonTheRevenge::CityScene1::showMoat (bool a)
-{
-	_layersMoat [0] -> setVisible (!a);
-	_layersMoat [1] -> setVisible (!a);
-	_layersMoat [2] -> setVisible (a);
-	_layersMoat [3] -> setVisible (a);
-}
-
-// ---
-__IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::CityScene1::OnOffSwitches)
-{
-	addOnOffSwitch (new QGAMES::OnOffSwitch (DragonTheRevenge::CityScene1::_SWITCHTOSHOWMOAT, true));
+	int lB = _blockMoatActionBlock -> setOfLayersActive ();
+	int nB = someAlive ? 0 : 1;
+	if (nB != lB && nB == 1)
+		game () -> sound (__DRAGONWINDTHEREVENGE_OPENDOORSOUNDID__) -> play (__QGAMES_GAMESOUNDCHANNEL__);
+	_blockMoatActionBlock -> activeSetOfLayers (nB);
 }
 
 // ---

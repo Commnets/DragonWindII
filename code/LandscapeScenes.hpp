@@ -70,14 +70,14 @@ namespace DragonTheRevenge
 		virtual void finalize ();
 
 		private:
-		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
-		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
-							{ return (new OnOffSwitches ()); }
-
 		/** @see parent. 
 			When the explosion happens the walls (right / left) could be destroyed too, 
 			cleaning up the way to interesting lateral caves. */
 		virtual void explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx = __BD 50);
+
+		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
+		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
+							{ return (new OnOffSwitches ()); }
 
 		private:
 		// Implementation

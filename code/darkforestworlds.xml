@@ -104,6 +104,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="80001" at="0"/>
+					<Conexion id="1" with="70004" at="1"/>
 				</Conexions>
 
 				<Maps>
@@ -216,6 +217,15 @@
 							<Attribute id="SecondsFiring" value="6"/>
 						</Attributes>
 					</Action>
+					
+					<!-- Layers Removeable -->
+					<Action id="73015">
+						<Attributes>
+							<Attribute id="NumberSets" value="1"/> 
+							<Attribute id="Set0" value="Solid_2"/>
+							<Attribute id="DefaultSet" value="0"/> 
+						</Attributes>
+					</Action>
 				</Actions>
 				
 				<Attributes>
@@ -237,17 +247,17 @@
 				</Maps>
 
 				<Entities>
-					<Entity id="50100" layer="Solid_2"/> 
-					<Entity id="50101" layer="Solid_2"/>
-					<SetOfEntities fromId="51000" number="110" layer="Solid_2"/>
-					<SetOfEntities fromId="30000" number="200" layer="Solid_2"/>
-					<SetOfEntities fromId="31000" number="200" layer="Solid_2"/>
+					<Entity id="50100" layer="Solid_1"/> 
+					<Entity id="50101" layer="Solid_1"/>
+					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
+					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
+					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
 					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
-					<SetOfEntities fromId="32000" number="10" layer="Solid_2"/>
+					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
 				</Entities>
 			</Scene>
 			<!-- -->
@@ -300,6 +310,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="90000" at="0"/>
+					<Conexion id="1" with="80001" at="2"/>
 				</Conexions>
 
 				<Maps>

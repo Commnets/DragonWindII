@@ -158,6 +158,16 @@
 							<Attribute id="LightningsFrecuency" value="1.5"/>
 						</Attributes>
 					</Action>
+					
+					<!-- Layers Removeable in the Moat -->
+					<Action id="73010">
+						<Attributes>
+							<Attribute id="NumberSets" value="2"/> 
+							<Attribute id="Set0" value="Liquid_Moat,Base_LakeMoat"/>
+							<Attribute id="Set1" value="Solid_Moat,Base_Moat"/>
+							<Attribute id="DefaultSet" value="0"/> 
+						</Attributes>
+					</Action>
 				</Actions>
 				
 				<Attributes>
@@ -238,7 +248,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="TypeOfFire" value="0"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
@@ -296,11 +306,11 @@
 					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
 					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
 					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
-					<SetOfEntities fromId="50110" number="10" layer="Base_Lake"/> 
-					<SetOfEntities fromId="50120" number="10" layer="Base_Lake"/> 
-					<SetOfEntities fromId="60000" number="10" layer="Base_Lake"/> 
-					<SetOfEntities fromId="61000" number="10" layer="Base_Lake"/> 
-					<SetOfEntities fromId="62000" number="10" layer="Base_Lake"/> 
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
 				</Entities>
 			</Scene>
@@ -460,7 +470,7 @@
 
 				<Conexions>
 					<Conexion id="0" with="70000" at="0"/>
-					<Conexion id="1" with="60005" at="0"/>
+					<Conexion id="1" with="60005" at="2"/>
 				</Conexions>
 
 				<Maps>
@@ -474,11 +484,11 @@
 					<SetOfEntities fromId="51000" number="110" layer="Solid_1"/>
 					<SetOfEntities fromId="30000" number="200" layer="Solid_1"/>
 					<SetOfEntities fromId="31000" number="200" layer="Solid_1"/>
-					<SetOfEntities fromId="50110" number="10" layer="Solid_1"/> 
-					<SetOfEntities fromId="50120" number="10" layer="Solid_1"/> 
-					<SetOfEntities fromId="60000" number="10" layer="Solid_1"/> 
-					<SetOfEntities fromId="61000" number="10" layer="Solid_1"/> 
-					<SetOfEntities fromId="62000" number="10" layer="Solid_1"/> 
+					<SetOfEntities fromId="50110" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="50120" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="60000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="61000" number="10" layer="DecorationFront_1"/> 
+					<SetOfEntities fromId="62000" number="10" layer="DecorationFront_1"/> 
 					<SetOfEntities fromId="32000" number="10" layer="Solid_1"/>
 				</Entities>
 			</Scene>

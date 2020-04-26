@@ -108,6 +108,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="90001" at="0"/>
+					<Conexion id="1" with="80002" at="1"/>
 				</Conexions>
 
 				<Maps>
@@ -198,6 +199,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="90002" at="0"/>
+					<Conexion id="1" with="90000" at="2"/>
 				</Conexions>
 
 				<Maps>
@@ -296,7 +298,7 @@
 					</Action>
 					
 					<!-- Special Condition in that scene to move a couple of lifts -->
-					<Action id="900021" active="YES"> 
+					<Action id="900021" active="NO"> 
 						<Attributes>
 							<Attribute id="Lifts" value="Base_3"/> 
 							<Attribute id="SecondsToGoBack" value="4"/> 
@@ -314,6 +316,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="90003" at="0"/>
+					<Conexion id="1" with="90001" at="1"/>
 				</Conexions>
 
 				<Maps>
@@ -417,6 +420,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="90004" at="0"/>
+					<Conexion id="1" with="90002" at="2"/>
 				</Conexions>
 
 				<Maps>
@@ -490,6 +494,7 @@
 				
 				<Conexions>
 					<Conexion id="0" with="100000" at="0"/>
+					<Conexion id="1" with="90003" at="2"/>
 				</Conexions>
 
 				<Maps>

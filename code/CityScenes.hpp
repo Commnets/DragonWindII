@@ -59,8 +59,8 @@ namespace DragonTheRevenge
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: CityScene (__DRAGONWINDTHEREVENGE_CITYWORLDSCENE1ID__, m, cn, p, ePL),
 			  _theBadGuysToKill (),
-			  _layersMoat () // The base, the solid and the liquid...
-							{ _layersMoat [0] = _layersMoat [1] = _layersMoat [2] = NULL; }
+			  _blockMoatActionBlock (NULL)
+							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
@@ -68,23 +68,11 @@ namespace DragonTheRevenge
 		virtual void finalize ();
 
 		private:
-		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
-		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
-							{ return (new OnOffSwitches ()); }
-
-		/** To know whether the moat is or not visible. */
-		bool isMoatVisible ();
-		/** To hide or show the moat. */
-		void showMoat (bool a);
-
-		private:
 		// Implementation
 		/** A list with all bad guys that when dying make the removable platform to come true. */
 		QGAMES::Entities _theBadGuysToKill;
-		/** A reference to the layers with the information to hide or show. */
-		QGAMES::TileLayers _layersMoat;
-
-		static const int _SWITCHTOSHOWMOAT = 0;
+		/** A reference to the block controlling the moat. */
+		DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock* _blockMoatActionBlock;
 	};
 
 	/** CityWorld Scene 2 */

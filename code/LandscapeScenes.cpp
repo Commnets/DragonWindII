@@ -91,7 +91,6 @@ void DragonTheRevenge::LandscapeScene1::explosionAround (const QGAMES::Position&
 		onOffSwitch (_SWITCHTOSHOWWALLS [0]) -> set (false);
 	if ((pos - QGAMES::Position (__BD 1454, __BD 1680, __BD 0)).module () < (rdx * __BD 2))
 		onOffSwitch (_SWITCHTOSHOWWALLS [1]) -> set (false);
-	
 }
 
 // ---

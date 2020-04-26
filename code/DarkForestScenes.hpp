@@ -86,12 +86,32 @@ namespace DragonTheRevenge
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: DarkForestScene (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDSCENE1ID__, m, cn, p, ePL)
+			: DarkForestScene (__DRAGONWINDTHEREVENGE_DARKFORESTWORLDSCENE1ID__, m, cn, p, ePL),
+			  _blockRemoveableWallActionBlock (NULL)
 							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
 		virtual void drawOn (QGAMES::Screen* s, const QGAMES::Position& p = QGAMES::Position::_noPoint);
+		virtual void finalize ();
+
+		private:
+		/** @see parent. 
+			When the explosion happens the walls (right / left) could be destroyed too, 
+			cleaning up the way to interesting lateral caves. */
+		virtual void explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx = __BD 50);
+
+		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
+		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
+							{ return (new OnOffSwitches ()); }
+
+		private:
+		// Implementation
+		/** A reference to the block with the hidden block. */
+		DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock* _blockRemoveableWallActionBlock;
+
+		static const int _SWITCHTOSHOWWALL = 0;
 	};
 
 	/** DarkForest Scene 2 */

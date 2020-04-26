@@ -32,14 +32,16 @@ void DragonTheRevenge::MountainsScene0::initialize ()
 	_doorActionBlock = dynamic_cast <DRAGONWIND::MoveLinearASetOfLayersActionBlock*> (actionBlock (74000));
 	assert (_doorActionBlock);
 
-	if (!_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGQUESTIONTYPE__))
-		_ninja -> toSay (std::string ("A question symbol is needed to open door"),
+	reStartAllOnOffSwitches ();
+
+	if (!_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGKEYTYPE__))
+		_ninja -> toSay (std::string ("A key is needed to open door"),
 			DRAGONWIND::DragonArtist::DialogProperties (__QGAMES_COURIER10WHITELETTERS__, 5, 10, 
 				__QGAMES_SHADOWCOLOR__, __QGAMES_WHITECOLOR__, 255, __BD 1.5, 
 				QGAMES::Vector (__BD -100, __BD -100, __BD 0)));
 
 	onOffSwitch (_SWITCHDOOROPEN) -> 
-		set (_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGQUESTIONTYPE__));
+		set (_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGKEYTYPE__));
 }
 
 // ---
@@ -48,7 +50,7 @@ void DragonTheRevenge::MountainsScene0::updatePositions ()
 	DragonTheRevenge::MountainsScene::updatePositions ();
 
 	onOffSwitch (_SWITCHDOOROPEN) -> 
-		set (_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGQUESTIONTYPE__));
+		set (_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGKEYTYPE__));
 
 	for (int i = 0; i < _NUMBERSOLIDS; i++)
 		_blockRemoveableActionBlocks [i] -> activeSetOfLayers 
@@ -205,14 +207,14 @@ void DragonTheRevenge::MountainsScene2::initialize ()
 	_doorActionBlock = dynamic_cast <DRAGONWIND::MoveLinearASetOfLayersActionBlock*> (actionBlock (74001));
 	assert (_doorActionBlock);
 
-	if (!_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__))
-		_ninja -> toSay (std::string ("A paper symbol is needed to open doors"),
+	if (!_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGHAMMERTYPE__))
+		_ninja -> toSay (std::string ("A hammer is   needed to open doors"),
 			DRAGONWIND::DragonArtist::DialogProperties (__QGAMES_COURIER10WHITELETTERS__, 5, 14, 
 				__QGAMES_SHADOWCOLOR__, __QGAMES_WHITECOLOR__, 255, __BD 1.5, 
 				QGAMES::Vector (__BD -100, __BD -100, __BD 0)));
 
 	onOffSwitch (_SWITCHDOOROPEN) -> 
-		set (_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__));
+		set (_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGHAMMERTYPE__));
 }
 
 // ---
@@ -221,7 +223,7 @@ void DragonTheRevenge::MountainsScene2::updatePositions ()
 	DragonTheRevenge::MountainsScene::updatePositions ();
 
 	onOffSwitch (_SWITCHDOOROPEN) -> 
-		set (_ninja -> carriesTypeInPocket (__DRAGONWIND_NINJATHINGPAPERTYPE__));
+		set (_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGHAMMERTYPE__));
 
 	if (onOffSwitch (_SWITCHDOOROPEN) -> isOn ())
 		_doorActionBlock -> toMoveForward ();
