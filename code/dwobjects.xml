@@ -6,7 +6,7 @@
 	
 	<!-- Standard backgrounds -->
 	<!-- Dessert -->
-	<Background id="50100" form="50100" times="2">
+	<Background id="50100" form="50100" times="3">
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
@@ -92,7 +92,7 @@
 	</Background>
 	
 	<!-- Dark Forest -->
-	<Background id="50110" form="50110" times="2">
+	<Background id="50110" form="50110" times="3">
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
@@ -178,7 +178,7 @@
 	</Background>
 	
 	<!-- The City -->
-	<Background id="50120" form="50120" times="2">
+	<Background id="50120" form="50120" times="3">
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
@@ -350,7 +350,7 @@
 	</Background>
 	
 	<!-- Mountains -->
-	<Background id="50140" form="50140" times="2">
+	<Background id="50140" form="50140" times="3">
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>
@@ -411,7 +411,7 @@
 	</Background>
 	
 	<!-- Temple  -->
-	<Background id="50150" form="50150" times="2">
+	<Background id="50150" form="50150" times="3">
 		<Attributes>
 			<Attribute id="FADEGRADE" value="255"/>
 			<Attribute id="AUTOMATICMOVE" value="YES"/>

@@ -71,7 +71,7 @@
 					<Attribute id="NAME" value="Enjoy the sight"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80005"/> 
-					<Attribute id="LIQUIDSFLUIDITY" value="7.50"/> <!-- A little thicker, because it is green -->
+					<Attribute id="LIQUIDSFLUIDITY" value="8.50"/> <!-- A little thicker, because it is green -->
 				</Attributes>
 				
 				<Conexions>

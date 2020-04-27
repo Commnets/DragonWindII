@@ -233,7 +233,7 @@
 					<Attribute id="NAME" value="You need a flashlight"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="50008"/> 
-					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="8.50"/> <!-- Thicker -->
 				</Attributes>
 				
 				<Conexions>

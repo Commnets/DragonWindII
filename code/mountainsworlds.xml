@@ -103,7 +103,7 @@
 					<Attribute id="NAME" value="Through the cave"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
-					<Attribute id="LIQUIDSFLUIDITY" value="8.50"/> <!-- Even thicker, because it is orange -->
+					<Attribute id="LIQUIDSFLUIDITY" value="9.50"/> <!-- Even thicker, because it is orange -->
 				</Attributes>
 				
 				<Conexions>

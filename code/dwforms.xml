@@ -1295,19 +1295,19 @@
 	<!-- In the City -->
 	<Form id="50120" name="City0" file="forms/BKCity0.png" width="1067" height="600" 
             fSpacing="0" fMargin="0" fWidth="1067" fHeight="600" aColor="255" nFrames="1"/>
-	<Form id="50121" name="City0" file="forms/BKCity1.png" width="1067" height="600" 
+	<Form id="50121" name="City1" file="forms/BKCity1.png" width="1067" height="600" 
             fSpacing="0" fMargin="0" fWidth="1067" fHeight="600" aColor="255" nFrames="1"/>
-	<Form id="50122" name="City0" file="forms/BKCity2.png" width="1067" height="600" 
+	<Form id="50122" name="City2" file="forms/BKCity2.png" width="1067" height="600" 
             fSpacing="0" fMargin="0" fWidth="1067" fHeight="600" aColor="255" nFrames="1"/>
-	<Form id="50123" name="City0" file="forms/BKCity3.png" width="1067" height="600" 
+	<Form id="50123" name="City3" file="forms/BKCity3.png" width="1067" height="600" 
             fSpacing="0" fMargin="0" fWidth="1067" fHeight="600" aColor="255" nFrames="1"/>
-	<Form id="50124" name="City0" file="forms/BKCity4.png" width="1067" height="600" 
+	<Form id="50124" name="City4" file="forms/BKCity4.png" width="1067" height="600" 
             fSpacing="0" fMargin="0" fWidth="1067" fHeight="600" aColor="255" nFrames="1"/>
-	<Form id="50125" name="City0" file="forms/BKCity5.png" width="1067" height="600" 
+	<Form id="50125" name="City5" file="forms/BKCity5.png" width="1067" height="600" 
             fSpacing="0" fMargin="0" fWidth="1067" fHeight="600" aColor="255" nFrames="1"/>
-	<Form id="50126" name="City0" file="forms/BKCity6.png" width="1067" height="600" 
+	<Form id="50126" name="City6" file="forms/BKCity6.png" width="1067" height="600" 
             fSpacing="0" fMargin="0" fWidth="1067" fHeight="600" aColor="255" nFrames="1"/>
-	<Form id="50127" name="City0" file="forms/BKCity7.png" width="1067" height="600" 
+	<Form id="50127" name="City7" file="forms/BKCity7.png" width="1067" height="600" 
             fSpacing="0" fMargin="0" fWidth="1067" fHeight="600" aColor="255" nFrames="1"/>
 	<!-- In the Landscape -->
 	<Form id="50130" name="Landscape0" file="forms/BKLandscape0.png" width="1978" height="600" 
