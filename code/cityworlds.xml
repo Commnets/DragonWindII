@@ -22,13 +22,14 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50001"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="0"/> 
+							<Attribute id="TypeOfFire" value="0,6"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
 							<Attribute id="SecondsFiring" value="5"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 2 -->
 					<Action id="71021"> 
 						<Attributes>
@@ -101,7 +102,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50004"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="0"/>
+							<Attribute id="TypeOfFire" value="0,6"/>
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
@@ -115,7 +116,7 @@
 							<Attribuye id="MonitorId" value="50005"/> 
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1"/> 
-							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="ImpulseOfFire" value="8"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="1.5"/>
 							<Attribute id="SecondsFiring" value="5"/>
@@ -138,13 +139,13 @@
 					<!-- Block 4 -->
 					<Action id="71033"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribuye id="MonitorId" value="50006"/> 
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1"/> 
-							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="ImpulseOfFire" value="10"/>
+							<Attribute id="SecondsToFire" value="-5"/>
 							<Attribute id="SecondsBetweenFires" value="1.5"/>
-							<Attribute id="SecondsFiring" value="3"/>
+							<Attribute id="SecondsFiring" value="-3"/>
 						</Attributes>
 					</Action>
 					
@@ -249,7 +250,7 @@
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="0"/> 
-							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="ImpulseOfFire" value="2"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
 							<Attribute id="SecondsFiring" value="5"/>
@@ -259,10 +260,10 @@
 					<!-- Block 4 -->
 					<Action id="71043"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribuye id="MonitorId" value="50006"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="20"/> 
-							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="TypeOfFire" value="21,1"/> 
+							<Attribute id="ImpulseOfFire" value="10"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="1.5"/>
 							<Attribute id="SecondsFiring" value="3"/>
@@ -366,10 +367,10 @@
 					<!-- Block 3 -->
 					<Action id="71052"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/> 
+							<Attribuye id="MonitorId" value="50006"/> 
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1"/> 
-							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="ImpulseOfFire" value="10"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="1.5"/>
 							<Attribute id="SecondsFiring" value="3"/>

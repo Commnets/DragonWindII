@@ -1460,7 +1460,7 @@
 					<Attribute id="ACCELERATION" value="0,0,0"/> 
 				</Attributes>
 			</State>
-			<State id="2" animation="2" movement="62000">
+			<State id="2" animation="2" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 
@@ -1488,7 +1488,7 @@
 					<Attribute id="ACCELERATION" value="0,0,0"/> 
 				</Attributes>
 			</State>
-			<State id="12" animation="12" movement="62000">
+			<State id="12" animation="12" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 
@@ -1518,7 +1518,7 @@
 					<Attribute id="ACCELERATION" value="0,0,0"/> 
 				</Attributes>
 			</State>
-			<State id="22" animation="22" movement="62000">
+			<State id="22" animation="22" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 
@@ -1546,7 +1546,7 @@
 					<Attribute id="ACCELERATION" value="0,0,0"/> 
 				</Attributes>
 			</State>
-			<State id="32" animation="32" movement="62000">
+			<State id="32" animation="32" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 
@@ -1576,7 +1576,7 @@
 					<Attribute id="ACCELERATION" value="0,0,0"/> 
 				</Attributes>
 			</State>
-			<State id="42" animation="42" movement="62000">
+			<State id="42" animation="42" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 
@@ -1604,7 +1604,7 @@
 					<Attribute id="ACCELERATION" value="0,0,0"/> 
 				</Attributes>
 			</State>
-			<State id="52" animation="52" movement="62000">
+			<State id="52" animation="52" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 
@@ -1634,7 +1634,7 @@
 					<Attribute id="ACCELERATION" value="0,0,0"/> 
 				</Attributes>
 			</State>
-			<State id="62" animation="62" movement="62000">
+			<State id="62" animation="62" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 
@@ -1662,7 +1662,7 @@
 					<Attribute id="ACCELERATION" value="0,0,0"/> 
 				</Attributes>
 			</State>
-			<State id="72" animation="72" movement="62000">
+			<State id="72" animation="72" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 
@@ -1772,7 +1772,7 @@
 				</Attributes>
 			</State>
 			<!-- Jumping -->
-			<State id="102" animation="101" movement="62000">
+			<State id="102" animation="101" movementBase="62000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-100,0"/> 
 					<Attribute id="ACCELERATION" value="0,100,0"/> 

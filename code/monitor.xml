@@ -133,14 +133,14 @@
 			<Variable id="Type" value="0"/> <!-- Means standing -->
 			<Variable id="Direction" value="1"/> <!-- Meaning to the left -->
 			<!-- Impulse is not neceesary when standing -->
-			<Variable id="Seconds" value="1.0"/> <!-- Seconds -->
+			<Variable id="Seconds" value="-2.0"/> <!-- Seconds -->
 		</Step>
 		
 		<!-- 2: Jump -->
 		<Step type="50000">
 			<Variable id="Type" value="2"/> <!-- Means Jump  -->
 			<Variable id="Direction" value="1"/>
-			<Variable id="Impulse" value="-2"/> <!-- Normal impulse -->
+			<Variable id="Impulse" value="-8"/> <!-- Normal impulse -->
 			<!-- Time makes no sense when jumping -->
 		</Step>
 	</Monitor>
@@ -152,14 +152,14 @@
 			<Variable id="Type" value="0"/> <!-- Means standing -->
 			<Variable id="Direction" value="0"/> <!-- Meaning to the right -->
 			<!-- Impulse is not neceesary when standing -->
-			<Variable id="Seconds" value="1.0"/> <!-- Seconds -->
+			<Variable id="Seconds" value="-2.0"/> <!-- Seconds -->
 		</Step>
 		
 		<!-- 2: Jump -->
 		<Step type="50000">
 			<Variable id="Type" value="2"/> <!-- Means Jump  -->
 			<Variable id="Direction" value="1"/>
-			<Variable id="Impulse" value="-2"/> <!-- Normal impulse -->
+			<Variable id="Impulse" value="-8"/> <!-- Normal impulse -->
 			<!-- Time makes no sense when jumping -->
 		</Step>
 	</Monitor>

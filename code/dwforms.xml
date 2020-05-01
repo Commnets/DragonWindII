@@ -128,6 +128,9 @@
 		<Frame id="61" fPosX="070" fPosY="065" fWidth="34" fHeight="32" xoffset="0" yoffset="0" width="34" height="32"/>
 		<Frame id="62" fPosX="001" fPosY="001" fWidth="27" fHeight="24" xoffset="0" yoffset="0" width="27" height="24"/>
     </Form>
+	<Form id="50007" name="LittleStar" file="forms/LittleStar.png" width="15" height="15" 
+            fSpacing="0" fMargin="0" fWidth="15" fHeight="15" aColor="255" nFrames="1"/>
+	
 	<!-- For Things is used the same form than for the score object -->
 	<!-- -->
 	

@@ -153,7 +153,7 @@ __IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::MoveLiftsCiclicActionBlock::OnOffS
 DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::Properties::Properties 
 		(const std::map <std::string, std::string>& dt)
 	: DragonTheRevenge::MoveLiftsCiclicActionBlock::Properties (dt),
-	  _sToGoBack (2)
+	  _sToGoBack (__BD 2)
 {
 	if (dt.find (std::string (__DRAGONWINDTHEREVENGE_MEORLDSSCENE2BLOCKSECPARAMID__)) != dt.end ())
 		_sToGoBack = __BD (std::atof ((*dt.find (__DRAGONWINDTHEREVENGE_MEORLDSSCENE2BLOCKSECPARAMID__)).second.c_str ()));
