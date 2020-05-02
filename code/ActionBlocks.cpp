@@ -58,7 +58,7 @@ QGAMES::SetOfOpenValues DragonTheRevenge::MoveLiftsCiclicActionBlock::Properties
 			lLst += std::string (",") + _lifts [i];
 	}
 
-	QGAMES::SetOfOpenValues result;
+	QGAMES::SetOfOpenValues result (std::string (__QGAMES_RUNTIMEVALUESOTHERPRPSTYPE__));
 
 	result.addOpenValue (0, QGAMES::OpenValue (lLst));
 
@@ -69,6 +69,7 @@ QGAMES::SetOfOpenValues DragonTheRevenge::MoveLiftsCiclicActionBlock::Properties
 void DragonTheRevenge::MoveLiftsCiclicActionBlock::Properties::fromSetOfOpenValues 
 	(const QGAMES::SetOfOpenValues& oV)
 {
+	assert (oV.name () == std::string (__QGAMES_RUNTIMEVALUESOTHERPRPSTYPE__));
 	assert (oV.existOpenValue (0));
 
 	_lifts = QGAMES::getElementsFrom (oV.openValue (0).strValue (), ',');
