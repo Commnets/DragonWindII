@@ -98,11 +98,18 @@ namespace DragonTheRevenge
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: CityScene (__DRAGONWINDTHEREVENGE_CITYWORLDSCENE3ID__, m, cn, p, ePL)
+			: CityScene (__DRAGONWINDTHEREVENGE_CITYWORLDSCENE3ID__, m, cn, p, ePL),
+			  _moveableLayersPerDifficulty ()
 							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
+		virtual void finalize ();
+
+		private:
+		// Implementation
+		QGAMES::AdvancedTileLayers _moveableLayersPerDifficulty;
 	};
 
 	/** CityWorld Scene 4 */

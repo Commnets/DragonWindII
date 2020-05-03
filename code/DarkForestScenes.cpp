@@ -48,19 +48,21 @@ void DragonTheRevenge::DarkForestScene0::updatePositions ()
 	DragonTheRevenge::DarkForestScene::updatePositions ();
 
 	for (int i = 0; i < _NUMBERHOLES; i++)
-	if (onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> isOn ())
 	{
-		if (!isHoleDisappearing (i) && counter (_COUNTERTOSHOWDISAPPEARHOLE [i]) -> isEnd ())
-			dissapearHole (i);
-		if (hasHoleDissapear (i))
-			onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> set (false);
-	}
-	else
-	{
-		if (!isHoleAppearing (i) && counter (_COUNTERTOSHOWDISAPPEARHOLE [i]) -> isEnd ())
-			appearHole (i);
-		if (hasHoleAppear (i))
-			onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> set (true);
+		if (onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> isOn ())
+		{
+			if (!isHoleDisappearing (i) && counter (_COUNTERTOSHOWDISAPPEARHOLE [i]) -> isEnd ())
+				dissapearHole (i);
+			if (hasHoleDissapear (i))
+				onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> set (false);
+		}
+		else
+		{
+			if (!isHoleAppearing (i) && counter (_COUNTERTOSHOWDISAPPEARHOLE [i]) -> isEnd ())
+				appearHole (i);
+			if (hasHoleAppear (i))
+				onOffSwitch (_SWITCHHOLEVISIBLE [i]) -> set (true);
+		}
 	}
 }
 

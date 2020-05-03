@@ -75,23 +75,37 @@ void DragonTheRevenge::CityScene3::initialize ()
 
 	DragonTheRevenge::CityScene::initialize ();
 
+	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
+	assert (pM);
+	_moveableLayersPerDifficulty [0] = 
+		dynamic_cast <QGAMES::PlatformTileLayer*> (pM -> layer (std::string ("Base_7Easy")));
+	_moveableLayersPerDifficulty [1] = 
+		dynamic_cast <QGAMES::PlatformTileLayer*> (pM -> layer (std::string ("Base_7Medium")));
+	_moveableLayersPerDifficulty [2] = 
+		dynamic_cast <QGAMES::PlatformTileLayer*> (pM -> layer (std::string ("Base_7Difficult")));
+	assert (_moveableLayersPerDifficulty [0] && 
+			_moveableLayersPerDifficulty [1] &&
+		    _moveableLayersPerDifficulty [2]);
+}
+
+// ---
+void DragonTheRevenge::CityScene3::updatePositions ()
+{
+	DragonTheRevenge::CityScene::updatePositions ();
+
 	DRAGONWIND::Game::Conf* cfg = dynamic_cast <DRAGONWIND::Game::Conf*> (game () -> configuration ());
 	assert (cfg);
 
-	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
-	assert (pM); 
-	QGAMES::PlatformTileLayer* bE = 
-		dynamic_cast <QGAMES::PlatformTileLayer*> (pM -> layer (std::string ("Base_7Easy")));
-	QGAMES::PlatformTileLayer* bM = 
-		dynamic_cast <QGAMES::PlatformTileLayer*> (pM -> layer (std::string ("Base_7Medium")));
-	QGAMES::PlatformTileLayer* bD = 
-		dynamic_cast <QGAMES::PlatformTileLayer*> (pM -> layer (std::string ("Base_7Difficult")));
-	assert (bE && bM && bD);
+	for (int i = 0; i < 3; i++) 
+		_moveableLayersPerDifficulty [i] -> setVisible (cfg -> difficulty () == i);
+}
 
-	// The most moveable layer visible will depend on the difficulty level too
-	bE -> setVisible (cfg -> difficulty () == 0);
-	bM -> setVisible (cfg -> difficulty () == 1);
-	bD -> setVisible (cfg -> difficulty () == 2);
+// ---
+void DragonTheRevenge::CityScene3::finalize ()
+{
+	DragonTheRevenge::CityScene::finalize ();
+
+	_moveableLayersPerDifficulty = QGAMES::AdvancedTileLayers ();
 }
 
 // ---
