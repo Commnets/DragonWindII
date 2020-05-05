@@ -110,7 +110,7 @@ void DragonTheRevenge::MountainsScene1::initialize ()
 	_solidLayers [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
 	_solidLayers [2] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_3")));
 	_solidLayers [3] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_4")));
-	assert (_solidLayers [0] && _solidLayers [1] && _solidLayers [2]);
+	assert (_solidLayers [0] && _solidLayers [1] && _solidLayers [2] && _solidLayers [3]);
 
 	reStartAllCounters ();
 	reStartAllOnOffSwitches ();

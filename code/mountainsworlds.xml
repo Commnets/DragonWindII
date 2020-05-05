@@ -25,8 +25,8 @@
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
 							<Attribute id="SecondsToFire" value="4"/>
-							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="1"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
+							<Attribute id="SecondsFiring" value="2"/>
 						</Attributes>
 					</Action>
 					
@@ -37,7 +37,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="21"/> 
 							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="SecondsToFire" value="-4"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="2"/>
 						</Attributes>
@@ -48,11 +48,11 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50006"/> 
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="0"/> 
-							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="TypeOfFire" value="1"/> 
+							<Attribute id="ImpulseOfFire" value="10"/>
+							<Attribute id="SecondsToFire" value="-5"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
-							<Attribute id="SecondsFiring" value="6"/>
+							<Attribute id="SecondsFiring" value="2"/>
 						</Attributes>
 					</Action>
 					
@@ -62,8 +62,8 @@
 							<Attribute id="TypeCondition" value="4"/> 
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
-							<Attribute id="LightningsProbability" value="70"/>
-							<Attribute id="LightningsFrecuency" value="3"/>
+							<Attribute id="ThundersProbability" value="75"/>
+							<Attribute id="ThundersFrecuency" value="2"/>
 						</Attributes>
 					</Action>
 					
@@ -103,7 +103,7 @@
 					<Attribute id="NAME" value="Through the cave"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="80001"/> 
-					<Attribute id="LIQUIDSFLUIDITY" value="9.50"/> <!-- Even thicker, because it is orange -->
+					<Attribute id="LIQUIDSFLUIDITY" value="8.00"/> <!-- Even thicker, because it is orange -->
 				</Attributes>
 				
 				<Conexions>
@@ -136,7 +136,7 @@
 			<Scene id="90001">
 				<Actions>
 					<!-- Flying Monsters -->
-					<!-- Birds -->
+					<!-- Bords -->
 					<Action id="70075">
 						<Attributes>
 							<Attribute id="TypeOfMonster" value="1"/> 
@@ -158,21 +158,21 @@
 							<Attribuye id="MonitorId" value="50002"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
-							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="ImpulseOfFire" value="-5"/>
+							<Attribute id="SecondsToFire" value="-6"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="4"/>
+							<Attribute id="SecondsFiring" value="2"/>
 						</Attributes>
 					</Action>
 					
 					<!-- Block 2 -->
 					<Action id="71161"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/>
+							<Attribuye id="MonitorId" value="50006"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="1"/> 
-							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="TypeOfFire" value="1,20,21"/> 
+							<Attribute id="ImpulseOfFire" value="10"/>
+							<Attribute id="SecondsToFire" value="-5"/>
 							<Attribute id="SecondsBetweenFires" value="1.5"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
@@ -240,11 +240,11 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50000"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="6"/> 
-							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="4"/>
-							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="4"/>
+							<Attribute id="TypeOfFire" value="0,6"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="-8"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
+							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
 					
@@ -254,9 +254,9 @@
 							<Attribuye id="MonitorId" value="50002"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
-							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="5"/>
-							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="ImpulseOfFire" value="-2"/>
+							<Attribute id="SecondsToFire" value="-5"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
@@ -264,13 +264,13 @@
 					<!-- Block 3 -->
 					<Action id="71172"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/>
+							<Attribuye id="MonitorId" value="50006"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="21"/> 
-							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="TypeOfFire" value="0,6,21"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="-3"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="4"/>
+							<Attribute id="SecondsFiring" value="2"/>
 						</Attributes>
 					</Action>
 					
@@ -280,8 +280,8 @@
 							<Attribute id="TypeCondition" value="4"/> 
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
-							<Attribute id="LightningsProbability" value="70"/>
-							<Attribute id="LightningsFrecuency" value="3"/>
+							<Attribute id="RainDensity" value="0.10"/>
+							<Attribute id="RainBackgroundId" value="50160"/>
 						</Attributes>
 					</Action>
 					
@@ -357,9 +357,9 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50000"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="6"/> 
-							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="4"/>
+							<Attribute id="TypeOfFire" value="0,6"/> 
+							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="SecondsToFire" value="-8"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="4"/>
 						</Attributes>
@@ -370,11 +370,11 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="20"/> 
+							<Attribute id="TypeOfFire" value="0,6"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="SecondsToFire" value="-8"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="3"/>
+							<Attribute id="SecondsFiring" value="4"/>
 						</Attributes>
 					</Action>
 					
@@ -383,22 +383,23 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50002"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="20"/> 
-							<Attribute id="ImpulseOfFire" value="-1"/>
-							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="TypeOfFire" value="1,20"/> 
+							<Attribute id="ImpulseOfFire" value="-8"/>
+							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="4"/>
+							<Attribute id="SecondsFiring" value="2"/>
 						</Attributes>
 					</Action>
 					
 					<!-- Environment Condition -->
 					<Action id="72085">
 						<Attributes>
-							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="TypeCondition" value="3"/>  <!-- Wind -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
-							<Attribute id="LightningsProbability" value="70"/>
-							<Attribute id="LightningsFrecuency" value="3"/>
+							<Attribute id="WindSpeed" value="2"/>
+							<Attribute id="WindDensity" value="0.10"/>
+							<Attribute id="WindTraceId" value="10011"/>
 						</Attributes>
 					</Action>
 					
@@ -464,22 +465,22 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50006"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="20"/> 
-							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="2"/>
+							<Attribute id="TypeOfFire" value="1,20"/> 
+							<Attribute id="ImpulseOfFire" value="10"/>
+							<Attribute id="SecondsToFire" value="-6"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
-							<Attribute id="SecondsFiring" value="5"/>
+							<Attribute id="SecondsFiring" value="4"/>
 						</Attributes>
 					</Action>
 					
 					<!-- Environment Condition -->
 					<Action id="72090">
 						<Attributes>
-							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="TypeCondition" value="7"/> 
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
-							<Attribute id="LightningsProbability" value="70"/>
-							<Attribute id="LightningsFrecuency" value="3"/>
+							<Attribute id="CloudsDensity" value="2"/>
+							<Attribute id="CloudsSpeed" value="1"/>
 						</Attributes>
 					</Action>
 				</Actions>

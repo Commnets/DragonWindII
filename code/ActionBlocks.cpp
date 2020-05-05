@@ -200,8 +200,6 @@ void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::initialize ()
 	assert (_moveablePlatform);
 
 	DragonTheRevenge::MoveLiftsCiclicActionBlock::initialize ();
-	
-	reStartAllCounters ();
 }
 
 // ---
@@ -228,12 +226,14 @@ void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::liftsToMove (bool m)
 	DragonTheRevenge::MoveLiftsCiclicActionBlock::liftsToMove (m);
 
 	if (_moveablePlatform)
+	{
 		_moveablePlatform -> setMove (m);
+	}
 }
 // ---
 bool DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::areLiftsMoving ()
 {
-	return (DragonTheRevenge::MoveLiftsCiclicActionBlock::areLiftsMoving () & _moveablePlatform -> moves ());
+	return (DragonTheRevenge::MoveLiftsCiclicActionBlock::areLiftsMoving () && _moveablePlatform -> moves ());
 }
 
 // ---
