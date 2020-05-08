@@ -134,8 +134,6 @@ void DragonTheRevenge::MoveLiftsCiclicActionBlock::initialize ()
 			dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string (_properties -> _lifts [i])));
 		assert (_lifts [i]); // Just in case...
 	}
-	
-	reStartAllOnOffSwitches ();
 }
 
 // ---
