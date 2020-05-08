@@ -76,6 +76,43 @@ void DragonTheRevenge::MoveLiftsCiclicActionBlock::Properties::fromSetOfOpenValu
 }
 
 // ---
+QGAMES::SetOfOpenValues DragonTheRevenge::MoveLiftsCiclicActionBlock::runtimeValues () const
+{
+	assert (_properties);
+
+	QGAMES::SetOfOpenValues result = DRAGONWIND::SceneActionBlock::runtimeValues ();
+
+	int lNE = result.lastNestedOpenValueId ();
+
+	result.addSetOfOpenValues (lNE + 1, _properties -> asSetOfOpenValues ());
+
+	// It is not needed to save here the status of the layers
+	// because they are already being saved when the status of the scene is stored
+
+	return (result);
+}
+
+// ---
+void DragonTheRevenge::MoveLiftsCiclicActionBlock::initializeRuntimeValuesFrom (const QGAMES::SetOfOpenValues& cfg)
+{
+	assert (_properties);
+
+	int lNE = cfg.lastNestedOpenValueId ();
+
+	assert (cfg.existSetOfOpenValues (lNE));
+
+	QGAMES::SetOfOpenValues cCfg = cfg;
+
+	_properties -> fromSetOfOpenValues (cCfg.setOfOpenValues (lNE));
+	cCfg.removeSetOfOpenValues (lNE);
+
+	// The status of the layers is not recovered here...
+	// It is recovered when the status of its map is got back!
+
+	DRAGONWIND::SceneActionBlock::initializeRuntimeValuesFrom (cCfg);
+}
+
+// ---
 void DragonTheRevenge::MoveLiftsCiclicActionBlock::setActive (bool a)
 {
 	DRAGONWIND::SceneActionBlock::setActive (a);
@@ -91,7 +128,6 @@ void DragonTheRevenge::MoveLiftsCiclicActionBlock::initialize ()
 	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (scene () -> activeMap ());
 	assert (pM); // Just in case...
 
-	_lifts= QGAMES::TileLayers ();
 	for (int i = 0; i < (int) _properties -> _lifts.size (); i++)
 	{
 		_lifts [i] = 
@@ -100,9 +136,6 @@ void DragonTheRevenge::MoveLiftsCiclicActionBlock::initialize ()
 	}
 	
 	reStartAllOnOffSwitches ();
-
-	onOffSwitch (_SWITCHLIFTSTOMOVE) -> set (initialActive ());
-	liftsToMove (onOffSwitch (_SWITCHLIFTSTOMOVE) -> isOn ());
 }
 
 // ---
@@ -110,14 +143,20 @@ void DragonTheRevenge::MoveLiftsCiclicActionBlock::updatePositions ()
 {
 	DRAGONWIND::SceneActionBlock::updatePositions ();
 
-	for (QGAMES::TileLayers::const_iterator i = _lifts.begin (); i != _lifts.end (); i++)
+	// Ideally, this instruction is not need
+	// as the lifts only move when the action block is active
+	// and only when it is active it is updated!
+	if (areLiftsMoving ())
 	{
-		QGAMES::Layer::SetOfMovementsBehaviour* mBhv = 
-			dynamic_cast <QGAMES::Layer::SetOfMovementsBehaviour*> ((*i).second -> movement ());
-		assert (mBhv);
+		for (QGAMES::TileLayers::const_iterator i = _lifts.begin (); i != _lifts.end (); i++)
+		{
+			QGAMES::Layer::SetOfMovementsBehaviour* mBhv = 
+				dynamic_cast <QGAMES::Layer::SetOfMovementsBehaviour*> ((*i).second -> movement ());
+			assert (mBhv);
 
-		if (mBhv -> hasCurrentMovementFinished ())
-			(*i).second -> setPosition (QGAMES::Position::_cero);
+			if (mBhv -> hasCurrentMovementFinished ())
+				(*i).second -> setPosition (QGAMES::Position::_cero);
+		}
 	}
 }
 
@@ -141,13 +180,6 @@ bool DragonTheRevenge::MoveLiftsCiclicActionBlock::areLiftsMoving ()
 	for (QGAMES::TileLayers::const_iterator i = _lifts.begin (); i != _lifts.end () && result; 
 			result &= (*i++).second -> moves ());
 	return (result);
-}
-
-// ---
-__IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::MoveLiftsCiclicActionBlock::OnOffSwitches)
-{
-	addOnOffSwitch (new QGAMES::OnOffSwitch 
-		(DragonTheRevenge::MoveLiftsCiclicActionBlock::_SWITCHLIFTSTOMOVE, false));
 }
 
 // ---
@@ -192,25 +224,21 @@ void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::Properties::fromSetO
 // ---
 void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::initialize ()
 {
+	DragonTheRevenge::MoveLiftsCiclicActionBlock::initialize ();
+
 	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (scene () -> activeMap ());
 	assert (pM); 
 
 	_moveablePlatform = 
-		dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_4"))); // The ciclic lift
+		dynamic_cast <QGAMES::TileLayer*> (pM -> layer (std::string ("Base_4"))); // The non ciclic lift
 	assert (_moveablePlatform);
 
-	DragonTheRevenge::MoveLiftsCiclicActionBlock::initialize ();
-}
-
-// ---
-void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::updatePositions ()
-{
-	DragonTheRevenge::MoveLiftsCiclicActionBlock::updatePositions ();
-
-	if (!_moveablePlatform -> moves () && counter (_COUNTERTOGOBACK) -> isEnd ())
-	{
-		// TODO
-	}
+	reStartAllCounters ();
+	
+	// These methods are also invoked at parent level, 
+	// but because a new platform to be moved has been considered just above
+	// a new invocation is need...
+	liftsToMove (initialActive ());
 }
 
 // ---
@@ -226,9 +254,7 @@ void DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::liftsToMove (bool m)
 	DragonTheRevenge::MoveLiftsCiclicActionBlock::liftsToMove (m);
 
 	if (_moveablePlatform)
-	{
 		_moveablePlatform -> setMove (m);
-	}
 }
 // ---
 bool DragonTheRevenge::MoveLiftsMountainsScene2ActionBlock::areLiftsMoving ()

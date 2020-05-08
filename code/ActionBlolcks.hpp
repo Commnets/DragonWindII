@@ -77,6 +77,10 @@ namespace DragonTheRevenge
 		const Properties* properties () const
 							{ return (_properties); }
 
+		/** @see parent. */
+		virtual QGAMES::SetOfOpenValues runtimeValues () const;
+		virtual void initializeRuntimeValuesFrom (const QGAMES::SetOfOpenValues& cfg);
+
 		/** @see parent. 
 			starts or stops the moevement of the lifts. */
 		virtual void setActive (bool a);
@@ -91,15 +95,9 @@ namespace DragonTheRevenge
 		virtual void liftsToMove (bool m);
 		virtual bool areLiftsMoving ();
 
-		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
-		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
-							{ return (new OnOffSwitches ()); }
-
 		protected:
 		Properties* _properties;
 		QGAMES::TileLayers _lifts;
-
-		static const int _SWITCHLIFTSTOMOVE = 0;
 	};
 
 	/** An special block to move lifts in the screen 2 of the world of mountains. */
@@ -143,7 +141,6 @@ namespace DragonTheRevenge
 
 		/** @see parent. */
 		virtual void initialize ();
-		virtual void updatePositions ();
 		virtual void finalize ();
 
 		protected:
@@ -159,7 +156,6 @@ namespace DragonTheRevenge
 		QGAMES::TileLayer* _moveablePlatform;
 
 		static const int _COUNTERTOGOBACK = 0;
-		static const int _SWITCHLIFTSTOMOVE = 0;
 	};
 }
 
