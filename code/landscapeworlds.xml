@@ -29,6 +29,7 @@
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 2 -->
 					<Action id="71071"> 
 						<Attributes>
@@ -41,13 +42,14 @@
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 3 -->
 					<Action id="71072"> 
 						<Attributes>
 							<Attribuye id="MonitorId" value="50006"/> 
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1,20"/> 
-							<Attribute id="ImpulseOfFire" value="5"/>
+							<Attribute id="ImpulseOfFire" value="8"/>
 							<Attribute id="SecondsToFire" value="-5"/>
 							<Attribute id="SecondsBetweenFires" value="1.5"/>
 							<Attribute id="SecondsFiring" value="3"/>
@@ -126,6 +128,7 @@
 							<Attribute id="SecondsFiring" value="1"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 2 -->
 					<Action id="71081"> 
 						<Attributes>
@@ -138,6 +141,7 @@
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 3 -->
 					<Action id="71082"> 
 						<Attributes>
@@ -150,6 +154,7 @@
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 4 -->
 					<Action id="71083"> 
 						<Attributes>
@@ -162,6 +167,7 @@
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 5 -->
 					<Action id="71084"> 
 						<Attributes>
@@ -174,6 +180,7 @@
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 6 -->
 					<Action id="71085"> 
 						<Attributes>
@@ -186,6 +193,7 @@
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 7 -->
 					<Action id="71086"> 
 						<Attributes>
@@ -198,6 +206,7 @@
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>
+					
 					<!-- Block 8 -->
 					<Action id="71087"> 
 						<Attributes>
