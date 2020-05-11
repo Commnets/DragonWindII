@@ -2257,7 +2257,7 @@
 				<Attributes>
 					<Attribute id="FORM" value="50066"/>
 					<Attribute id="INITIALASPECT" value="30"/>
-					<Attribute id="FINALASPECT" value="39"/>
+					<Attribute id="FINALASPECT" value="38"/>
 					<Attribute id="FRACTIONTOCHANGE" value="5"/>
 					<Attribute id="LOOP" value="1"/>
 				</Attributes>
@@ -2320,7 +2320,7 @@
 				<Attributes>
 					<Attribute id="FORM" value="50067"/>
 					<Attribute id="INITIALASPECT" value="30"/>
-					<Attribute id="FINALASPECT" value="39"/>
+					<Attribute id="FINALASPECT" value="38"/>
 					<Attribute id="FRACTIONTOCHANGE" value="5"/>
 					<Attribute id="LOOP" value="1"/>
 				</Attributes>
