@@ -63,7 +63,7 @@
 					<!-- Block 5 -->
 					<Action id="71204"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50006"/>
+							<Attribuye id="MonitorId" value="50012"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20,21"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
@@ -178,7 +178,7 @@
 					<!-- Block 5 -->
 					<Action id="71214"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50006"/>
+							<Attribuye id="MonitorId" value="50012"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
@@ -319,7 +319,7 @@
 					<!-- Block 7 -->
 					<Action id="71226"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/>
+							<Attribuye id="MonitorId" value="50012"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>

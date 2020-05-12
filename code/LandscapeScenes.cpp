@@ -83,13 +83,13 @@ void DragonTheRevenge::LandscapeScene1::finalize ()
 }
 
 // ---
-void DragonTheRevenge::LandscapeScene1::explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx)
+void DragonTheRevenge::LandscapeScene1::explosionAround (DRAGONWIND::Shooting* sth, QGAMES::bdata rdx)
 {
-	DragonTheRevenge::LandscapeScene::explosionAround (pos, rdx);
+	DragonTheRevenge::LandscapeScene::explosionAround (sth, rdx);
 
-	if ((pos - QGAMES::Position (__BD 264, __BD 1680, __BD 0)).module () < (rdx * __BD 2))
+	if ((sth -> centerPosition () - QGAMES::Position (__BD 264, __BD 1680, __BD 0)).module () < (rdx * __BD 2))
 		onOffSwitch (_SWITCHTOSHOWWALLS [0]) -> set (false);
-	if ((pos - QGAMES::Position (__BD 1454, __BD 1680, __BD 0)).module () < (rdx * __BD 2))
+	if ((sth -> centerPosition () - QGAMES::Position (__BD 1454, __BD 1680, __BD 0)).module () < (rdx * __BD 2))
 		onOffSwitch (_SWITCHTOSHOWWALLS [1]) -> set (false);
 }
 

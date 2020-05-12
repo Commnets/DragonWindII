@@ -74,13 +74,13 @@ void DragonTheRevenge::MountainsScene0::finalize ()
 }
 
 // ---
-void DragonTheRevenge::MountainsScene0::explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx)
+void DragonTheRevenge::MountainsScene0::explosionAround (DRAGONWIND::Shooting* sth, QGAMES::bdata rdx)
 {
-	DragonTheRevenge::MountainsScene::explosionAround (pos, rdx);
+	DragonTheRevenge::MountainsScene::explosionAround (sth, rdx);
 
-	if ((pos - QGAMES::Position (__BD 864, __BD 96, __BD 0)).module () < (rdx * __BD 2))
+	if ((sth -> centerPosition () - QGAMES::Position (__BD 864, __BD 96, __BD 0)).module () < (rdx * __BD 2))
 		onOffSwitch (_SWITCHTOSHOWSOLIDWALL [0]) -> set (false);
-	if ((pos - QGAMES::Position (__BD 1728, __BD 120, __BD 0)).module () < (rdx * __BD 2))
+	if ((sth -> centerPosition () - QGAMES::Position (__BD 1728, __BD 120, __BD 0)).module () < (rdx * __BD 2))
 		onOffSwitch (_SWITCHTOSHOWSOLIDWALL [1]) -> set (false);
 }
 

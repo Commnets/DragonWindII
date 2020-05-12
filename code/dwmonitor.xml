@@ -5,7 +5,7 @@
 	<Include file="ptmonitor.xml"/>
 	
 	<!-- Simple step: 
-		 Just stands for ever looking to the right -->
+		 Just stands for ever looking to the right (left is defined in dwmonitor.xml) -->
 	<Monitor id="50000" cyclic="NO">
 		<!-- Single step: Staying -->
 		<Step type="50000">
@@ -84,7 +84,7 @@
 	</Monitor>
 	
 	<!-- Simple step: 
-		 Just stands for ever looking to the left -->
+		 Just stands for ever looking to the right (left is defined in dwmonitor.xml) -->
 	<Monitor id="50002" cyclic="NO">
 		<!-- 1: To stand for ever -->
 		<Step type="50000">
@@ -129,21 +129,17 @@
 					<Variable id="Seconds" value="0.0"/> <!-- Seconds -->
 				</Step>
 				
-				<!-- 2.2: Run -->
+				<!-- 2.2: Run go back -->
 				<Step type="50000">
-					<Variable id="Type" value="3"/> <!-- Means running -->
+					<Variable id="Type" value="10"/> <!-- Means running with limits -->
 					<Variable id="Direction" value="1"/>
 					<Variable id="Impulse" value="-4"/> <!-- Random -->
-					<Variable id="Seconds" value="0"/> <!-- Just finishes when starts -->
+					<Variable id="Seconds" value="10"/> <!-- Just finishes when starts -->
+					<Variable id="Pixels" value="50"/>
+					<Variable id="Limits" value="432,0,0,672,576,0"/>
 				</Step>
 				
-				<!-- 2.3: Keep the movement in a limits -->
-				<Step type="9">
-					<Variable id="Limits" value="432,0,0,672,576,0,0,0,1"/>
-					<Variable id="Distance" value="100"/>
-				</Step>
-				
-				<!-- 2.4: Stands looking to the left -->
+				<!-- 2.3: Stands looking to the left -->
 				<Step type="50000">
 					<Variable id="Type" value="0"/> 
 					<Variable id="Direction" value="1"/> 
@@ -163,20 +159,16 @@
 				
 				<!-- 3.2: Run -->
 				<Step type="50000">
-					<Variable id="Type" value="3"/> <!-- Means running -->
+					<Variable id="Type" value="10"/> <!-- Means running -->
 					<Variable id="Direction" value="1"/> <!-- Looking to the left -->
 					<Variable id="Backwards" value="YES"/> <!-- But moving backwards, that's it to the right -->
 					<Variable id="Impulse" value="-4"/> <!-- Random -->
-					<Variable id="Seconds" value="0"/> <!-- Just finishes when starts -->
+					<Variable id="Seconds" value="10"/> 
+					<Variable id="Pixels" value="50"/>
+					<Variable id="Limits" value="432,0,0,672,576,0"/>
 				</Step>
 				
-				<!-- 3.3: Keep the movement in a limits -->
-				<Step type="9">
-					<Variable id="Limits" value="432,0,0,672,576,0,0,0,1"/> 
-					<Variable id="Distance" value="50"/>
-				</Step>
-				
-				<!-- 3.4: Stands looking to the left -->
+				<!-- 3.3: Stands looking to the left -->
 				<Step type="50000">
 					<Variable id="Type" value="0"/> 
 					<Variable id="Direction" value="1"/> 

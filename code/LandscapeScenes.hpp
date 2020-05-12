@@ -73,7 +73,7 @@ namespace DragonTheRevenge
 		/** @see parent. 
 			When the explosion happens the walls (right / left) could be destroyed too, 
 			cleaning up the way to interesting lateral caves. */
-		virtual void explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx = __BD 50);
+		virtual void explosionAround (DRAGONWIND::Shooting* sth, QGAMES::bdata rdx = __BD 50);
 
 		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
 		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()

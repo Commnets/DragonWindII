@@ -246,11 +246,11 @@ void DragonTheRevenge::DarkForestScene1::finalize ()
 }
 
 // ---
-void DragonTheRevenge::DarkForestScene1::explosionAround (const QGAMES::Position& pos, QGAMES::bdata rdx)
+void DragonTheRevenge::DarkForestScene1::explosionAround (DRAGONWIND::Shooting* sth, QGAMES::bdata rdx)
 {
-	DragonTheRevenge::DarkForestScene::explosionAround (pos, rdx);
+	DragonTheRevenge::DarkForestScene::explosionAround (sth, rdx);
 
-	if ((pos - QGAMES::Position (__BD 1656, __BD 168, __BD 0)).module () < (rdx * __BD 2))
+	if ((sth -> centerPosition () - QGAMES::Position (__BD 1656, __BD 168, __BD 0)).module () < (rdx * __BD 2))
 		onOffSwitch (_SWITCHTOSHOWWALL) -> set (false);
 }
 

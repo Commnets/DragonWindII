@@ -278,7 +278,7 @@
 					<!-- Block 1 -->
 					<Action id="71140"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50006"/>
+							<Attribuye id="MonitorId" value="50012"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1,20"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>

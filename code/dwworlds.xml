@@ -36,8 +36,8 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50001"/> <!-- @see dwmonitor.xml -->
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="0"/> <!-- Arrow flying -->
-							<Attribute id="ImpulseOfFire" value="1"/>
+							<Attribute id="TypeOfFire" value="0,6"/> <!-- Arrow ot star flying -->
+							<Attribute id="ImpulseOfFire" value="-3"/>
 							<Attribute id="SecondsToFire" value="5"/>
 							<Attribute id="SecondsBetweenFires" value="0.5"/>
 							<Attribute id="SecondsFiring" value="5"/>
@@ -62,7 +62,7 @@
 					<Attribute id="NAME" value="Scn Example"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> <!-- To indicate the axis the scene moves towards -->
 					<Attribute id="BACKGROUNDMUSIC" value="50002"/> <!-- The music in the background if it is on -->
-					<Attribute id="LIQUIDSFLUIDITY" value="2.50"/> <!-- Nothing is 1!! -->
+					<Attribute id="LIQUIDSFLUIDITY" value="6.50"/> <!-- Nothing is 1!! -->
 				</Attributes>
 				<Conexions>
 					<Conexion id="0" with="60001" at="0"/>
@@ -105,13 +105,24 @@
 							<Attribute id="SecondsFiring" value="5"/>
 						</Attributes>
 					</Action>
+					<Action id="71002"> 
+						<Attributes>
+							<Attribuye id="MonitorId" value="50003"/> 
+							<Attribute id="Fire" value="YES"/>
+							<Attribute id="TypeOfFire" value="1"/> 
+							<Attribute id="ImpulseOfFire" value="10"/>
+							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
+							<Attribute id="SecondsFiring" value="4"/>
+						</Attributes>
+					</Action>
 				</Actions>
 				<Attributes>
 					<Attribute id="FUNDAMENTAL" value="YES"/>
 					<Attribute id="NAME" value="Scn Example Next"/>
 					<Attribute id="MOVEMENT" value="1,0,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="50002"/> 
-					<Attribute id="LIQUIDSFLUIDITY" value="2.50"/> 
+					<Attribute id="LIQUIDSFLUIDITY" value="5.50"/> 
 				</Attributes>
 				<Conexions>
 					<Conexion id="1" with="60000" at="2"/>
