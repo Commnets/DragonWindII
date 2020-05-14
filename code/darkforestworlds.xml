@@ -85,7 +85,7 @@
 					<!-- Environment Condition -->
 					<Action id="72055">
 						<Attributes>
-							<Attribute id="TypeCondition" value="1"/>
+							<Attribute id="TypeCondition" value="1"/> <!-- Rain -->
 							<Attribute id="SecondsToStart" value="3"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="RainDensity" value="0.10"/>
@@ -278,7 +278,7 @@
 					<!-- Block 1 -->
 					<Action id="71140"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50012"/>
+							<Attribuye id="MonitorId" value="50014"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1,20"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
@@ -291,7 +291,7 @@
 					<!-- Environment Condition -->
 					<Action id="72065">
 						<Attributes>
-							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="TypeCondition" value="4"/> <!-- Lightning -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-5"/> 
 							<Attribute id="LightningsProbability" value="70"/>

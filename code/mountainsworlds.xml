@@ -59,7 +59,7 @@
 					<!-- Environment Condition -->
 					<Action id="72070">
 						<Attributes>
-							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="TypeCondition" value="0"/> <!-- Thunders -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="ThundersProbability" value="75"/>
@@ -181,7 +181,7 @@
 					<!-- Environment Condition -->
 					<Action id="72075">
 						<Attributes>
-							<Attribute id="TypeCondition" value="2"/> 
+							<Attribute id="TypeCondition" value="2"/> <!-- Earthquake -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="EarthquakeIntensity" value="1"/>
@@ -277,7 +277,7 @@
 					<!-- Environment Condition -->
 					<Action id="72080">
 						<Attributes>
-							<Attribute id="TypeCondition" value="4"/> 
+							<Attribute id="TypeCondition" value="1"/> <!-- Rain -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="RainDensity" value="0.10"/>
@@ -397,8 +397,8 @@
 							<Attribute id="TypeCondition" value="3"/>  <!-- Wind -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
-							<Attribute id="WindSpeed" value="2"/>
-							<Attribute id="WindDensity" value="0.10"/>
+							<Attribute id="WindSpeed" value="1"/>
+							<Attribute id="WindDensity" value="0.5"/>
 							<Attribute id="WindTraceId" value="10011"/>
 						</Attributes>
 					</Action>
@@ -463,7 +463,7 @@
 					<!-- Block 1 -->
 					<Action id="71190"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50012"/>
+							<Attribuye id="MonitorId" value="50015"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1,20,0,6"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
@@ -476,7 +476,7 @@
 					<!-- Environment Condition -->
 					<Action id="72090">
 						<Attributes>
-							<Attribute id="TypeCondition" value="7"/> 
+							<Attribute id="TypeCondition" value="7"/> <!-- Clouds -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="CloudsDensity" value="2"/>

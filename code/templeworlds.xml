@@ -63,7 +63,7 @@
 					<!-- Block 5 -->
 					<Action id="71204"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50012"/>
+							<Attribuye id="MonitorId" value="50016"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20,21"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
@@ -76,7 +76,7 @@
 					<!-- Environment Condition -->
 					<Action id="72095">
 						<Attributes>
-							<Attribute id="TypeCondition" value="3"/> 
+							<Attribute id="TypeCondition" value="3"/> <!-- Wind -->
 							<Attribute id="SecondsToStart" value="0"/>
 							<Attribute id="SecondsCondition" value="-1"/> 
 							<Attribute id="WindDensity" value="1"/>
@@ -178,7 +178,7 @@
 					<!-- Block 5 -->
 					<Action id="71214"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50012"/>
+							<Attribuye id="MonitorId" value="50017"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
@@ -319,7 +319,7 @@
 					<!-- Block 7 -->
 					<Action id="71226"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50012"/>
+							<Attribuye id="MonitorId" value="50018"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
@@ -332,11 +332,46 @@
 					<!-- Environment Condition -->
 					<Action id="72105">
 						<Attributes>
-							<Attribute id="TypeCondition" value="1"/> <!-- Rainbow -->
+							<Attribute id="TypeCondition" value="5"/> <!-- Rainbow -->
 							<Attribute id="SecondsToStart" value="0"/>
-							<Attribute id="SecondsCondition" value="-1"/> 
-							<Attribute id="RainDensity" value="0.15"/>
-							<Attribute id="RainBackgroundId" value="50160"/>
+							<Attribute id="SecondsCondition" value="-1"/>
+							<Attribute id="SecondsRainbow" value="1000"/> <!-- In this case seconds condition is not enough -->
+						</Attributes>
+					</Action>
+					
+					<!-- Door Moving Condition -->
+					<Action id="74005">
+						<Attributes>
+							<Attribute id="Set" value="Solid_Door1"/> 
+							<Attribute id="Direction" value="0,-1,0"/>
+							<Attribute id="Length" value="192"/> 
+							<Attribute id="Speed" value="1"/>
+							<Attribute id="Sound" value="-1"/>
+							<Attribute id="SoundChannel" value="-1"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Door Moving Condition -->
+					<Action id="74006">
+						<Attributes>
+							<Attribute id="Set" value="Solid_Door2"/> 
+							<Attribute id="Direction" value="0,-1,0"/>
+							<Attribute id="Length" value="192"/> 
+							<Attribute id="Speed" value="1"/>
+							<Attribute id="Sound" value="-1"/>
+							<Attribute id="SoundChannel" value="-1"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Door Moving Condition -->
+					<Action id="74007">
+						<Attributes>
+							<Attribute id="Set" value="Solid_Door3"/> 
+							<Attribute id="Direction" value="0,-1,0"/>
+							<Attribute id="Length" value="192"/> 
+							<Attribute id="Speed" value="1"/>
+							<Attribute id="Sound" value="-1"/>
+							<Attribute id="SoundChannel" value="-1"/>
 						</Attributes>
 					</Action>
 				</Actions>

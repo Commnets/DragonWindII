@@ -37,7 +37,7 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="SecondsToFire" value="10"/>
 							<Attribute id="SecondsBetweenFires" value="1.5"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
@@ -443,8 +443,8 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1,20"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
-							<Attribute id="SecondsToFire" value="-4"/>
-							<Attribute id="SecondsBetweenFires" value="1"/>
+							<Attribute id="SecondsToFire" value="-8"/>
+							<Attribute id="SecondsBetweenFires" value="2"/>
 							<Attribute id="SecondsFiring" value="3"/>
 						</Attributes>
 					</Action>

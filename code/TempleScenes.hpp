@@ -72,11 +72,26 @@ namespace DragonTheRevenge
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: TempleScene (__DRAGONWINDTHEREVENGE_TEMPLEWORLDSCENE2ID__, m, cn, p, ePL)
+			: TempleScene (__DRAGONWINDTHEREVENGE_TEMPLEWORLDSCENE2ID__, m, cn, p, ePL),
+			  _doorActionBlocks ()
 							{ }
 
 		/** @see parent. */
 		virtual void initialize ();
+		virtual void updatePositions ();
+		virtual void finalize ();
+
+		private:
+		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
+		virtual QGAMES::OnOffSwitches* createOnOffSwitches ()
+							{ return (new OnOffSwitches ()); }
+
+		private:
+		// Implementation
+		std::vector <DRAGONWIND::MoveLinearASetOfLayersActionBlock*> _doorActionBlocks;
+
+		static const int _NUMBERDOORS = 3;
+		static const int _SWITCHDOOROPEN [_NUMBERDOORS];
 	};
 }
 
