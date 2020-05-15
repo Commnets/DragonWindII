@@ -97,7 +97,7 @@ void DragonTheRevenge::CityScene3::updatePositions ()
 	assert (cfg);
 
 	for (int i = 0; i < 3; i++) 
-		_moveableLayersPerDifficulty [i] -> setVisible (cfg -> difficulty () == i);
+		_moveableLayersPerDifficulty [i] -> setVisible ((cfg -> difficulty () < 3) ? i : 2);
 }
 
 // ---
