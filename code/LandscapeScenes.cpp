@@ -21,6 +21,38 @@ void DragonTheRevenge::LandscapeScene0::initialize ()
 }
 
 // ---
+QGAMES::SetOfOpenValues DragonTheRevenge::LandscapeScene1::runtimeValues () const
+{
+	QGAMES::SetOfOpenValues result = DragonTheRevenge::LandscapeScene::runtimeValues ();
+
+	int lNE = result.lastNestedOpenValueId ();
+
+	result.addSetOfOpenValues (lNE + 1, 
+		_gorilla ? _gorilla -> runtimeValues () 
+			: QGAMES::SetOfOpenValues (std::string (__QGAMES_RUNTIMEVALUESELMNTTYPE__)));
+
+	return (result);
+}
+
+// ---
+void DragonTheRevenge::LandscapeScene1::initializeRuntimeValuesFrom (const QGAMES::SetOfOpenValues& cfg)
+{
+	int lNE = cfg.lastNestedOpenValueId ();
+
+	assert (cfg.existSetOfOpenValues (lNE));
+
+	QGAMES::SetOfOpenValues cCfg = cfg;
+
+	QGAMES::SetOfOpenValues cVV = cCfg.setOfOpenValues (lNE);
+	assert (cVV.name () == std::string (__QGAMES_RUNTIMEVALUESELMNTTYPE__));
+	if (_gorilla && cVV.numberValues () != 0)
+		_gorilla -> initializeRuntimeValuesFrom (cVV);
+	cCfg.removeSetOfOpenValues (lNE);
+
+	DragonTheRevenge::LandscapeScene::initializeRuntimeValuesFrom (cCfg);
+}
+
+// ---
 void DragonTheRevenge::LandscapeScene1::initialize ()
 {
 	setMap (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1MAPID__);
@@ -60,14 +92,26 @@ void DragonTheRevenge::LandscapeScene1::updatePositions ()
 
 	// If the coin in the scene?
 	// If it is, the gorilla should move close to it and leave the portal empty!
-	if (isThingVisible (__DRAGONWIND_NINJATHINGCOINTYPE__) && _gorilla -> stepsMonitor () != NULL &&
-		_gorilla -> stepsMonitor () -> id () != __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__)
+	int nSt = -1;
+	if (isThingVisible (__DRAGONWIND_NINJATHINGCOINTYPE__))
 	{
-		_gorilla -> addControlStepsMonitor 
-			(game () -> characterMonitorBuilder () -> monitorFor 
-				(__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__, _gorilla));
-		_gorillaActionBlock -> properties ()-> _monitorId = __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__;
+		if (_gorilla -> stepsMonitor () != NULL &&
+			_gorilla -> stepsMonitor () -> id () != __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__)
+			nSt = __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__;
 	}
+	else
+	{
+		if (_gorilla -> stepsMonitor () != NULL && 
+			_gorilla -> stepsMonitor () -> id () != __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLANOMID__)
+			nSt = __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLANOMID__;
+	}
+
+	if (nSt != -1)
+	{
+		_gorilla -> addControlStepsMonitor (game () -> characterMonitorBuilder () -> monitorFor (nSt, _gorilla));
+		_gorillaActionBlock -> properties () -> _monitorId = nSt;
+	}
+
 }
 
 // ---

@@ -65,6 +65,10 @@ namespace DragonTheRevenge
 							{ }
 
 		/** @see parent. */
+		virtual QGAMES::SetOfOpenValues runtimeValues () const;
+		virtual void initializeRuntimeValuesFrom (const QGAMES::SetOfOpenValues& cfg);
+
+		/** @see parent. */
 		virtual void initialize ();
 		virtual void updatePositions ();
 		virtual void finalize ();
