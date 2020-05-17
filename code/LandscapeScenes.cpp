@@ -90,28 +90,18 @@ void DragonTheRevenge::LandscapeScene1::updatePositions ()
 		_blockRemoveableActionBlocks [i] -> activeSetOfLayers 
 			(onOffSwitch (_SWITCHTOSHOWWALLS [i]) -> isOn () ? 0 : 1);
 
-	// If the coin in the scene?
-	// If it is, the gorilla should move close to it and leave the portal empty!
-	int nSt = -1;
+	// If the coin is in the scene, a switch to indicate it, is activated
+	// Notice that if the coin is no longer in the scene, but it was, the switch is not switched off back ever
+	// So, it is possible to show just once the coin and remove it off for further uses with the same effect!
 	if (isThingVisible (__DRAGONWIND_NINJATHINGCOINTYPE__))
-	{
-		if (_gorilla -> stepsMonitor () != NULL &&
-			_gorilla -> stepsMonitor () -> id () != __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__)
-			nSt = __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__;
-	}
-	else
-	{
-		if (_gorilla -> stepsMonitor () != NULL && 
-			_gorilla -> stepsMonitor () -> id () != __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLANOMID__)
-			nSt = __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLANOMID__;
-	}
+		onOffSwitch (_SWITCHCOINSHOWN) -> set (true); 
 
-	if (nSt != -1)
-	{
-		_gorilla -> addControlStepsMonitor (game () -> characterMonitorBuilder () -> monitorFor (nSt, _gorilla));
-		_gorillaActionBlock -> properties () -> _monitorId = nSt;
-	}
-
+	// Has the gorilla to move?
+	if (onOffSwitch (_SWITCHCOINSHOWN) -> isOn () &&
+		_gorilla -> stepsMonitor () != NULL &&
+		_gorilla -> stepsMonitor () -> id () != __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__)
+		_gorilla -> addControlStepsMonitor (game () -> characterMonitorBuilder () -> 
+			monitorFor (__DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__, _gorilla));
 }
 
 // ---
@@ -143,6 +133,7 @@ __IMPLEMENTONOFFSWITCHES__ (DragonTheRevenge::LandscapeScene1::OnOffSwitches)
 	for (int i = 0; i < _NUMBERWALLS; i++)
 		addOnOffSwitch (new QGAMES::OnOffSwitch 
 			(DragonTheRevenge::LandscapeScene1::_SWITCHTOSHOWWALLS [i], true));
+	addOnOffSwitch (new QGAMES::OnOffSwitch (DragonTheRevenge::LandscapeScene1::_SWITCHCOINSHOWN, false));
 }
 
 // ---

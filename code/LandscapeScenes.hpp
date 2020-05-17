@@ -93,6 +93,7 @@ namespace DragonTheRevenge
 
 		static const int _NUMBERWALLS = 2;
 		static const int _SWITCHTOSHOWWALLS [_NUMBERWALLS];
+		static const int _SWITCHCOINSHOWN = _NUMBERWALLS; // Always the next...
 	};
 
 	/** LandscapeWorld Scene 2 */
