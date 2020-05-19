@@ -345,8 +345,8 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="0"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="1"/>
-							<Attribute id="SecondsBetweenFires" value="0.5"/>
+							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="5"/>
 						</Attributes>
 					</Action>
@@ -358,8 +358,8 @@
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="6"/> 
 							<Attribute id="ImpulseOfFire" value="1"/>
-							<Attribute id="SecondsToFire" value="1"/>
-							<Attribute id="SecondsBetweenFires" value="0.5"/>
+							<Attribute id="SecondsToFire" value="3"/>
+							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="5"/>
 						</Attributes>
 					</Action>
@@ -439,10 +439,10 @@
 					<!-- Block 1 -->
 					<Action id="71060"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50012"/> 
+							<Attribuye id="MonitorId" value="50012"/> <!-- Typical complex movement for Jacks -->
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="1,20"/> 
-							<Attribute id="ImpulseOfFire" value="10"/>
+							<Attribute id="ImpulseOfFire" value="10"/> <!-- To maintain bombs away enough -->
 							<Attribute id="SecondsToFire" value="-8"/>
 							<Attribute id="SecondsBetweenFires" value="2"/>
 							<Attribute id="SecondsFiring" value="3"/>

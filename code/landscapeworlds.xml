@@ -122,8 +122,9 @@
 							<Attribuye id="MonitorId" value="50002"/> 
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
+							<!-- Something linked to Donkey Kong: Throwinng barrels or balls!! -->
 							<Attribute id="ImpulseOfFire" value="-5"/>
-							<Attribute id="SecondsToFire" value="-2"/>
+							<Attribute id="SecondsToFire" value="-5"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="1"/>
 						</Attributes>
