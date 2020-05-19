@@ -384,8 +384,8 @@
 							<Attribuye id="MonitorId" value="50002"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
-							<Attribute id="ImpulseOfFire" value="8"/>
-							<Attribute id="SecondsToFire" value="5"/>
+							<Attribute id="ImpulseOfFire" value="2"/>
+							<Attribute id="SecondsToFire" value="1"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>
 							<Attribute id="SecondsFiring" value="2"/>
 						</Attributes>
@@ -465,7 +465,7 @@
 						<Attributes>
 							<Attribuye id="MonitorId" value="50015"/>
 							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="1,20,0,6"/> 
+							<Attribute id="TypeOfFire" value="1,20"/> 
 							<Attribute id="ImpulseOfFire" value="10"/>
 							<Attribute id="SecondsToFire" value="-6"/>
 							<Attribute id="SecondsBetweenFires" value="1"/>

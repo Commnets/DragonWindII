@@ -11,7 +11,7 @@
 					<!-- Block 1 -->
 					<Action id="71200"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/>
+							<Attribuye id="MonitorId" value="50020"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="5"/>
@@ -24,7 +24,7 @@
 					<!-- Block 2 -->
 					<Action id="71201"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50000"/>
+							<Attribuye id="MonitorId" value="50019"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="5"/>
@@ -37,7 +37,7 @@
 					<!-- Block 3 -->
 					<Action id="71202"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/>
+							<Attribuye id="MonitorId" value="50020"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="5"/>
@@ -50,7 +50,7 @@
 					<!-- Block 4 -->
 					<Action id="71203"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50000"/>
+							<Attribuye id="MonitorId" value="50019"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="21"/> 
 							<Attribute id="ImpulseOfFire" value="5"/>
@@ -126,7 +126,7 @@
 					<!-- Block 1 -->
 					<Action id="71210"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50000"/>
+							<Attribuye id="MonitorId" value="50021"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="5"/>
@@ -165,7 +165,7 @@
 					<!-- Block 4 -->
 					<Action id="71213"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/>
+							<Attribuye id="MonitorId" value="50022"/>
 							<Attribute id="Fire" value="YES"/>
 							<Attribute id="TypeOfFire" value="20"/> 
 							<Attribute id="ImpulseOfFire" value="5"/>
@@ -293,26 +293,16 @@
 					<!-- Block 5 -->
 					<Action id="71224"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50000"/>
-							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="20"/> 
-							<Attribute id="ImpulseOfFire" value="5"/>
-							<Attribute id="SecondsToFire" value="-6"/>
-							<Attribute id="SecondsBetweenFires" value="2"/>
-							<Attribute id="SecondsFiring" value="3"/>
+							<Attribuye id="MonitorId" value="50023"/>
+							<Attribute id="Fire" value="NO"/> <!-- It doesn't need to fire -->
 						</Attributes>
 					</Action>
 
 					<!-- Block 6 -->
 					<Action id="71225"> 
 						<Attributes>
-							<Attribuye id="MonitorId" value="50002"/>
-							<Attribute id="Fire" value="YES"/>
-							<Attribute id="TypeOfFire" value="20"/> 
-							<Attribute id="ImpulseOfFire" value="5"/>
-							<Attribute id="SecondsToFire" value="-6"/>
-							<Attribute id="SecondsBetweenFires" value="2"/>
-							<Attribute id="SecondsFiring" value="3"/>
+							<Attribuye id="MonitorId" value="50024"/>
+							<Attribute id="Fire" value="NO"/> <!-- It doesn't need to fire -->
 						</Attributes>
 					</Action>
 
