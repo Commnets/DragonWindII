@@ -319,16 +319,6 @@
 						</Attributes>
 					</Action>
 					
-					<!-- Environment Condition -->
-					<Action id="72105">
-						<Attributes>
-							<Attribute id="TypeCondition" value="5"/> <!-- Rainbow -->
-							<Attribute id="SecondsToStart" value="0"/>
-							<Attribute id="SecondsCondition" value="-1"/>
-							<Attribute id="SecondsRainbow" value="1000"/> <!-- In this case seconds condition is not enough -->
-						</Attributes>
-					</Action>
-					
 					<!-- Door Moving Condition -->
 					<Action id="74005">
 						<Attributes>

@@ -23,7 +23,6 @@ void DragonTheRevenge::CityScene1::initialize ()
 
 	DragonTheRevenge::CityScene::initialize ();
 
-	// Get all monsters playing in the scene...
 	_theBadGuysToKill = QGAMES::Entities ();
 	std::vector <int> tM = { __DRAGONWIND_CATTYPEID__, __DRAGONWIND_DOGTYPEID__ };
 	for (QGAMES::Entities::const_iterator i = characters ().begin (); i != characters ().end (); i++)
@@ -117,14 +116,13 @@ void DragonTheRevenge::CityScene4::initialize ()
 	DragonTheRevenge::CityScene::initialize ();
 
 	assert (!_badGuys.empty ());
-	_mainBadGuy = dynamic_cast <DRAGONWIND::BadGuy*> ((*_badGuys.begin ()).second);
+	_mainBadGuy = firstBadGuyType (__DRAGONWIND_JACKTYPEID__);
 	assert (_mainBadGuy);
 
 	DRAGONWIND::Game* dG = dynamic_cast <DRAGONWIND::Game*> (game ());
 	assert (dG);
 	_badGuyEnergyLevel = dG -> badGuyEnergyLevelScoreObject ();
 	assert (_badGuyEnergyLevel);
-
 	_badGuyEnergyLevel -> observe (_mainBadGuy);
 	_badGuyEnergyLevel -> setVisible (true);
 }

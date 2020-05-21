@@ -90,13 +90,9 @@ void DragonTheRevenge::LandscapeScene1::updatePositions ()
 		_blockRemoveableActionBlocks [i] -> activeSetOfLayers 
 			(onOffSwitch (_SWITCHTOSHOWWALLS [i]) -> isOn () ? 0 : 1);
 
-	// If the coin is in the scene, a switch to indicate it, is activated
-	// Notice that if the coin is no longer in the scene, but it was, the switch is not switched off back ever
-	// So, it is possible to show just once the coin and remove it off for further uses with the same effect!
 	if (isThingVisible (__DRAGONWIND_NINJATHINGCOINTYPE__))
 		onOffSwitch (_SWITCHCOINSHOWN) -> set (true); 
 
-	// Has the gorilla to move?
 	if (onOffSwitch (_SWITCHCOINSHOWN) -> isOn () &&
 		_gorilla -> stepsMonitor () != NULL &&
 		_gorilla -> stepsMonitor () -> id () != __DRAGONWINDTHEREVENGE_LANDSCAPEWORLDSCENE1GORILLAABID__)
@@ -168,14 +164,13 @@ void DragonTheRevenge::LandscapeScene4::initialize ()
 	DragonTheRevenge::LandscapeScene::initialize ();
 
 	assert (!_badGuys.empty ());
-	_mainBadGuy = dynamic_cast <DRAGONWIND::BadGuy*> ((*_badGuys.begin ()).second);
+	_mainBadGuy = firstBadGuyType (__DRAGONWIND_JACKTYPEID__);
 	assert (_mainBadGuy);
 
 	DRAGONWIND::Game* dG = dynamic_cast <DRAGONWIND::Game*> (game ());
 	assert (dG);
 	_badGuyEnergyLevel = dG -> badGuyEnergyLevelScoreObject ();
 	assert (_badGuyEnergyLevel);
-
 	_badGuyEnergyLevel -> observe (_mainBadGuy);
 	_badGuyEnergyLevel -> setVisible (true);
 }
@@ -189,4 +184,3 @@ void DragonTheRevenge::LandscapeScene4::finalize ()
 
 	DragonTheRevenge::LandscapeScene::finalize ();
 }
-

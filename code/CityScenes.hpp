@@ -7,7 +7,7 @@
  *	Game: Dragonwind II (The Revenge) \n
  *	Author: Ignacio Cea Forniés (Community Networks) \n
  *	Creation Date: 24/01/2020 \n
- *	Description: Defines the base for all scenes in Dragonwind II \n
+ *	Description: Defines City Scenes in Dragonwind II \n
  *	Versions: 1.0 Initial
  */
 
@@ -34,7 +34,7 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** CityWorld Scene 0 */
+	/** CityWorld Scene 0. */
 	class CityScene0 : public CityScene
 	{
 		public:
@@ -49,7 +49,8 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** CityWorld Scene 1 */
+	/** CityWorld Scene 1. \n
+		When a couple of bad guys are killed, the base needed to get the end of the scene appears. */
 	class CityScene1 : public CityScene
 	{
 		public:
@@ -69,13 +70,13 @@ namespace DragonTheRevenge
 
 		private:
 		// Implementation
-		/** A list with all bad guys that when dying make the removable platform to come true. */
+		/** The bad guys to kill for the base to appear. */
 		QGAMES::Entities _theBadGuysToKill;
-		/** A reference to the block controlling the moat. */
+		/** A reference to the block controlling the moat (appear / dessapear). */
 		DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock* _blockMoatActionBlock;
 	};
 
-	/** CityWorld Scene 2 */
+	/** CityWorld Scene 2. */
 	class CityScene2 : public CityScene
 	{
 		public:
@@ -90,7 +91,9 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** CityWorld Scene 3 */
+	/** CityWorld Scene 3. \n
+		According with the difficulty of the game, 
+		the layers at the end of the scene will be ones or others. */
 	class CityScene3 : public CityScene
 	{
 		public:
@@ -112,7 +115,8 @@ namespace DragonTheRevenge
 		QGAMES::AdvancedTileLayers _moveableLayersPerDifficulty;
 	};
 
-	/** CityWorld Scene 4 */
+	/** CityWorld Scene 4. \n
+		Jack goes for you! */
 	class CityScene4 : public CityScene
 	{
 		public:
@@ -130,6 +134,7 @@ namespace DragonTheRevenge
 		virtual void finalize ();
 
 		private:
+		// Implementation
 		DRAGONWIND::BadGuy* _mainBadGuy;
 		DRAGONWIND::EntityEnergy* _badGuyEnergyLevel;
 	};

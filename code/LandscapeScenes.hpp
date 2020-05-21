@@ -7,7 +7,7 @@
  *	Game: Dragonwind II (The Revenge) \n
  *	Author: Ignacio Cea Forniés (Community Networks) \n
  *	Creation Date: 30/03/2020 \n
- *	Description: Defines the base for all scenes in Dragonwind II \n
+ *	Description: Defines Landscape Scenes in Dragonwind II \n
  *	Versions: 1.0 Initial
  */
 
@@ -35,7 +35,7 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** LandscapeWorld Scene 0 */
+	/** LandscapeWorld Scene 0. */
 	class LandscapeScene0 : public LandscapeScene
 	{
 		public:
@@ -50,7 +50,12 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** LandscapeWorld Scene 1 */
+	/** LandscapeWorld Scene 1. \n
+		The most complex scene of the game with no doubt. \n
+		Going to the underground!. \n
+		There is a gorilla watching the main pass from one side to other. \n
+		The gorilla moves towards a coin, leaving the pass free! Take the coin in the room aside. \n
+		There is two rooms aside hidden by a block. The block can be broken with an explosion. */
 	class LandscapeScene1 : public LandscapeScene
 	{
 		public:
@@ -96,7 +101,7 @@ namespace DragonTheRevenge
 		static const int _SWITCHCOINSHOWN = _NUMBERWALLS; // Always the next...
 	};
 
-	/** LandscapeWorld Scene 2 */
+	/** LandscapeWorld Scene 2. */
 	class LandscapeScene2 : public LandscapeScene
 	{
 		public:
@@ -111,7 +116,7 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** LandscapeWorld Scene 3 */
+	/** LandscapeWorld Scene 3. */
 	class LandscapeScene3 : public LandscapeScene
 	{
 		public:
@@ -126,7 +131,8 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** LandscapeWorld Scene 4 */
+	/** LandscapeWorld Scene 4. \n
+		Jack goes for you. */
 	class LandscapeScene4 : public LandscapeScene
 	{
 		public:
@@ -144,6 +150,7 @@ namespace DragonTheRevenge
 		virtual void finalize ();
 
 		private:
+		// Implementation
 		DRAGONWIND::BadGuy* _mainBadGuy;
 		DRAGONWIND::EntityEnergy* _badGuyEnergyLevel;
 	};

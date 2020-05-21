@@ -21,8 +21,6 @@ void DragonTheRevenge::DarkForestScene0::initialize ()
 	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
 	assert (pM); // Just in case...
 
-	// Which are the layers involved in the base movement?
-	// Extracted one by one from the list of those...
 	QGAMES::AdvancedTileLayers tL1;
 	tL1 [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Base_2")));
 	tL1 [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
@@ -38,8 +36,6 @@ void DragonTheRevenge::DarkForestScene0::initialize ()
 
 	reStartAllCounters ();
 	reStartAllOnOffSwitches ();
-
-	// No previous situation of how much visible or invisible are the layers is considered
 }
 
 // ---
@@ -176,7 +172,6 @@ void DragonTheRevenge::DarkForestScene1::initialize ()
 
 	reStartAllOnOffSwitches ();
 
-	// Just and advise...
 	if (!_ninja -> carriesTypeInPocket (__DRAGONWINDTHEREVENGE_NINJATHINGLIGHTTYPE__))
 		_ninja -> toSay (std::string ("Light is needed,  look for it before"),
 			DRAGONWIND::DragonArtist::DialogProperties (__QGAMES_COURIER10WHITELETTERS__, 5, 9, 
@@ -269,14 +264,13 @@ void DragonTheRevenge::DarkForestScene2::initialize ()
 	DragonTheRevenge::DarkForestScene::initialize ();
 
 	assert (!_badGuys.empty ());
-	_mainBadGuy = dynamic_cast <DRAGONWIND::BadGuy*> ((*_badGuys.begin ()).second);
+	_mainBadGuy = firstBadGuyType (__DRAGONWIND_JACKTYPEID__);
 	assert (_mainBadGuy);
 
 	DRAGONWIND::Game* dG = dynamic_cast <DRAGONWIND::Game*> (game ());
 	assert (dG);
 	_badGuyEnergyLevel = dG -> badGuyEnergyLevelScoreObject ();
 	assert (_badGuyEnergyLevel);
-
 	_badGuyEnergyLevel -> observe (_mainBadGuy);
 	_badGuyEnergyLevel -> setVisible (true);
 }
@@ -290,4 +284,3 @@ void DragonTheRevenge::DarkForestScene2::finalize ()
 
 	DragonTheRevenge::DarkForestScene::finalize ();
 }
-

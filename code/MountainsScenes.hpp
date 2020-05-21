@@ -7,7 +7,7 @@
  *	Game: Dragonwind II (The Revenge) \n
  *	Author: Ignacio Cea Forniés (Community Networks) \n
  *	Creation Date: 11/04/2020 \n
- *	Description: Defines the base for all scenes in Dragonwind II \n
+ *	Description: Defines the Mountain Scenes of Dragonwind II \n
  *	Versions: 1.0 Initial
  */
 
@@ -34,7 +34,12 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** Mountain Scene 0 */
+	/** Mountain Scene 0. \n
+		A closed door is at the entrance of the cave.\n
+		The only way to move it up it carrying a key. \n
+		The key is in one of the scene of the dark ones. \n
+		Additionally there a couple of things hidden behind two walls. \n
+		That things a thunder to protect the ninja and a hammer that is needed in other scene of this world. */
 	class MountainsScene0 : public MountainsScene
 	{
 		public:
@@ -55,7 +60,7 @@ namespace DragonTheRevenge
 		private:
 		/** @see parent. 
 			When the explosion happens the walls (1 / 2) could be destroyed too, 
-			cleaning up the way to interesting lateral caves. */
+			cleaning up the way to interesting hidden caves. */
 		virtual void explosionAround (DRAGONWIND::Shooting* sth, QGAMES::bdata rdx = __BD 50);
 
 		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
@@ -72,7 +77,9 @@ namespace DragonTheRevenge
 		static const int _SWITCHDOOROPEN = 2;
 	};
 
-	/** Mountain Scene 1 */
+	/** Mountain Scene 1. \n
+		The scene when the pillars move. \n
+		The only way to move forward is slidding! */
 	class MountainsScene1 : public MountainsScene
 	{
 		public:
@@ -108,7 +115,9 @@ namespace DragonTheRevenge
 		static const int _SWITCHSOLIDMOVING [_NUMBERSOLIDS];
 	};
 
-	/** Mountain Scene 2 */
+	/** Mountain Scene 2. \n
+		In this scene there is a door closing the exit way. \n
+		To open that door the ninja must carry a hammer located initially in the scene 0 of this world. */
 	class MountainsScene2 : public MountainsScene
 	{
 		public:
@@ -137,7 +146,7 @@ namespace DragonTheRevenge
 		static const int _SWITCHDOOROPEN = 0;
 	};
 
-	/** Mountain Scene 3 */
+	/** Mountain Scene 3. */
 	class MountainsScene3 : public MountainsScene
 	{
 		public:
@@ -152,7 +161,8 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** Mountain Scene 4 */
+	/** Mountain Scene 4. \n
+		Jack goes for you. */
 	class MountainsScene4 : public MountainsScene
 	{
 		public:
@@ -170,6 +180,7 @@ namespace DragonTheRevenge
 		virtual void finalize ();
 
 		private:
+		// Implementation
 		DRAGONWIND::BadGuy* _mainBadGuy;
 		DRAGONWIND::EntityEnergy* _badGuyEnergyLevel;
 	};

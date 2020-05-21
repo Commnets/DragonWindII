@@ -7,7 +7,7 @@
  *	Game: Dragonwind II (The Revenge) \n
  *	Author: Ignacio Cea Forniés (Community Networks) \n
  *	Creation Date: 30/03/2020 \n
- *	Description: Defines the base for all scenes in Dragonwind II \n
+ *	Description: Defines Dark Forest Scenes in Dragonwind II \n
  *	Versions: 1.0 Initial
  */
 
@@ -34,7 +34,8 @@ namespace DragonTheRevenge
 		virtual void initialize ();
 	};
 
-	/** DarkForest Scene 0 */
+	/** DarkForest Scene 0. \n
+		Two holes appear and disappear in the scene. */
 	class DarkForestScene0 : public DarkForestScene
 	{
 		public:
@@ -78,7 +79,9 @@ namespace DragonTheRevenge
 		static const int _SWITCHHOLEVISIBLE [_NUMBERHOLES];
 	};
 
-	/** DarkForest Scene 1 */
+	/** DarkForest Scene 1. \n
+		There should have be light enough to see the scene in the surroundings. \n
+		Additionally there is a key hidden behind a wall that has to be broken with an explosion to get it.  */
 	class DarkForestScene1 : public DarkForestScene
 	{
 		public:
@@ -93,13 +96,12 @@ namespace DragonTheRevenge
 		/** @see parent. */
 		virtual void initialize ();
 		virtual void updatePositions ();
+		/** To produce the effect of the light. */
 		virtual void drawOn (QGAMES::Screen* s, const QGAMES::Position& p = QGAMES::Position::_noPoint);
 		virtual void finalize ();
 
 		private:
-		/** @see parent. 
-			When the explosion happens the walls (right / left) could be destroyed too, 
-			cleaning up the way to interesting lateral caves. */
+		/** @see parent. */
 		virtual void explosionAround (DRAGONWIND::Shooting* sth, QGAMES::bdata rdx = __BD 50);
 
 		__DECLAREONOFFSWITCHES__ (OnOffSwitches);
@@ -108,13 +110,14 @@ namespace DragonTheRevenge
 
 		private:
 		// Implementation
-		/** A reference to the block with the hidden block. */
+		/** A reference to the block with the key inside */
 		DRAGONWIND::SwitchVisibilityBetweenASetOfLayersActionBlock* _blockRemoveableWallActionBlock;
 
 		static const int _SWITCHTOSHOWWALL = 0;
 	};
 
-	/** DarkForest Scene 2 */
+	/** DarkForest Scene 2. \n
+		Jack goes for you. */
 	class DarkForestScene2 : public DarkForestScene
 	{
 		public:
@@ -132,6 +135,7 @@ namespace DragonTheRevenge
 		virtual void finalize ();
 
 		private:
+		// Implementation
 		DRAGONWIND::BadGuy* _mainBadGuy;
 		DRAGONWIND::EntityEnergy* _badGuyEnergyLevel;
 	};

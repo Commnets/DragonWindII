@@ -105,7 +105,6 @@ void DragonTheRevenge::MountainsScene1::initialize ()
 	QGAMES::TiledMap* pM = dynamic_cast <QGAMES::TiledMap*> (activeMap ());
 	assert (pM); // Just in case...
 
-	// The layers involved in the pillars movement...
 	_solidLayers [0] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_1")));
 	_solidLayers [1] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_2")));
 	_solidLayers [2] = dynamic_cast <QGAMES::AdvancedTileLayer*> (pM -> layer (std::string ("Solid_3")));
@@ -266,14 +265,13 @@ void DragonTheRevenge::MountainsScene4::initialize ()
 	DragonTheRevenge::MountainsScene::initialize ();
 
 	assert (!_badGuys.empty ());
-	_mainBadGuy = dynamic_cast <DRAGONWIND::BadGuy*> ((*_badGuys.begin ()).second);
+	_mainBadGuy = firstBadGuyType (__DRAGONWIND_JACKTYPEID__);
 	assert (_mainBadGuy);
 
 	DRAGONWIND::Game* dG = dynamic_cast <DRAGONWIND::Game*> (game ());
 	assert (dG);
 	_badGuyEnergyLevel = dG -> badGuyEnergyLevelScoreObject ();
 	assert (_badGuyEnergyLevel);
-
 	_badGuyEnergyLevel -> observe (_mainBadGuy);
 	_badGuyEnergyLevel -> setVisible (true);
 }
@@ -287,4 +285,3 @@ void DragonTheRevenge::MountainsScene4::finalize ()
 
 	DragonTheRevenge::MountainsScene::finalize ();
 }
-
