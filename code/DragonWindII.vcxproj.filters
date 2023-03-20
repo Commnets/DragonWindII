@@ -96,6 +96,9 @@
     <ClInclude Include="DataGame.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -152,11 +155,6 @@
     <ClCompile Include="TempleWorlds.cpp">
       <Filter>Archivos de código fuente\Worlds</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="TestDragonwind.rc">
-      <Filter>Archivos de recursos</Filter>
-    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="adentities.xml">
@@ -300,5 +298,15 @@
     <Xml Include="worlds.xml">
       <Filter>Configuration</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DragonWindII.rc">
+      <Filter>Archivos de recursos</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DragonwindIcon.ico">
+      <Filter>Archivos de recursos</Filter>
+    </Image>
   </ItemGroup>
 </Project>
